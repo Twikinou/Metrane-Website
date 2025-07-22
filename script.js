@@ -74,29 +74,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-// Parallax effect for hero section
-let ticking = false;
-function updateParallax() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.floating-elements .element');
-    
-    parallaxElements.forEach((element, index) => {
-        const speed = 0.5 + (index * 0.1);
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-    
-    ticking = false;
-}
-
-function requestTick() {
-    if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-    }
-}
-
-window.addEventListener('scroll', requestTick);
-
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
