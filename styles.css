@@ -605,6 +605,7 @@ p {
 .benefits {
     padding: 80px 0;
     background-color: var(--white);
+    min-height: 280vh; /* Ajusté pour plus d'espace */
 }
 .benefits-layout {
     display: grid;
@@ -615,7 +616,9 @@ p {
 
 .benefits-images {
     position: sticky;
-    top: 100px;
+    top: 20vh;
+    height: fit-content;
+    z-index: 1;
 }
 
 .image-grid {
@@ -639,12 +642,33 @@ p {
     height: 80%;
     object-fit: contain;
     border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
 }
 
+.benefit-img.active {
+    filter: grayscale(0%);
+}
+
+.benefits-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240vh;
+    padding-top: 10vh;
+}
 .benefit-item {
     display: flex;
+    flex-direction: column;
     gap: 24px;
-    margin-bottom: 60px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.benefit-item.visible {
+    opacity: 1;
 }
 
 .benefit-icon {
