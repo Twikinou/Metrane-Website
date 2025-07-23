@@ -486,27 +486,42 @@ p {
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    display: flex;
+    gap: 16px;  
     max-width: 1200px;
-    margin: 0 auto;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
 }
 
+/* La grande carte à gauche */
+.feature-card.large {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+/* La colonne de droite avec 2 cartes */
 .features-column {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
 }
 
 .feature-card {
     background: var(--gradient-blue);
     border-radius: 32px;
+    display: flex;
     padding: 40px;
     border: 1px solid #F1F1F1;
     position: relative;
     transition: var(--transition);
     color: var(--white);
+    height: calc(50% - 8px);
+    overflow: hidden;
 }
 
 .feature-card:hover {
@@ -514,198 +529,76 @@ p {
     box-shadow: 0 10px 30px rgba(0, 175, 239, 0.2);
 }
 
-.feature-card.large {
-    min-height: 520px;
-}
-
 .feature-icon-white {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
 
+.feature-icon-white img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .feature-card h3 {
+    font-family: "Radio Canada Big";
     font-size: 20px;
-    margin-bottom: 16px;
-    color: var(--white);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.2px;
 }
 
 .feature-card p {
+    font-family: Inter;
     font-size: 14px;
-    color: var(--white);
-    line-height: 1.7;
-    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
-/* Workflow section for Reporting Réglementaire */
-.feature-workflow {
+/* Feature preview section */
+.feature-preview.large {
+    margin-top: auto;
+    padding-top: 24px;
     position: relative;
-    margin-top: 40px;
+    bottom: -20px;
+    right: auto;
+    width: 100%;
 }
 
-.workflow-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.feature-preview {
+    margin-top: auto;
+    padding-top: 24px;
+    position: relative;
+    right: -42px;
+    bottom: -5px;
+    width: 50%;
 }
 
-.workflow-item {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 16px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-}
-
-.workflow-item svg {
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.workflow-text h4 {
-    font-size: 12px;
-    margin-bottom: 4px;
-    color: var(--white);
-}
-
-.workflow-text span {
-    font-size: 11px;
-    opacity: 0.8;
-}
-
-.workflow-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.workflow-logo {
-    width: 50px;
+.feature-preview.large img {
+    width: 100%;
     height: auto;
-    filter: brightness(0) invert(1);
 }
+
+.feature-preview img {
+    width: 120%;
+    height: auto;
+}
+
+/* Styles supprimés car remplacés par les images PNG */
 
 /* Reporting Business section */
 .feature-header {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
     margin-bottom: 20px;
-}
-
-.cash-flow-chart {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 12px;
-}
-
-.chart-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    padding: 8px;
-}
-
-.chart-header svg {
-    flex-shrink: 0;
-}
-
-.chart-title {
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.chart-content {
-    position: relative;
-    height: 120px;
-}
-
-.chart-graph {
-    width: 100%;
-    height: 100%;
-}
-
-/* Editique section */
-.editique-preview {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 16px;
-}
-
-.preview-header {
-    font-size: 10px;
-    margin-bottom: 12px;
-    opacity: 0.8;
-}
-
-.preview-card {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.preview-card svg {
-    flex-shrink: 0;
-}
-
-.preview-text strong {
-    display: block;
-    font-size: 12px;
-    margin-bottom: 2px;
-}
-
-.preview-text span {
-    font-size: 10px;
-    opacity: 0.8;
-}
-
-.document-types {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-}
-
-.doc-type {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-}
-
-.doc-type svg {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 8px;
-}
-
-.doc-type span {
-    display: block;
-    font-size: 10px;
-    margin-bottom: 4px;
-}
-
-.doc-type small {
-    font-size: 9px;
-    opacity: 0.7;
+    width: 50%;
 }
 
 /* Benefits Section */
@@ -1043,9 +936,6 @@ p {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
     
     .feature-card.large {
         min-height: auto;
@@ -1205,17 +1095,7 @@ p {
     }
 }
 /* Grid adjustments for features */
-@media (min-width: 768px) {
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
-    }
-    
-    .feature-card:first-child {
-        grid-column: 1 / -1;
-    }
-}
+
 
 /* Fade in animation */
 @keyframes fadeIn {
