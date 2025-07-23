@@ -697,26 +697,49 @@ p {
 /* Senegal CTA Section */
 .senegal-cta {
     padding: 80px 0;
-    background: radial-gradient(circle at 25% 67%, #FFFFFF 0%, #ECF0F4 100%);
+    background: #F8F9FA;
+    margin: 80px 0;
+    overflow: hidden;
 }
+
+.senegal-cta .container {
+    max-width: 1200px;
+}
+
 .cta-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: visible;
+}
+
+.cta-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 300px;
 }
 
 .cta-image {
-    overflow: hidden;
-    height: 300px;
-    border-radius: 12px;
+    position: absolute;
+    bottom: -200px;
+    z-index: 1;
 }
 
 .cta-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    object-position: center top;
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.cta-text {
+    flex: 1;
+    padding-left: 60px;
+    position: relative;
+    z-index: 2;
 }
 
 .cta-badge {
@@ -732,8 +755,23 @@ p {
 }
 
 .cta-text h2 {
-    font-size: 32px;
+    font-size: 42px;
+    font-weight: 500;
     margin-bottom: 20px;
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.senegal-cta .btn-primary {
+    font-size: 16px;
+    padding: 14px 28px;
 }
 
 /* FAQ Section */
