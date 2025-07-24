@@ -1,10 +1,27 @@
 // Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
 
 mobileMenuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
     mobileMenuToggle.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link or button
+const mobileNavItems = document.querySelectorAll('.mobile-nav-link, .mobile-menu-content .btn');
+mobileNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenuOverlay.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+    }
 });
 
 // FAQ Accordion
