@@ -233,6 +233,10 @@ p {
     z-index: 1000;
 }
 
+.mobile-menu-overlay {
+    display: none;
+}
+
 .mobile-menu-toggle span {
     display: block;
     width: 25px;
@@ -1087,6 +1091,7 @@ p {
     
     /* Mobile Menu Overlay - Séparé de la navbar */
     .mobile-menu-overlay {
+        display: block;
         position: fixed;
         top: 0;
         right: -100%;
@@ -1278,7 +1283,7 @@ p {
     .features-grid {
         flex-direction: column;
         height: auto;
-        gap: 16px;
+        gap: 32px;
     }
     
     .feature-card.large,
@@ -1287,7 +1292,7 @@ p {
     }
     
     .features-column {
-        gap: 16px;
+        gap: 32px;
         height: auto;
     }
     
@@ -1296,6 +1301,12 @@ p {
         height: auto;
         min-height: 200px;
         flex-direction: column;
+        border-radius: 24px;
+    }
+    
+    .feature-card:hover {
+        transform: none;
+        box-shadow: none;
     }
     
     .feature-card h3 {
@@ -1326,7 +1337,6 @@ p {
         right: 0;
         bottom: 0;
         width: 100%;
-        margin-top: auto;
         padding: 0;
         margin-bottom: 0;
     }
@@ -1335,11 +1345,14 @@ p {
     .feature-preview.large img {
         width: 100%;
         height: auto;
-        max-height: 150px;
+        max-height: 170px;
         object-fit: contain;
-        border-radius: 0 0 32px 32px;
+        border-radius: 0 0 0 0;
         margin: 0;
         padding: 0;
+        display: block;
+        position: relative;
+        bottom: 0px;
     }
     
     /* Images mobiles pour les feature cards */
