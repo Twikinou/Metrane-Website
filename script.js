@@ -120,8 +120,101 @@ const observer = new IntersectionObserver((entries) => {
 const animateElements = document.querySelectorAll('.feature-card, .faq-item');
 animateElements.forEach(el => observer.observe(el));
 
+// Benefits Mobile scroll animation
+function initBenefitsMobile() {
+    const mobileBenefitItems = document.querySelectorAll('.mobile-benefit-item');
+    const mobileBenefitImgs = document.querySelectorAll('.mobile-benefit-img');
+    
+    if (mobileBenefitItems.length === 0) return; // Pas de section mobile
+    
+    // Activer la première image et le premier texte par défaut
+    if (mobileBenefitImgs.length > 0) {
+        mobileBenefitImgs[0].classList.add('active');
+    }
+    if (mobileBenefitItems.length > 0) {
+        mobileBenefitItems[0].classList.add('visible');
+    }
+    
+    // Observer pour changer d'image selon le scroll (dans les deux sens)
+    const changeImageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const currentIndex = Array.from(mobileBenefitItems).indexOf(entry.target);
+            
+            if (entry.isIntersecting) {
+                // Élément entre dans la zone - activer son image et son texte
+                mobileBenefitImgs.forEach((img, index) => {
+                    if (index === currentIndex) {
+                        img.classList.add('active');
+                    } else {
+                        img.classList.remove('active');
+                    }
+                });
+                mobileBenefitItems.forEach((item, index) => {
+                    if (index === currentIndex) {
+                        item.classList.add('visible');
+                    } else {
+                        item.classList.remove('visible');
+                    }
+                });
+            } else {
+                // Élément sort de la zone - vérifier quelle image et texte activer
+                const rect = entry.boundingClientRect;
+                const isScrollingUp = rect.top > window.innerHeight * 0.08;
+                
+                if (isScrollingUp && currentIndex > 0) {
+                    // Scroll vers le haut - activer l'image et texte précédents
+                    const prevIndex = currentIndex - 1;
+                    mobileBenefitImgs.forEach((img, index) => {
+                        if (index === prevIndex) {
+                            img.classList.add('active');
+                        } else {
+                            img.classList.remove('active');
+                        }
+                    });
+                    mobileBenefitItems.forEach((item, index) => {
+                        if (index === prevIndex) {
+                            item.classList.add('visible');
+                        } else {
+                            item.classList.remove('visible');
+                        }
+                    });
+                } else if (!isScrollingUp && currentIndex < mobileBenefitItems.length - 1) {
+                    // Scroll vers le bas - activer l'image et texte suivants
+                    const nextIndex = currentIndex + 1;
+                    mobileBenefitImgs.forEach((img, index) => {
+                        if (index === nextIndex) {
+                            img.classList.add('active');
+                        } else {
+                            img.classList.remove('active');
+                        }
+                    });
+                    mobileBenefitItems.forEach((item, index) => {
+                        if (index === nextIndex) {
+                            item.classList.add('visible');
+                        } else {
+                            item.classList.remove('visible');
+                        }
+                    });
+                }
+            }
+        });
+    }, {
+        threshold: 0.01,
+        rootMargin: '0px'
+    });
+
+    mobileBenefitItems.forEach(item => {
+        changeImageObserver.observe(item);
+    });
+    
+    // Cache toujours visible - pas besoin de JavaScript
+}
+
 // Initialize benefits scroll when DOM is loaded
-document.addEventListener('DOMContentLoaded', initBenefitsScroll);
+document.addEventListener('DOMContentLoaded', () => {
+    initBenefitsScroll(); // Desktop
+    initBenefitsMobile(); // Mobile
+});
 
 // Add animation styles
 const style = document.createElement('style');

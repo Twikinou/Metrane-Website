@@ -485,6 +485,8 @@ p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px;
+    position: relative;
+    z-index: 10 !important;
 }
 
 .section-header h2 {
@@ -1068,7 +1070,7 @@ p {
     
     /* Navigation */
     .navbar {
-        padding: 16px 0;
+        padding: 20px 0;
     }
     
     .navbar .container {
@@ -1078,7 +1080,12 @@ p {
     
     .navbar.scrolled .container {
         padding: 12px 20px;
-        margin: 8px 16px 0;
+        margin: 8px auto 0;
+        width: 90%;
+        border-radius: 50px;
+        background: rgba(247, 250, 252, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     }
     
     .nav-menu {
@@ -1368,11 +1375,7 @@ p {
         content: url('assets/reporting-editique-mobile.png');
     }
     
-    /* Benefits Section */
-    .benefits {
-        padding: 40px 0;
-        min-height: auto;
-    }
+    /* Benefits Section - Déjà gérée par les media queries globales */
     
     .benefits-layout {
         gap: 40px;
@@ -1657,6 +1660,149 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Benefits Mobile Section - Masquée par défaut */
+.benefits-mobile {
+    display: none;
+    padding: 40px 0 0;
+    background-color: var(--white);
+    padding-bottom: 10vh;
+}
+
+/* Masquer benefits desktop sur mobile et afficher benefits-mobile */
+@media (max-width: 768px) {
+    .benefits {
+        display: none;
+    }
+    
+    .benefits-mobile {
+        display: block;
+    }
+}
+
+.mobile-benefits-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-image-sticky {
+    position: sticky;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+
+.mobile-image-sticky::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: calc(-1 * (100vw - 100%)/2);
+    right: 0;
+    height: 55vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #FFFFFFFF 87.5%, #FFFFFF00 100%);
+    z-index: -10;
+    opacity: 1;
+}
+
+.mobile-img-container {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    background-color: #F8F9FA;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mobile-benefit-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    filter: grayscale(100%);
+}
+
+.mobile-benefit-img.active {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.mobile-benefits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25vh;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.mobile-benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.mobile-benefit-item.visible {
+    opacity: 1;
+}
+
+.mobile-benefit-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-benefit-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.mobile-benefit-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-benefit-text h3 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.mobile-benefit-text p {
+    font-size: 16px;
+    margin: 0;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.mobile-benefit-text .btn {
+    padding: 12px 24px;
+    font-size: 14px;
 }
 
 /* Additional hover effects */
