@@ -18,12 +18,30 @@
                     <img src="assets/metrane-logo.svg" alt="Metrane">
                 </a>
                 <div class="nav-menu">
-                    <a href="#" class="nav-link">Solutions</a>
-                    <a href="#" class="nav-link">Produits</a>
-                    <a href="#" class="nav-link">À propos</a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link" data-translate="nav.solutions">Solutions</a>
+                    <a href="#" class="nav-link" data-translate="nav.products">Produits</a>
+                    <a href="#" class="nav-link" data-translate="nav.about">À propos</a>
+                    <a href="#" class="nav-link" data-translate="nav.contact">Contact</a>
                 </div>
-                <button class="btn btn-primary">Demander une démo</button>
+                <div class="language-selector">
+                    <button class="language-toggle">
+                        <span class="current-lang">FR</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="fr">
+                            <span>🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" data-translate="nav.demo">Demander une démo</button>
                 <button class="mobile-menu-toggle">
                     <span></span>
                     <span></span>
@@ -36,11 +54,23 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
         <div class="mobile-menu-content">
-            <a href="#" class="mobile-nav-link">Solutions</a>
-            <a href="#" class="mobile-nav-link">Produits</a>
-            <a href="#" class="mobile-nav-link">À propos</a>
-            <a href="#" class="mobile-nav-link">Contact</a>
-            <a href="#" class="btn btn-primary">Demander une démo</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.solutions">Solutions</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.products">Produits</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.about">À propos</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+            <div class="mobile-language-selector">
+                <div class="mobile-language-options">
+                    <button class="mobile-language-option" data-lang="fr">
+                        <span>🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="mobile-language-option" data-lang="en">
+                        <span>🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary" data-translate="nav.demo">Demander une démo</a>
         </div>
     </div>
 
@@ -50,24 +80,24 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Prenez le contrôle<br>de vos <span class="text-primary">reportings</span></h1>
-                        <p>Vos métiers savent ce qu'ils veulent. Offrez-leur les moyens de le faire. Metrane vous aide à créer le reporting dont votre entreprise a besoin.</p>
+                        <h1 data-translate="hero.title">Prenez le contrôle<br>de vos <span class="text-primary">reportings</span></h1>
+                        <p data-translate="hero.subtitle">Vos métiers savent ce qu'ils veulent. Offrez-leur les moyens de le faire. Metrane vous aide à créer le reporting dont votre entreprise a besoin.</p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary">Demander une démo</button>
-                            <button class="btn btn-secondary">En savoir plus</button>
+                            <button class="btn btn-primary" data-translate="hero.btn.demo">Demander une démo</button>
+                            <button class="btn btn-secondary" data-translate="hero.btn.more">En savoir plus</button>
                         </div>
                         <div class="stats">
                             <div class="stat">
-                                <div class="stat-value">10+</div>
-                                <div class="stat-label">Années d'existence</div>
+                                <div class="stat-value" data-translate="hero.stat1.value">10+</div>
+                                <div class="stat-label" data-translate="hero.stat1.label">Années d'existence</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">100%</div>
-                                <div class="stat-label">Reportings couverts</div>
+                                <div class="stat-value" data-translate="hero.stat2.value">100%</div>
+                                <div class="stat-label" data-translate="hero.stat2.label">Reportings couverts</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">0</div>
-                                <div class="stat-label">Ligne de code requise</div>
+                                <div class="stat-value" data-translate="hero.stat3.value">0</div>
+                                <div class="stat-label" data-translate="hero.stat3.label">Ligne de code requise</div>
                             </div>
                         </div>
                     </div>
@@ -89,9 +119,9 @@
                     </div>
                     <div class="announcement-content">
                         <img src="assets/senegal-flag.png" alt="Sénégal" class="flag" loading="lazy">
-                        <h3>Metrane Arrive au Sénégal !</h3>
-                        <p>Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions locales, adaptées et réactives.</p>
-                        <button class="btn btn-primary">On vous montre ?</button>
+                        <h3 data-translate="announcement.title">Metrane Arrive au Sénégal !</h3>
+                        <p data-translate="announcement.text">Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions locales, adaptées et réactives.</p>
+                        <button class="btn btn-primary" data-translate="announcement.btn">On vous montre ?</button>
                     </div>
                 </div>
             </div>
@@ -101,9 +131,9 @@
         <section class="features">
             <div class="container">
                 <div class="section-header">
-                    <span class="tag">Qu'est-ce que Metrane ?</span>
-                    <h2>Tout ce dont vous avez<br>besoin dans un seul outil</h2>
-                    <p>Réalisez vos reportings réglementaires, opérationnels et documentaires dans une seule plateforme automatisée et sans une seule ligne de code.</p>
+                    <span class="tag" data-translate="features.tag">Qu'est-ce que Metrane ?</span>
+                    <h2 data-translate="features.title">Tout ce dont vous avez<br>besoin dans un seul outil</h2>
+                    <p data-translate="features.subtitle">Réalisez vos reportings réglementaires, opérationnels et documentaires dans une seule plateforme automatisée et sans une seule ligne de code.</p>
                 </div>
                 <div class="features-grid">
                     <!-- Reporting Réglementaire - Grande carte à gauche -->
@@ -111,8 +141,8 @@
                         <div class="feature-icon-white">
                             <img src="assets/icon-reporting.svg" alt="Reporting Réglementaire">
                         </div>
-                        <h3>Reporting Réglementaire</h3>
-                        <p>Simplifiez la production de vos reportings destinés à l'ACPR, la BCE ou toute autre autorité. Générez, validez et exportez vos états réglementaires en quelques clics, en assurant la transparence et la fiabilité de vos données.</p>
+                        <h3 data-translate="features.regulatory.title">Reporting Réglementaire</h3>
+                        <p data-translate="features.regulatory.text">Simplifiez la production de vos reportings destinés à l'ACPR, la BCE ou toute autre autorité. Générez, validez et exportez vos états réglementaires en quelques clics, en assurant la transparence et la fiabilité de vos données.</p>
                         
                         <div class="feature-preview large">
                             <img src="assets/reporting-reglementaire.png" alt="Reporting Réglementaire Preview" loading="lazy">
@@ -128,8 +158,8 @@
                                     <img src="assets/icon-business.svg" alt="Reporting Business">
                                 </div>
                                 <div>
-                                    <h3>Reporting Business</h3>
-                                    <p>Utilisez vos données financières (core banking, front office...) pour créer des rapports personnalisés et pilotez votre activité.</p>
+                                    <h3 data-translate="features.business.title">Reporting Business</h3>
+                                    <p data-translate="features.business.text">Utilisez vos données financières (core banking, front office...) pour créer des rapports personnalisés et pilotez votre activité.</p>
                                 </div>
                             </div>
                             <div class="feature-preview">
@@ -144,8 +174,8 @@
                                     <img src="assets/icon-editic.svg" alt="Editique">
                                 </div>
                                 <div>
-                                    <h3>Editique</h3>
-                                    <p>Automatisez la génération de vos relevés, rapports et documents, qu'ils soient internes ou destinés à vos clients.</p>
+                                    <h3 data-translate="features.editic.title">Editique</h3>
+                                    <p data-translate="features.editic.text">Automatisez la génération de vos relevés, rapports et documents, qu'ils soient internes ou destinés à vos clients.</p>
                                 </div>
                             </div>
                             <div class="feature-preview">
@@ -161,9 +191,9 @@
         <section class="benefits">
             <div class="container">
                 <div class="section-header">
-                    <span class="tag">Pourquoi choisir Metrane ?</span>
-                    <h2>Reprenez la main sur votre reporting</h2>
-                    <p>Des solutions qui s'adaptent à vos besoins de reporting, de la conformité aux outils agiles.</p>
+                    <span class="tag" data-translate="benefits.tag">Pourquoi choisir Metrane ?</span>
+                    <h2 data-translate="benefits.title">Reprenez la main sur votre reporting</h2>
+                    <p data-translate="benefits.subtitle">Des solutions qui s'adaptent à vos besoins de reporting, de la conformité aux outils agiles.</p>
                 </div>
                 <div class="benefits-layout">
                     <div class="benefits-images">
@@ -189,9 +219,9 @@
                                 <img src="assets/icon-scroll-1.png" alt="Autonomie">
                             </div>
                             <div class="benefit-text">
-                                <h3>Autonomie métier</h3>
-                                <p>Rendez vos équipes autonomes vis‑à‑vis des contraintes informatiques grâce à nos outils ouverts et intuitifs.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.autonomy.title">Autonomie métier</h3>
+                                <p data-translate="benefits.autonomy.text">Rendez vos équipes autonomes vis‑à‑vis des contraintes informatiques grâce à nos outils ouverts et intuitifs.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -201,9 +231,9 @@
                                 <img src="assets/icon-scroll-2.png" alt="Conformité">
                             </div>
                             <div class="benefit-text">
-                                <h3>Conformité assurée</h3>
-                                <p>Répondez aux enjeux réglementaires avec des solutions conformes et adaptées à vos réalités métier. Metrane vous aide à structurer vos reportings selon les normes en vigueur tout en gardant la souplesse nécessaire aux besoins du terrain.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.compliance.title">Conformité assurée</h3>
+                                <p data-translate="benefits.compliance.text">Répondez aux enjeux réglementaires avec des solutions conformes et adaptées à vos réalités métier. Metrane vous aide à structurer vos reportings selon les normes en vigueur tout en gardant la souplesse nécessaire aux besoins du terrain.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -213,9 +243,9 @@
                                 <img src="assets/icon-scroll-3.png" alt="Architecture">
                             </div>
                             <div class="benefit-text">
-                                <h3>Architecte de vos solutions</h3>
-                                <p>Construisez des reportings sur mesure pour vos besoins opérationnels. Ne vous adaptez plus à un outil rigide. Grâce à notre approche modulaire et flexible, vous construisez exactement ce dont vous avez besoin.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.architect.title">Architecte de vos solutions</h3>
+                                <p data-translate="benefits.architect.text">Construisez des reportings sur mesure pour vos besoins opérationnels. Ne vous adaptez plus à un outil rigide. Grâce à notre approche modulaire et flexible, vous construisez exactement ce dont vous avez besoin.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -225,9 +255,9 @@
                                 <img src="assets/icon-scroll-4.png" alt="Fintech">
                             </div>
                             <div class="benefit-text">
-                                <h3>Labellisé Fintech 2017</h3>
-                                <p>Metrane a été reconnu par l'écosystème Fintech pour sa capacité à innover sur un sujet complexe : le reporting métier. Une solution robuste, pensée pour des entreprises agiles.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.fintech.title">Labellisé Fintech 2017</h3>
+                                <p data-translate="benefits.fintech.text">Metrane a été reconnu par l'écosystème Fintech pour sa capacité à innover sur un sujet complexe : le reporting métier. Une solution robuste, pensée pour des entreprises agiles.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
                     </div>
@@ -239,9 +269,9 @@
         <section class="benefits-mobile">
             <div class="container">
                 <div class="section-header">
-                    <span class="tag">Pourquoi choisir Metrane ?</span>
-                    <h2>Reprenez la main sur votre reporting</h2>
-                    <p>Des solutions qui s'adaptent à vos besoins de reporting, de la conformité aux outils agiles.</p>
+                    <span class="tag" data-translate="benefits.tag">Pourquoi choisir Metrane ?</span>
+                    <h2 data-translate="benefits.title">Reprenez la main sur votre reporting</h2>
+                    <p data-translate="benefits.subtitle">Des solutions qui s'adaptent à vos besoins de reporting, de la conformité aux outils agiles.</p>
                 </div>
                 
                 <div class="mobile-benefits-layout">
@@ -263,9 +293,9 @@
                                 <img src="assets/icon-scroll-1.png" alt="Autonomie">
                             </div>
                             <div class="mobile-benefit-text">
-                                <h3>Autonomie métier</h3>
-                                <p>Rendez vos équipes autonomes vis‑à‑vis des contraintes informatiques grâce à nos outils ouverts et intuitifs.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.autonomy.title">Autonomie métier</h3>
+                                <p data-translate="benefits.autonomy.text">Rendez vos équipes autonomes vis‑à‑vis des contraintes informatiques grâce à nos outils ouverts et intuitifs.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -275,9 +305,9 @@
                                 <img src="assets/icon-scroll-2.png" alt="Conformité">
                             </div>
                             <div class="mobile-benefit-text">
-                                <h3>Conformité assurée</h3>
-                                <p>Répondez aux enjeux réglementaires avec des solutions conformes et adaptées à vos réalités métier. Metrane vous aide à structurer vos reportings selon les normes en vigueur tout en gardant la souplesse nécessaire aux besoins du terrain.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.compliance.title">Conformité assurée</h3>
+                                <p data-translate="benefits.compliance.text">Répondez aux enjeux réglementaires avec des solutions conformes et adaptées à vos réalités métier. Metrane vous aide à structurer vos reportings selon les normes en vigueur tout en gardant la souplesse nécessaire aux besoins du terrain.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -287,9 +317,9 @@
                                 <img src="assets/icon-scroll-3.png" alt="Architecture">
                             </div>
                             <div class="mobile-benefit-text">
-                                <h3>Architecte de vos solutions</h3>
-                                <p>Construisez des reportings sur mesure pour vos besoins opérationnels. Ne vous adaptez plus à un outil rigide. Grâce à notre approche modulaire et flexible, vous construisez exactement ce dont vous avez besoin.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.architect.title">Architecte de vos solutions</h3>
+                                <p data-translate="benefits.architect.text">Construisez des reportings sur mesure pour vos besoins opérationnels. Ne vous adaptez plus à un outil rigide. Grâce à notre approche modulaire et flexible, vous construisez exactement ce dont vous avez besoin.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
 
@@ -299,9 +329,9 @@
                                 <img src="assets/icon-scroll-4.png" alt="Fintech">
                             </div>
                             <div class="mobile-benefit-text">
-                                <h3>Labellisé Fintech 2017</h3>
-                                <p>Metrane a été reconnu par l'écosystème Fintech pour sa capacité à innover sur un sujet complexe : le reporting métier. Une solution robuste, pensée pour des entreprises agiles.</p>
-                                <button class="btn btn-primary">Découvrir nos solutions</button>
+                                <h3 data-translate="benefits.fintech.title">Labellisé Fintech 2017</h3>
+                                <p data-translate="benefits.fintech.text">Metrane a été reconnu par l'écosystème Fintech pour sa capacité à innover sur un sujet complexe : le reporting métier. Une solution robuste, pensée pour des entreprises agiles.</p>
+                                <button class="btn btn-primary" data-translate="benefits.btn">Découvrir nos solutions</button>
                             </div>
                         </div>
                     </div>
@@ -322,9 +352,9 @@
                         <div class="cta-badge">
                             <img src="assets/senegal-flag.png" alt="Sénégal" loading="lazy">
                         </div>
-                        <h2>Metrane Arrive au Sénégal !</h2>
-                        <p>Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions locales, adaptées et réactives.</p>
-                        <button class="btn btn-primary">On vous montre ?</button>
+                        <h2 data-translate="announcement.title">Metrane Arrive au Sénégal !</h2>
+                        <p data-translate="announcement.text">Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions locales, adaptées et réactives.</p>
+                        <button class="btn btn-primary" data-translate="announcement.btn">On vous montre ?</button>
                     </div>
                 </div>
             </div>
@@ -335,69 +365,69 @@
             <div class="container">
                 <div class="faq-layout">
                     <div class="faq-header">
-                        <span class="tag">F.A.Q.</span>
-                        <h2>Questions fréquentes</h2>
-                        <p>Trouvez des réponses aux questions courantes sur notre plateforme et nos services.</p>
-                        <button class="btn btn-primary">Contactez-nous</button>
+                        <span class="tag" data-translate="faq.tag">F.A.Q.</span>
+                        <h2 data-translate="faq.title">Questions fréquentes</h2>
+                        <p data-translate="faq.subtitle">Trouvez des réponses aux questions courantes sur notre plateforme et nos services.</p>
+                        <button class="btn btn-primary" data-translate="faq.contact">Contactez-nous</button>
                     </div>
                     <div class="faq-list">
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Qu'est-ce que Metrane ?</span>
+                                <span data-translate="faq.q1">Qu'est-ce que Metrane ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Metrane est une plateforme de reporting automatisée qui permet aux entreprises de créer, gérer et distribuer leurs rapports réglementaires et opérationnels sans nécessiter de compétences techniques.</p>
+                                <p data-translate="faq.a1">Metrane est une plateforme de reporting automatisée qui permet aux entreprises de créer, gérer et distribuer leurs rapports réglementaires et opérationnels sans nécessiter de compétences techniques.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Metrane est-il compatible avec les exigences réglementaires des banques ?</span>
+                                <span data-translate="faq.q2">Metrane est-il compatible avec les exigences réglementaires des banques ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Oui, Metrane est conçu pour répondre aux exigences réglementaires les plus strictes du secteur bancaire, incluant les normes ACPR, BCE et autres régulateurs internationaux.</p>
+                                <p data-translate="faq.a2">Oui, Metrane est conçu pour répondre aux exigences réglementaires les plus strictes du secteur bancaire, incluant les normes ACPR, BCE et autres régulateurs internationaux.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Quels types de reportings puis-je créer avec Metrane ?</span>
+                                <span data-translate="faq.q3">Quels types de reportings puis-je créer avec Metrane ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Vous pouvez créer des reportings réglementaires (Bâle III, FODEP, COCOTIER), des rapports business personnalisés, et des documents éditiques (relevés, avis d'opérations, exports).</p>
+                                <p data-translate="faq.a3">Vous pouvez créer des reportings réglementaires (Bâle III, FODEP, COCOTIER), des rapports business personnalisés, et des documents éditiques (relevés, avis d'opérations, exports).</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Est-ce que je peux intégrer Metrane avec mes outils existants (SAS, Power BI, Excel...) ?</span>
+                                <span data-translate="faq.q4">Est-ce que je peux intégrer Metrane avec mes outils existants (SAS, Power BI, Excel...) ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Absolument. Metrane dispose d'APIs et de connecteurs permettant une intégration fluide avec vos outils existants comme SAS, Power BI, Excel et bien d'autres.</p>
+                                <p data-translate="faq.a4">Absolument. Metrane dispose d'APIs et de connecteurs permettant une intégration fluide avec vos outils existants comme SAS, Power BI, Excel et bien d'autres.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Proposez-vous un support technique dédié ?</span>
+                                <span data-translate="faq.q5">Proposez-vous un support technique dédié ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Oui, nous offrons un support technique dédié avec des experts disponibles pour vous accompagner dans l'utilisation de la plateforme et la résolution de vos problématiques.</p>
+                                <p data-translate="faq.a5">Oui, nous offrons un support technique dédié avec des experts disponibles pour vous accompagner dans l'utilisation de la plateforme et la résolution de vos problématiques.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span class="faq-icon">+</span>
-                                <span>Combien de temps faut-il pour déployer Metrane dans ma structure ?</span>
+                                <span data-translate="faq.q6">Combien de temps faut-il pour déployer Metrane dans ma structure ?</span>
                             </button>
                             <div class="faq-answer">
-                                <p>Le déploiement de Metrane varie selon la complexité de votre structure, mais généralement, une mise en place complète peut être réalisée en 2 à 6 semaines avec notre accompagnement.</p>
+                                <p data-translate="faq.a6">Le déploiement de Metrane varie selon la complexité de votre structure, mais généralement, une mise en place complète peut être réalisée en 2 à 6 semaines avec notre accompagnement.</p>
                             </div>
                         </div>
                     </div>
@@ -409,9 +439,9 @@
         <section class="contact-cta">
             <div class="container">
                 <div class="contact-content">
-                    <h2>Besoin d'un renseignement ?</h2>
-                    <button class="btn btn-white">Contactez-nous</button>
-                    <p class="contact-phone">Besoin d'aide ? Appelez-nous au <strong>01 86 95 04 08</strong></p>
+                    <h2 data-translate="contact.title">Besoin d'un renseignement ?</h2>
+                    <button class="btn btn-white" data-translate="contact.btn">Contactez-nous</button>
+                    <p class="contact-phone" data-translate="contact.phone">Besoin d'aide ? Appelez-nous au <strong>01 86 95 04 08</strong></p>
                 </div>
             </div>
         </section>
@@ -439,52 +469,52 @@
                 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Produit</h4>
+                        <h4 data-translate="footer.product">Produit</h4>
                         <ul>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">API</a></li>
+                            <li><a href="#" data-translate="footer.features">Features</a></li>
+                            <li><a href="#" data-translate="footer.pricing">Pricing</a></li>
+                            <li><a href="#" data-translate="footer.security">Security</a></li>
+                            <li><a href="#" data-translate="footer.api">API</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Entreprise</h4>
+                        <h4 data-translate="footer.company">Entreprise</h4>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" data-translate="footer.about">About</a></li>
+                            <li><a href="#" data-translate="footer.careers">Careers</a></li>
+                            <li><a href="#" data-translate="footer.news">News</a></li>
+                            <li><a href="#" data-translate="footer.contact">Contact</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Ressources</h4>
+                        <h4 data-translate="footer.resources">Ressources</h4>
                         <ul>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="#" data-translate="footer.documentation">Documentation</a></li>
+                            <li><a href="#" data-translate="footer.help">Help Center</a></li>
+                            <li><a href="#" data-translate="footer.community">Community</a></li>
+                            <li><a href="#" data-translate="footer.blog">Blog</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Contact</h4>
+                        <h4 data-translate="footer.contact">Contact</h4>
                         <address>
-                            10 rue de Penthièvre<br>
+                            <span data-translate="footer.address">10 rue de Penthièvre<br>
                             75008 Paris<br>
-                            01 86 95 04 08
+                            01 86 95 04 08</span>
                         </address>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Metrane. Tous droits réservés.</p>
+                <p data-translate="footer.copyright">&copy; 2025 Metrane. Tous droits réservés.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+                    <a href="#" data-translate="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-translate="footer.terms">Terms of Service</a>
+                    <a href="#" data-translate="footer.cookies">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -493,5 +523,6 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="lenis-config.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 </body>
 </html>
