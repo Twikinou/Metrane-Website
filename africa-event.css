@@ -1,5 +1,43 @@
 /* Africa Event Page Styles */
 
+/* Navigation overrides for Africa event page */
+.navbar .nav-link {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #FFB74D;
+}
+
+/* When scrolled, return to normal colors */
+.navbar.scrolled .nav-link {
+    color: var(--secondary-color);
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Language selector text in white initially */
+.navbar .language-toggle {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .language-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.scrolled .language-toggle {
+    color: var(--secondary-color);
+    border-color: rgba(0, 23, 60, 0.3);
+}
+
+.navbar.scrolled .language-toggle:hover {
+    background: rgba(0, 23, 60, 0.05);
+}
+
 /* Hero Section with Advanced Animations */
 .hero-africa {
     position: relative;
