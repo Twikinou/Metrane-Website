@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.classList.add('gallery-dot');
             if (i === 0) dot.classList.add('active');
             dot.addEventListener('click', () => {
-                currentIndex = i * itemsPerView;
+                currentIndex = i;
                 updateGallery();
             });
             galleryDots.appendChild(dot);
@@ -126,25 +126,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateGallery() {
         if (galleryTrack) {
-            const offset = currentIndex * (100 / itemsPerView);
+            const itemWidth = 100 / itemsPerView; // Width of each item in percentage
+            const offset = currentIndex * itemWidth;
             galleryTrack.style.transform = `translateX(-${offset}%)`;
             
             // Update dots
             const dots = document.querySelectorAll('.gallery-dot');
             dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === Math.floor(currentIndex / itemsPerView));
+                dot.classList.toggle('active', index === Math.floor(currentIndex / 1));
             });
 
             // Update navigation buttons
-            if (prevBtn) prevBtn.disabled = currentIndex === 0;
-            if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
+            if (prevBtn) {
+                prevBtn.disabled = currentIndex === 0;
+                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            }
+            if (nextBtn) {
+                nextBtn.disabled = currentIndex >= maxIndex;
+                nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+            }
         }
     }
 
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             if (currentIndex > 0) {
-                currentIndex = Math.max(0, currentIndex - itemsPerView);
+                currentIndex = Math.max(0, currentIndex - 1);
                 updateGallery();
             }
         });
@@ -153,11 +160,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             if (currentIndex < maxIndex) {
-                currentIndex = Math.min(maxIndex, currentIndex + itemsPerView);
+                currentIndex = Math.min(maxIndex, currentIndex + 1);
                 updateGallery();
             }
         });
     }
+
+    // Initialize gallery
+    updateGallery();
 
     // View all photos
     if (viewAllBtn) {
@@ -428,14 +438,19 @@ document.addEventListener('DOMContentLoaded', function() {
         viewAllBtn.addEventListener('click', () => {
             const modal = document.createElement('div');
             modal.className = 'photo-modal';
+            // Get current language and translations
+            const currentLang = localStorage.getItem('selectedLanguage') || 'fr';
+            const modalTitle = translations[currentLang]['africa.gallery.modal.title'] || 'Toutes les photos de l\'événement';
+            const altText = translations[currentLang]['africa.gallery.modal.alt'] || 'Photo événement';
+            
             modal.innerHTML = `
                 <div class="modal-content">
                     <button class="modal-close">&times;</button>
-                    <h2 style="margin-bottom: 2rem;">Toutes les photos de l'événement</h2>
+                    <h2 style="margin-bottom: 2rem;">${modalTitle}</h2>
                     <div class="modal-grid">
                         ${allPhotos.map(photo => 
                             `<div class="modal-item">
-                                <img src="assets/africa-event/photos/${photo}" alt="Photo événement" loading="lazy">
+                                <img src="assets/africa-event/photos/${photo}" alt="${altText}" loading="lazy">
                             </div>`
                         ).join('')}
                     </div>

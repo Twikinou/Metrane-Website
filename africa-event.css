@@ -157,10 +157,14 @@
 }
 
 .hero-description {
-    color: white;
+    color: white !important;
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 3rem;
+}
+
+.hero-description p {
+    color: white !important;
 }
 
 .hero-cta {
