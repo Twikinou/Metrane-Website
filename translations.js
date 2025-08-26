@@ -205,7 +205,75 @@ const translations = {
         "solutions.cta.title": "Prêt à transformer votre reporting ?",
         "solutions.cta.subtitle": "Découvrez comment Metrane peut révolutionner votre approche du reporting",
         "solutions.cta.demo": "Demander une démo",
-        "solutions.cta.contact": "Nous contacter"
+        "solutions.cta.contact": "Nous contacter",
+        
+        // About Page
+        "about.tag": "QUI SOMMES-NOUS",
+        "about.hero.title": "Une startup<br><span class=\"text-primary\">deux fondateurs</span>",
+        "about.hero.subtitle": "Metrane Tools, l'outil innovant permettant de réaliser des reportings ouverts à la main de l'utilisateur, est né de la rencontre de deux experts passionnés par l'innovation dans le secteur financier.",
+        "about.stat1.value": "2013",
+        "about.stat1.label": "Année de création",
+        "about.stat2.value": "2",
+        "about.stat2.label": "Pays d'implantation",
+        "about.stat3.value": "100%",
+        "about.stat3.label": "Dédié au reporting",
+        
+        "about.history.tag": "NOTRE HISTOIRE",
+        "about.history.title": "Une aventure entrepreneuriale<br>au service du reporting",
+        
+        "about.timeline.year1": "2013",
+        "about.timeline.title1": "Première rencontre",
+        "about.timeline.desc1": "Vincent Mazé et Christian Priso se rencontrent lors d'un projet Bâle III et décident de créer une solution innovante basée sur une approche bottom-up permettant de réaliser des reportings ouverts.",
+        
+        "about.timeline.year2": "2014",
+        "about.timeline.title2": "Création de Metrane",
+        "about.timeline.desc2": "Lancement officiel de Metrane Tools, la solution qui permet aux métiers de créer et gérer leurs reportings sans développement informatique.",
+        
+        "about.timeline.year3": "2017",
+        "about.timeline.title3": "Labellisation Finance Innovation",
+        "about.timeline.desc3": "Metrane obtient le label Finance Innovation, reconnaissant l'innovation et la valeur ajoutée de sa solution pour le secteur financier.",
+        
+        "about.timeline.year4": "2020",
+        "about.timeline.title4": "Accélération de la croissance",
+        "about.timeline.desc4": "Adoption accrue de la solution par de nombreux établissements financiers, confirmant la pertinence de l'approche Metrane.",
+        
+        "about.timeline.year5": "2024",
+        "about.timeline.title5": "Expansion au Sénégal",
+        "about.timeline.desc5": "Ouverture de bureaux à Dakar pour accompagner les acteurs financiers africains avec des solutions adaptées au contexte local.",
+        
+        "about.founders.tag": "L'HISTOIRE DES FONDATEURS",
+        "about.founders.title": "Une rencontre décisive,<br>une vision partagée",
+        
+        "about.story.text1": "Tout a commencé lors d'un projet Bâle III pour un client important du secteur bancaire. Les directives n'étaient pas encore claires et changeaient régulièrement. Il fallait trouver une solution agile et souple pour permettre d'avancer les travaux sans avoir à tout refaire à chaque évolution réglementaire.",
+        "about.story.text2": "Face à cette complexité croissante, l'un des responsables du projet se demandait s'il ne fallait pas tout arrêter, « lever le crayon » le temps d'y voir plus clair. C'est à ce moment précis que Vincent et Christian ont eu une révélation.",
+        "about.story.highlight": "« Plutôt que de subir les évolutions, pourquoi ne pas créer un outil qui permettrait aux métiers eux-mêmes de construire et faire évoluer leurs reportings ? »",
+        "about.story.text3": "Cette idée révolutionnaire de mettre en place une solution agile, minimisant les développements et très évolutive, a donné naissance à Metrane. Une approche bottom-up unique qui redonne le pouvoir aux utilisateurs métier.",
+        
+        "about.founder1.role": "Co-fondateur & CEO",
+        "about.founder1.bio": "Diplômé d'école d'ingénieur avec plus de 20 ans d'expérience dans le secteur informatique et financier. Vincent apporte sa vision stratégique et son expertise technique pour développer des solutions innovantes adaptées aux besoins des métiers financiers.",
+        
+        "about.founder2.role": "Co-fondateur & CTO",
+        "about.founder2.bio": "Diplômé d'École de Commerce en 1991, Christian cumule plus de 30 ans d'expérience dans le commercial et le marketing. Spécialisé dans les métiers financiers et les solutions de reporting, il apporte son expertise métier et sa connaissance approfondie des besoins clients.",
+        
+        "about.values.tag": "NOS VALEURS",
+        "about.values.title": "Ce qui nous anime<br>au quotidien",
+        
+        "about.value1.title": "Innovation",
+        "about.value1.desc": "Nous repoussons constamment les limites pour offrir des solutions toujours plus performantes et adaptées.",
+        
+        "about.value2.title": "Agilité",
+        "about.value2.desc": "Notre approche flexible permet de s'adapter rapidement aux évolutions réglementaires et aux besoins métiers.",
+        
+        "about.value3.title": "Fiabilité",
+        "about.value3.desc": "Garantir l'exactitude et la cohérence des données pour des reportings sans faille.",
+        
+        "about.value4.title": "Autonomie",
+        "about.value4.desc": "Redonner le pouvoir aux utilisateurs métier pour qu'ils créent leurs propres reportings.",
+        
+        "about.cta.title": "Prêt à transformer votre reporting ?",
+        "about.cta.subtitle": "Découvrez comment Metrane peut révolutionner votre approche du reporting financier.",
+        "about.cta.demo": "Demander une démo",
+        "about.cta.solutions": "Découvrir nos solutions"
     },
     en: {
         // Navigation
@@ -413,7 +481,75 @@ const translations = {
         "solutions.cta.title": "Ready to transform your reporting?",
         "solutions.cta.subtitle": "Discover how Metrane can revolutionize your approach to reporting",
         "solutions.cta.demo": "Request a demo",
-        "solutions.cta.contact": "Contact us"
+        "solutions.cta.contact": "Contact us",
+        
+        // About Page
+        "about.tag": "WHO WE ARE",
+        "about.hero.title": "A startup<br><span class=\"text-primary\">two founders</span>",
+        "about.hero.subtitle": "Metrane Tools, the innovative tool that enables open reporting at the user's fingertips, was born from the meeting of two experts passionate about innovation in the financial sector.",
+        "about.stat1.value": "2013",
+        "about.stat1.label": "Founded",
+        "about.stat2.value": "2",
+        "about.stat2.label": "Countries",
+        "about.stat3.value": "100%",
+        "about.stat3.label": "Reporting focused",
+        
+        "about.history.tag": "OUR HISTORY",
+        "about.history.title": "An entrepreneurial adventure<br>serving reporting",
+        
+        "about.timeline.year1": "2013",
+        "about.timeline.title1": "First meeting",
+        "about.timeline.desc1": "Vincent Mazé and Christian Priso meet during a Basel III project and decide to create an innovative solution based on a bottom-up approach enabling open reporting.",
+        
+        "about.timeline.year2": "2014",
+        "about.timeline.title2": "Creation of Metrane",
+        "about.timeline.desc2": "Official launch of Metrane Tools, the solution that allows business users to create and manage their reports without IT development.",
+        
+        "about.timeline.year3": "2017",
+        "about.timeline.title3": "Finance Innovation Label",
+        "about.timeline.desc3": "Metrane obtains the Finance Innovation label, recognizing the innovation and added value of its solution for the financial sector.",
+        
+        "about.timeline.year4": "2020",
+        "about.timeline.title4": "Growth acceleration",
+        "about.timeline.desc4": "Increased adoption of the solution by numerous financial institutions, confirming the relevance of the Metrane approach.",
+        
+        "about.timeline.year5": "2024",
+        "about.timeline.title5": "Expansion to Senegal",
+        "about.timeline.desc5": "Opening of offices in Dakar to support African financial players with solutions adapted to the local context.",
+        
+        "about.founders.tag": "THE FOUNDERS' STORY",
+        "about.founders.title": "A decisive meeting,<br>a shared vision",
+        
+        "about.story.text1": "It all started during a Basel III project for a major banking client. The guidelines were not yet clear and kept changing. A flexible and agile solution was needed to advance the work without having to redo everything with each regulatory change.",
+        "about.story.text2": "Faced with this growing complexity, one of the project managers wondered whether they should stop everything, 'put down the pen' until things became clearer. It was at that precise moment that Vincent and Christian had a revelation.",
+        "about.story.highlight": "'Rather than suffering through changes, why not create a tool that would allow business users themselves to build and evolve their reports?'",
+        "about.story.text3": "This revolutionary idea of implementing an agile solution, minimizing development and highly scalable, gave birth to Metrane. A unique bottom-up approach that gives power back to business users.",
+        
+        "about.founder1.role": "Co-founder & CEO",
+        "about.founder1.bio": "Engineering school graduate with over 20 years of experience in the IT and financial sector. Vincent brings his strategic vision and technical expertise to develop innovative solutions tailored to the needs of financial businesses.",
+        
+        "about.founder2.role": "Co-founder & CTO",
+        "about.founder2.bio": "Business School graduate in 1991, Christian has over 30 years of experience in sales and marketing. Specialized in financial businesses and reporting solutions, he brings his business expertise and deep knowledge of customer needs.",
+        
+        "about.values.tag": "OUR VALUES",
+        "about.values.title": "What drives us<br>every day",
+        
+        "about.value1.title": "Innovation",
+        "about.value1.desc": "We constantly push the boundaries to offer increasingly efficient and adapted solutions.",
+        
+        "about.value2.title": "Agility",
+        "about.value2.desc": "Our flexible approach allows us to quickly adapt to regulatory changes and business needs.",
+        
+        "about.value3.title": "Reliability",
+        "about.value3.desc": "Ensuring accuracy and consistency of data for flawless reporting.",
+        
+        "about.value4.title": "Autonomy",
+        "about.value4.desc": "Giving power back to business users so they can create their own reports.",
+        
+        "about.cta.title": "Ready to transform your reporting?",
+        "about.cta.subtitle": "Discover how Metrane can revolutionize your approach to financial reporting.",
+        "about.cta.demo": "Request a demo",
+        "about.cta.solutions": "Discover our solutions"
     }
 };
 

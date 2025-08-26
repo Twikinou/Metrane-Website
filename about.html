@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Metrane | Une startup deux fondateurs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Radio+Canada+Big:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/metrane-logo.svg" alt="Metrane">
+                </a>
+                <div class="nav-menu">
+                    <a href="solutions.html" class="nav-link" data-translate="nav.solutions">Solutions</a>
+                    <a href="#" class="nav-link" data-translate="nav.products">Produits</a>
+                    <a href="about.html" class="nav-link active" data-translate="nav.about">À propos</a>
+                    <a href="#" class="nav-link" data-translate="nav.contact">Contact</a>
+                </div>
+                <div class="language-selector">
+                    <button class="language-toggle">
+                        <span class="current-lang">FR</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="fr">
+                            <span>🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" data-translate="nav.demo">Demander une démo</button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <a href="solutions.html" class="mobile-nav-link" data-translate="nav.solutions">Solutions</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.products">Produits</a>
+            <a href="about.html" class="mobile-nav-link active" data-translate="nav.about">À propos</a>
+            <a href="#" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+            <div class="mobile-language-selector">
+                <div class="mobile-language-options">
+                    <button class="mobile-language-option" data-lang="fr">
+                        <span>🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="mobile-language-option" data-lang="en">
+                        <span>🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary" data-translate="nav.demo">Demander une démo</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <div class="about-hero-text">
+                        <span class="tag" data-translate="about.tag">QUI SOMMES-NOUS</span>
+                        <h1 data-translate="about.hero.title">Une startup<br><span class="text-primary">deux fondateurs</span></h1>
+                        <p data-translate="about.hero.subtitle">Metrane Tools, l'outil innovant permettant de réaliser des reportings ouverts à la main de l'utilisateur, est né de la rencontre de deux experts passionnés par l'innovation dans le secteur financier.</p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-value" data-translate="about.stat1.value">2013</div>
+                                <div class="stat-label" data-translate="about.stat1.label">Année de création</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" data-translate="about.stat2.value">2</div>
+                                <div class="stat-label" data-translate="about.stat2.label">Pays d'implantation</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" data-translate="about.stat3.value">100%</div>
+                                <div class="stat-label" data-translate="about.stat3.label">Dédié au reporting</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-hero-visual">
+                        <img src="assets/team_metrane.svg" alt="Team Metrane" class="about-hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Timeline Section -->
+        <section class="history-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag" data-translate="about.history.tag">NOTRE HISTOIRE</span>
+                    <h2 data-translate="about.history.title">Une aventure entrepreneuriale<br>au service du reporting</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year" data-translate="about.timeline.year1">2013</div>
+                            <h3 data-translate="about.timeline.title1">Première rencontre</h3>
+                            <p data-translate="about.timeline.desc1">Vincent Mazé et Christian Priso se rencontrent lors d'un projet Bâle III et décident de créer une solution innovante basée sur une approche bottom-up permettant de réaliser des reportings ouverts.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year" data-translate="about.timeline.year2">2014</div>
+                            <h3 data-translate="about.timeline.title2">Création de Metrane</h3>
+                            <p data-translate="about.timeline.desc2">Lancement officiel de Metrane Tools, la solution qui permet aux métiers de créer et gérer leurs reportings sans développement informatique.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year" data-translate="about.timeline.year3">2017</div>
+                            <h3 data-translate="about.timeline.title3">Labellisation Finance Innovation</h3>
+                            <p data-translate="about.timeline.desc3">Metrane obtient le label Finance Innovation, reconnaissant l'innovation et la valeur ajoutée de sa solution pour le secteur financier.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year" data-translate="about.timeline.year4">2020</div>
+                            <h3 data-translate="about.timeline.title4">Accélération de la croissance</h3>
+                            <p data-translate="about.timeline.desc4">Adoption accrue de la solution par de nombreux établissements financiers, confirmant la pertinence de l'approche Metrane.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year" data-translate="about.timeline.year5">2024</div>
+                            <h3 data-translate="about.timeline.title5">Expansion au Sénégal</h3>
+                            <p data-translate="about.timeline.desc5">Ouverture de bureaux à Dakar pour accompagner les acteurs financiers africains avec des solutions adaptées au contexte local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders Story Section -->
+        <section class="founders-story">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag" data-translate="about.founders.tag">L'HISTOIRE DES FONDATEURS</span>
+                    <h2 data-translate="about.founders.title">Une rencontre décisive,<br>une vision partagée</h2>
+                </div>
+
+                <div class="founders-story-content">
+                    <div class="story-card">
+                        <p class="story-text" data-translate="about.story.text1">
+                            Tout a commencé lors d'un projet Bâle III pour un client important du secteur bancaire. Les directives n'étaient pas encore claires et changeaient régulièrement. Il fallait trouver une solution agile et souple pour permettre d'avancer les travaux sans avoir à tout refaire à chaque évolution réglementaire.
+                        </p>
+                        <p class="story-text" data-translate="about.story.text2">
+                            Face à cette complexité croissante, l'un des responsables du projet se demandait s'il ne fallait pas tout arrêter, « lever le crayon » le temps d'y voir plus clair. C'est à ce moment précis que Vincent et Christian ont eu une révélation.
+                        </p>
+                        <p class="story-highlight" data-translate="about.story.highlight">
+                            « Plutôt que de subir les évolutions, pourquoi ne pas créer un outil qui permettrait aux métiers eux-mêmes de construire et faire évoluer leurs reportings ? »
+                        </p>
+                        <p class="story-text" data-translate="about.story.text3">
+                            Cette idée révolutionnaire de mettre en place une solution agile, minimisant les développements et très évolutive, a donné naissance à Metrane. Une approche bottom-up unique qui redonne le pouvoir aux utilisateurs métier.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <div class="founder-image">
+                            <img src="assets/vincent maze.jpg" alt="Vincent Mazé">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Vincent Mazé</h3>
+                            <p class="founder-role" data-translate="about.founder1.role">Co-fondateur & CEO</p>
+                            <p class="founder-bio" data-translate="about.founder1.bio">
+                                Diplômé d'école d'ingénieur avec plus de 20 ans d'expérience dans le secteur informatique et financier. Vincent apporte sa vision stratégique et son expertise technique pour développer des solutions innovantes adaptées aux besoins des métiers financiers.
+                            </p>
+                            <div class="founder-social">
+                                <a href="#" aria-label="LinkedIn Vincent Mazé">
+                                    <img src="assets/linkedin.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="founder-card">
+                        <div class="founder-image">
+                            <img src="assets/christian priso.jpg" alt="Christian Priso">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Christian Priso</h3>
+                            <p class="founder-role" data-translate="about.founder2.role">Co-fondateur & CTO</p>
+                            <p class="founder-bio" data-translate="about.founder2.bio">
+                                Diplômé d'École de Commerce en 1991, Christian cumule plus de 30 ans d'expérience dans le commercial et le marketing. Spécialisé dans les métiers financiers et les solutions de reporting, il apporte son expertise métier et sa connaissance approfondie des besoins clients.
+                            </p>
+                            <div class="founder-social">
+                                <a href="#" aria-label="LinkedIn Christian Priso">
+                                    <img src="assets/linkedin.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag" data-translate="about.values.tag">NOS VALEURS</span>
+                    <h2 data-translate="about.values.title">Ce qui nous anime<br>au quotidien</h2>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="#E6F3FF"/>
+                                <path d="M24 16V32M16 24H32" stroke="#0052CC" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="about.value1.title">Innovation</h3>
+                        <p data-translate="about.value1.desc">Nous repoussons constamment les limites pour offrir des solutions toujours plus performantes et adaptées.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="#E6F3FF"/>
+                                <path d="M20 24L22.5 26.5L28 21" stroke="#0052CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="about.value2.title">Agilité</h3>
+                        <p data-translate="about.value2.desc">Notre approche flexible permet de s'adapter rapidement aux évolutions réglementaires et aux besoins métiers.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="#E6F3FF"/>
+                                <path d="M24 20V24L27 27" stroke="#0052CC" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="8" stroke="#0052CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="about.value3.title">Fiabilité</h3>
+                        <p data-translate="about.value3.desc">Garantir l'exactitude et la cohérence des données pour des reportings sans faille.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="#E6F3FF"/>
+                                <path d="M19 22C19 19.2386 21.2386 17 24 17C26.7614 17 29 19.2386 29 22V31H19V22Z" stroke="#0052CC" stroke-width="2"/>
+                                <rect x="17" y="26" width="14" height="8" stroke="#0052CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="about.value4.title">Autonomie</h3>
+                        <p data-translate="about.value4.desc">Redonner le pouvoir aux utilisateurs métier pour qu'ils créent leurs propres reportings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 data-translate="about.cta.title">Prêt à transformer votre reporting ?</h2>
+                    <p data-translate="about.cta.subtitle">Découvrez comment Metrane peut révolutionner votre approche du reporting financier.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" data-translate="about.cta.demo">Demander une démo</a>
+                        <a href="solutions.html" class="btn btn-secondary" data-translate="about.cta.solutions">Découvrir nos solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/metrane-logo.svg" alt="Metrane" class="footer-logo">
+                    <img src="assets/labeling.png" alt="Fintech 2017" class="fintech-label" loading="lazy">
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="assets/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" aria-label="X (Twitter)">
+                            <img src="assets/x.png" alt="X">
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <img src="assets/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-translate="footer.product">Produit</h4>
+                        <ul>
+                            <li><a href="#" data-translate="footer.features">Features</a></li>
+                            <li><a href="#" data-translate="footer.pricing">Pricing</a></li>
+                            <li><a href="#" data-translate="footer.security">Security</a></li>
+                            <li><a href="#" data-translate="footer.api">API</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.company">Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html" data-translate="footer.about">About</a></li>
+                            <li><a href="#" data-translate="footer.careers">Careers</a></li>
+                            <li><a href="#" data-translate="footer.news">News</a></li>
+                            <li><a href="#" data-translate="footer.contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.resources">Ressources</h4>
+                        <ul>
+                            <li><a href="#" data-translate="footer.documentation">Documentation</a></li>
+                            <li><a href="#" data-translate="footer.help">Help Center</a></li>
+                            <li><a href="#" data-translate="footer.community">Community</a></li>
+                            <li><a href="#" data-translate="footer.blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.contact">Contact</h4>
+                        <address>
+                            <span data-translate="footer.address">10 rue de Penthièvre<br>
+                            75008 Paris<br>
+                            01 86 95 04 08</span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2025 Metrane. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#" data-translate="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-translate="footer.terms">Terms of Service</a>
+                    <a href="#" data-translate="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="lenis-config.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>
