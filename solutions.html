@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Metrane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Radio+Canada+Big:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="solutions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/metrane-logo.svg" alt="Metrane">
+                </a>
+                <div class="nav-menu">
+                    <a href="solutions.html" class="nav-link active" data-translate="nav.solutions">Solutions</a>
+                    <a href="index.html#benefits" class="nav-link" data-translate="nav.products">Produits</a>
+                    <a href="index.html#faq" class="nav-link" data-translate="nav.about">À propos</a>
+                    <a href="index.html#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                </div>
+                <div class="language-selector">
+                    <button class="language-toggle">
+                        <span class="current-lang">FR</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="fr">
+                            <span>🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" data-translate="nav.demo">Demander une démo</button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <a href="solutions.html" class="mobile-nav-link active" data-translate="nav.solutions">Solutions</a>
+            <a href="index.html#benefits" class="mobile-nav-link" data-translate="nav.products">Produits</a>
+            <a href="index.html#faq" class="mobile-nav-link" data-translate="nav.about">À propos</a>
+            <a href="index.html#contact" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+            <div class="mobile-language-selector">
+                <div class="mobile-language-options">
+                    <button class="mobile-language-option" data-lang="fr">
+                        <span>🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="mobile-language-option" data-lang="en">
+                        <span>🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn btn-primary" data-translate="nav.demo">Demander une démo</a>
+        </div>
+    </div>
+
+    <!-- Hero Section avec animations avancées -->
+    <section class="hero-solutions">
+        <div class="animated-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-translate="solutions.hero.title">
+                        Devenez l'architecte de <span class="gradient-text">vos solutions</span>
+                    </h1>
+                    <p class="hero-subtitle" data-translate="solutions.hero.subtitle">
+                        Metrane Tools, une solution simple, économique et évolutive pour tous vos besoins de reporting
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-pill">
+                            <span class="pill-icon">✓</span>
+                            <span data-translate="solutions.hero.feature1">Sans code</span>
+                        </div>
+                        <div class="feature-pill">
+                            <span class="pill-icon">✓</span>
+                            <span data-translate="solutions.hero.feature2">Autonomie totale</span>
+                        </div>
+                        <div class="feature-pill">
+                            <span class="pill-icon">✓</span>
+                            <span data-translate="solutions.hero.feature3">Évolutif</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-large" data-translate="solutions.hero.cta1">
+                            Découvrir Metrane Tools
+                        </button>
+                        <button class="btn btn-secondary btn-large" data-translate="solutions.hero.cta2">
+                            Voir une démo
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <img src="assets/solutions/AdobeReporting.png" alt="Adobe Reporting" class="hero-img-main floating">
+                        <img src="assets/solutions/AdobeMove.png" alt="Adobe Move" class="hero-img-secondary orbit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Construction & Visualisation -->
+    <section id="construction" class="construction-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="solutions.construction.tag">Solutions complètes</span>
+                <h2 class="section-title" data-translate="solutions.construction.title">
+                    Construction & Visualisation
+                </h2>
+                <p class="section-subtitle" data-translate="solutions.construction.subtitle">
+                    Quittez vos apriori sur le reporting complexe, chronophage et coûteux et découvrez notre solution intuitive de reporting
+                </p>
+            </div>
+            
+            <div class="construction-content">
+                <div class="construction-visual">
+                    <img src="assets/solutions/Construction-Visualisation_tool_image.png.png" alt="Construction Tool" class="pulse-animation">
+                </div>
+                <div class="construction-text">
+                    <h3 data-translate="solutions.construction.question">Metrane comment ça marche ?</h3>
+                    <p data-translate="solutions.construction.description">
+                        Avec Metrane, plus besoin de créer des environnements spécifiques et faire des développements, vous pourrez réaliser tous vos reportings en seulement 3 étapes.
+                    </p>
+                    <div class="steps-list">
+                        <div class="step-item" data-aos="fade-up">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4 data-translate="solutions.construction.step1.title">Sélectionnez les informations</h4>
+                                <p data-translate="solutions.construction.step1.text">Construisez votre report aussi facilement que sur un outil de bureautique</p>
+                            </div>
+                        </div>
+                        <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4 data-translate="solutions.construction.step2.title">Chargez vos fichiers</h4>
+                                <p data-translate="solutions.construction.step2.text">Visualisez vos résultats instantanément</p>
+                            </div>
+                        </div>
+                        <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4 data-translate="solutions.construction.step3.title">Devenez autonome !</h4>
+                                <p data-translate="solutions.construction.step3.text">Metrane a été conçu pour les non-informaticiens avec un moteur de règles ouvert, un algorithme de paramétrage intuitif et une interface de reporting facile d'utilisation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Metrane Tools -->
+    <section id="metrane-tools" class="tools-section">
+        <div class="container">
+            <div class="tools-header">
+                <div class="tools-badge">
+                    <img src="assets/metrane-logo.svg" alt="Metrane">
+                    <span>TOOLS</span>
+                </div>
+                <h2 class="section-title" data-translate="solutions.tools.title">
+                    Metrane Tools, une solution simple, économique et évolutive
+                </h2>
+            </div>
+
+            <div class="tools-benefits">
+                <div class="benefit-card" data-aos="zoom-in">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="#0099FF" stroke-width="2"/>
+                            <path d="M16 24L22 30L32 18" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="solutions.tools.benefit1.title">Gain de temps</h3>
+                    <p data-translate="solutions.tools.benefit1.text">Réalisez vos reportings réglementaires ou business, effectuez des simulations, simulez des cas de stress</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="12" width="32" height="24" rx="4" stroke="#0099FF" stroke-width="2"/>
+                            <path d="M20 24H28M24 20V28" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="solutions.tools.benefit2.title">Data crossings</h3>
+                    <p data-translate="solutions.tools.benefit2.text">Utilisez Metrane Tools pour vos "data crossings", interfacez un entrepôt de données avec des outils périphériques</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="16" r="6" stroke="#0099FF" stroke-width="2"/>
+                            <path d="M12 34C12 28 17 24 24 24C31 24 36 28 36 34" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="solutions.tools.benefit3.title">Solutions adhoc</h3>
+                    <p data-translate="solutions.tools.benefit3.text">Remplacez des développements adhoc, des solutions bureautiques, etc.</p>
+                </div>
+            </div>
+
+            <div class="tools-schema">
+                <img src="assets/solutions/METRANE_SCHEMA.png" alt="Schema Metrane" class="schema-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Bottom Up Concept -->
+    <section id="bottom-up" class="bottom-up-section">
+        <div class="container">
+            <div class="bottom-up-content">
+                <div class="content-text">
+                    <h2 class="section-title" data-translate="solutions.bottomup.title">
+                        Le concept "Bottom Up"
+                    </h2>
+                    <p class="lead" data-translate="solutions.bottomup.lead">
+                        Avec la démarche Bottom-up de Metrane, prendre en compte des évolutions et faire des simulations n'a jamais été aussi simple.
+                    </p>
+                    <p data-translate="solutions.bottomup.description">
+                        Metrane est basé sur un concept innovant, le « bottom-up », qui vous permet de paramétrer vos reportings en partant de données élémentaires pour construire les informations par étapes successives.
+                    </p>
+                    <p data-translate="solutions.bottomup.benefit">
+                        Grâce à ce procédé, vous allez pouvoir définir vos règles de gestion, utiliser et construire des modèles de rapport, tout cela sans aucune connaissance informatique. Une fois que vous aurez chargé vos données, vos reports seront accessibles et mis à jour automatiquement.
+                    </p>
+                    <p data-translate="solutions.bottomup.period">
+                        À chaque période de reporting, il vous suffira de charger vos nouvelles données en intégrant vous-même vos fichiers via l'interface de Metrane Tools.
+                    </p>
+                    <div class="cta-group">
+                        <button class="btn btn-primary" data-translate="solutions.bottomup.cta1">En savoir plus</button>
+                        <button class="btn btn-outline" data-translate="solutions.bottomup.cta2">Demander une démo</button>
+                    </div>
+                </div>
+                <div class="content-visual">
+                    <div class="bottom-up-diagram">
+                        <img src="assets/solutions/schema-bottom up.png" alt="Bottom Up Schema" class="diagram-img floating">
+                        <div class="diagram-points">
+                            <div class="point point-1 pulse" data-title="Données élémentaires">
+                                <span>1</span>
+                            </div>
+                            <div class="point point-2 pulse" data-title="Règles de gestion">
+                                <span>2</span>
+                            </div>
+                            <div class="point point-3 pulse" data-title="Rapports finaux">
+                                <span>3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Engagements -->
+    <section id="engagements" class="engagements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="solutions.engagements.title">Nos engagements</h2>
+                <p class="section-subtitle" data-translate="solutions.engagements.subtitle">
+                    Avec Metrane Tools vous pourrez :
+                </p>
+            </div>
+            <div class="engagements-grid">
+                <div class="engagement-card" data-aos="flip-left">
+                    <div class="card-icon">
+                        <img src="assets/icon-scroll-1.png" alt="Économies">
+                    </div>
+                    <h3 data-translate="solutions.engagements.card1.title">Réaliser des économies</h3>
+                    <p data-translate="solutions.engagements.card1.text">Simplifier votre process en remplaçant vos solutions bureautiques</p>
+                </div>
+                <div class="engagement-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-icon">
+                        <img src="assets/icon-scroll-2.png" alt="Moderniser">
+                    </div>
+                    <h3 data-translate="solutions.engagements.card2.title">Moderniser les dispositifs</h3>
+                    <p data-translate="solutions.engagements.card2.text">Moderniser les dispositifs de production de vos reportings</p>
+                </div>
+                <div class="engagement-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-icon">
+                        <img src="assets/icon-scroll-3.png" alt="Contraintes">
+                    </div>
+                    <h3 data-translate="solutions.engagements.card3.title">Faire des contraintes une opportunité</h3>
+                    <p data-translate="solutions.engagements.card3.text">Faire des contraintes réglementaires une opportunité !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Notre Métier -->
+    <section id="notre-metier" class="metier-section">
+        <div class="parallax-bg"></div>
+        <div class="container">
+            <div class="metier-content">
+                <h2 class="section-title" data-translate="solutions.metier.title">Notre métier</h2>
+                
+                <div class="metier-block">
+                    <h3 data-translate="solutions.metier.banks.title">Les banques face au tsunami réglementaire</h3>
+                    <p data-translate="solutions.metier.banks.text">
+                        Les exigences croissantes et en constante évolution pèsent sur les établissements assujettis qui doivent produire de nombreux reportings à des fréquences régulières, destinés aux autorités de contrôle (ACP, CCLRF, AMF...). Certain allant jusqu'à évoquer un « tsunami réglementaire » pour décrire cette accumulation de réglementations (42 nouvelles directives en matière de réglementation bancaire de 2008 à 2015, rapport EBF).
+                    </p>
+                    <p data-translate="solutions.metier.banks.study">
+                        Une étude du cabinet Ernst & Young pour l'ABBL montre qu'en moyenne pour les banques, « la mise en conformité aux nouvelles règles représentait 41% de leurs investissements totaux, variant de 23% auprès des grandes institutions à 67% pour les plus petites ».
+                    </p>
+                </div>
+
+                <div class="metier-block">
+                    <h3 data-translate="solutions.metier.solution.title">Notre solution de reporting réglementaire et business</h3>
+                    <p data-translate="solutions.metier.solution.text">
+                        Face ces enjeux, nous avons construit une solution économique, plus évolutive que celles proposées par les progiciels réglementaires et plus simple à mettre en place que les développements internes.
+                    </p>
+                    
+                    <div class="advantages-list">
+                        <h4 data-translate="solutions.metier.advantages.title">Les avantages de la solution Metrane</h4>
+                        <ul>
+                            <li data-translate="solutions.metier.advantages.item1">Un progiciel sur mesure et clé en main (totalement intégré dé la récupération des données à la visualisation des reportings)</li>
+                            <li data-translate="solutions.metier.advantages.item2">Par sa simplicité, notre solution s'adresse directement aux métiers (aucune connaissance informatique n'est requise pour utiliser notre outil)</li>
+                            <li data-translate="solutions.metier.advantages.item3">La réduction de vos coûts informatiques (une solution unique pour tous vos besoins de reporting)</li>
+                            <li data-translate="solutions.metier.advantages.item4">Une solution fiable et robuste (assure une piste d'audit détaillée et permet le traitement de gros volumes de données)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="solutions.cta.title">Prêt à transformer votre reporting ?</h2>
+                <p data-translate="solutions.cta.subtitle">Découvrez comment Metrane peut révolutionner votre approche du reporting</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white btn-large" data-translate="solutions.cta.demo">Demander une démo</button>
+                    <button class="btn btn-outline-white btn-large" data-translate="solutions.cta.contact">Nous contacter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/metrane-logo.svg" alt="Metrane" class="footer-logo">
+                    <img src="assets/labeling.png" alt="Fintech 2017" class="fintech-label" loading="lazy">
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="assets/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <img src="assets/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <img src="assets/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-translate="footer.product">Produit</h4>
+                        <ul>
+                            <li><a href="#" data-translate="footer.features">Features</a></li>
+                            <li><a href="#" data-translate="footer.pricing">Pricing</a></li>
+                            <li><a href="#" data-translate="footer.security">Security</a></li>
+                            <li><a href="#" data-translate="footer.api">API</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.company">Entreprise</h4>
+                        <ul>
+                            <li><a href="#" data-translate="footer.about">About</a></li>
+                            <li><a href="#" data-translate="footer.careers">Careers</a></li>
+                            <li><a href="#" data-translate="footer.news">News</a></li>
+                            <li><a href="#" data-translate="footer.contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.resources">Ressources</h4>
+                        <ul>
+                            <li><a href="#" data-translate="footer.documentation">Documentation</a></li>
+                            <li><a href="#" data-translate="footer.help">Help Center</a></li>
+                            <li><a href="#" data-translate="footer.community">Community</a></li>
+                            <li><a href="#" data-translate="footer.blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer.contact">Contact</h4>
+                        <address>
+                            <span data-translate="footer.address">10 rue de Penthièvre<br>
+                            75008 Paris<br>
+                            01 86 95 04 08</span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2025 Metrane. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#" data-translate="footer.privacy">Privacy Policy</a>
+                    <a href="#" data-translate="footer.terms">Terms of Service</a>
+                    <a href="#" data-translate="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="lenis-config.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script src="solutions.js"></script>
+</body>
+</html>
