@@ -276,7 +276,7 @@ const translations = {
         "about.cta.solutions": "Découvrir nos solutions",
         
         // Contact Page
-        "contact.hero.title": "Demander une démo",
+        "contact.hero.title": "Besoin d'une <span class=\"text-primary\">démo</span> ?",
         "contact.hero.subtitle": "Découvrez comment Metrane peut transformer votre approche du reporting et vous faire gagner du temps sur vos processus métier.",
         "contact.form.title": "Prenons rendez-vous",
         "contact.form.description": "Remplissez ce formulaire et l'une de nos consultants.es dans les plus brefs délais pour organiser votre démonstration personnalisée.",
@@ -594,7 +594,7 @@ const translations = {
         "about.cta.solutions": "Discover our solutions",
         
         // Contact Page
-        "contact.hero.title": "Request a demo",
+        "contact.hero.title": "Need a <span class=\"text-primary\">demo</span>?",
         "contact.hero.subtitle": "Discover how Metrane can transform your reporting approach and save you time on your business processes.",
         "contact.form.title": "Let's schedule a meeting",
         "contact.form.description": "Fill out this form and one of our consultants will contact you as soon as possible to arrange your personalized demonstration.",
