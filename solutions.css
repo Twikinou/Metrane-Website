@@ -364,19 +364,36 @@
     overflow: hidden;
 }
 
-.tools-section::before {
-    content: '';
+.computer-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto 0;
+    height: 400px;
+}
+
+.computer-frame {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 100%;
-    background: url('assets/solutions/Container.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.05;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.tools-header {
+.computer-wrapper .screen-content {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.tools-section .tools-header {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
@@ -407,26 +424,33 @@
     color: #0a0e27;
     max-width: 900px;
     margin: 0 auto;
+    font-size: 3rem;
+}
+
+.tools-section .container {
+    position: relative;
+    z-index: 3;
 }
 
 .tools-benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
     z-index: 1;
 }
 
 .benefit-card {
-    background: #ffffff;
+    background: rgba(0, 153, 255, 0.08);
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     opacity: 0;
     transform: scale(0.9);
+    cursor: pointer;
 }
 
 .benefit-card.aos-animate {
@@ -440,29 +464,19 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.benefit-icon {
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.benefit-icon img {
-    max-width: 80px;
-    max-height: 80px;
-    object-fit: contain;
-}
+/* Removed benefit-icon styles as images are no longer displayed */
 
 .benefit-card h3 {
     color: #0a0e27;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
 }
 
 .benefit-card p {
     color: #666;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .tools-schema {
@@ -472,12 +486,14 @@
 }
 
 .schema-img {
-    max-width: 40%;
+    max-width: 80%;
     height: auto;
     border-radius: 0;
     box-shadow: none;
     animation: none;
     pointer-events: none;
+    margin: 20px auto;
+    transition: opacity 0.3s ease;
 }
 
 @keyframes float-slow {

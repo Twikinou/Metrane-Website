@@ -138,15 +138,31 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Schema image interaction
-    const schemaImg = document.querySelector('.schema-img');
-    if (schemaImg) {
-        schemaImg.addEventListener('mouseenter', () => {
-            schemaImg.style.transform = 'scale(1.05)';
-        });
-        
-        schemaImg.addEventListener('mouseleave', () => {
-            schemaImg.style.transform = 'scale(1)';
+    // Schema image interaction - Change image on benefit card hover
+    const dynamicSchema = document.getElementById('dynamic-schema');
+    const originalSchemaSrc = 'assets/solutions/METRANE_SCHEMA.png';
+    const benefitCardsHover = document.querySelectorAll('.benefit-card[data-hover-img]');
+    
+    if (dynamicSchema && benefitCardsHover.length > 0) {
+        benefitCardsHover.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const hoverImg = this.getAttribute('data-hover-img');
+                if (hoverImg) {
+                    dynamicSchema.style.opacity = '0';
+                    setTimeout(() => {
+                        dynamicSchema.src = hoverImg;
+                        dynamicSchema.style.opacity = '1';
+                    }, 300);
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                dynamicSchema.style.opacity = '0';
+                setTimeout(() => {
+                    dynamicSchema.src = originalSchemaSrc;
+                    dynamicSchema.style.opacity = '1';
+                }, 300);
+            });
         });
     }
 
