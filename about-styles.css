@@ -2,21 +2,12 @@
 
 /* About Hero Section */
 .about-hero {
-    padding: 120px 0 80px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 140px 0 80px;
+    background-image: url('assets/background-hero.png');
+    background-size: cover;
+    background-position: bottom;
     position: relative;
     overflow: hidden;
-}
-
-.about-hero::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    top: -250px;
-    right: -250px;
 }
 
 .about-hero-content {
@@ -486,6 +477,8 @@
 @media (max-width: 768px) {
     .about-hero {
         padding: 100px 0 60px;
+        background-position: center bottom;
+        background-size: cover;
     }
 
     .about-hero-text h1 {

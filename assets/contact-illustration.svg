@@ -1,0 +1,122 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="envelope1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFEB3B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="envelope2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC107;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6F00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="person" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background clouds -->
+  <ellipse cx="100" cy="80" rx="40" ry="20" fill="#E8EAF6" opacity="0.6"/>
+  <ellipse cx="120" cy="75" rx="25" ry="15" fill="#E8EAF6" opacity="0.6"/>
+  <ellipse cx="80" cy="75" rx="20" ry="12" fill="#E8EAF6" opacity="0.6"/>
+  
+  <ellipse cx="450" cy="60" rx="35" ry="18" fill="#E8EAF6" opacity="0.6"/>
+  <ellipse cx="470" cy="55" rx="20" ry="12" fill="#E8EAF6" opacity="0.6"/>
+  
+  <ellipse cx="520" cy="320" rx="45" ry="22" fill="#E8EAF6" opacity="0.6"/>
+  <ellipse cx="540" cy="315" rx="28" ry="16" fill="#E8EAF6" opacity="0.6"/>
+  
+  <!-- Ground line -->
+  <rect x="0" y="350" width="600" height="4" fill="#E8EAF6" rx="2"/>
+  
+  <!-- Motion lines -->
+  <rect x="200" y="140" width="60" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  <rect x="220" y="150" width="40" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  <rect x="180" y="160" width="80" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  
+  <rect x="350" y="100" width="50" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  <rect x="370" y="110" width="30" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  
+  <rect x="400" y="200" width="40" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  <rect x="420" y="210" width="60" height="2" fill="#C5CAE9" rx="1" opacity="0.4"/>
+  
+  <!-- Flying envelopes -->
+  <!-- Large envelope top right -->
+  <g transform="translate(420, 150) rotate(15)">
+    <rect x="0" y="0" width="80" height="60" rx="4" fill="url(#envelope1)"/>
+    <path d="M0 0 L40 35 L80 0" fill="#FF8F00"/>
+    <rect x="0" y="0" width="80" height="4" fill="#FF8F00"/>
+  </g>
+  
+  <!-- Medium envelope center -->
+  <g transform="translate(250, 120) rotate(-10)">
+    <rect x="0" y="0" width="60" height="45" rx="3" fill="url(#envelope2)"/>
+    <path d="M0 0 L30 26 L60 0" fill="#FF6F00"/>
+    <rect x="0" y="0" width="60" height="3" fill="#FF6F00"/>
+  </g>
+  
+  <!-- Small envelope left -->
+  <g transform="translate(150, 180) rotate(20)">
+    <rect x="0" y="0" width="40" height="30" rx="2" fill="url(#envelope1)"/>
+    <path d="M0 0 L20 17 L40 0" fill="#FF8F00"/>
+    <rect x="0" y="0" width="40" height="2" fill="#FF8F00"/>
+  </g>
+  
+  <!-- Small envelope bottom left -->
+  <g transform="translate(120, 250) rotate(-5)">
+    <rect x="0" y="0" width="35" height="25" rx="2" fill="url(#envelope2)"/>
+    <path d="M0 0 L17.5 15 L35 0" fill="#FF6F00"/>
+    <rect x="0" y="0" width="35" height="2" fill="#FF6F00"/>
+  </g>
+  
+  <!-- Tiny envelope far left -->
+  <g transform="translate(80, 220) rotate(30)">
+    <rect x="0" y="0" width="25" height="18" rx="1" fill="url(#envelope1)"/>
+    <path d="M0 0 L12.5 10 L25 0" fill="#FF8F00"/>
+    <rect x="0" y="0" width="25" height="1" fill="#FF8F00"/>
+  </g>
+  
+  <!-- Medium envelope bottom -->
+  <g transform="translate(200, 280) rotate(-15)">
+    <rect x="0" y="0" width="50" height="38" rx="2" fill="url(#envelope2)"/>
+    <path d="M0 0 L25 22 L50 0" fill="#FF6F00"/>
+    <rect x="0" y="0" width="50" height="2" fill="#FF6F00"/>
+  </g>
+  
+  <!-- Person running -->
+  <g transform="translate(320, 240)">
+    <!-- Legs -->
+    <rect x="10" y="60" width="8" height="40" fill="#3F51B5" rx="4"/>
+    <rect x="25" y="70" width="8" height="35" fill="#3F51B5" rx="4"/>
+    
+    <!-- Shoes -->
+    <ellipse cx="14" cy="105" rx="12" ry="6" fill="#1A237E"/>
+    <ellipse cx="29" cy="108" rx="12" ry="6" fill="#1A237E"/>
+    <circle cx="10" cy="105" r="2" fill="white"/>
+    <circle cx="25" cy="108" r="2" fill="white"/>
+    
+    <!-- Body -->
+    <rect x="15" y="25" width="15" height="35" fill="url(#person)" rx="7"/>
+    
+    <!-- Arms -->
+    <rect x="5" y="30" width="30" height="6" fill="#FFB74D" rx="3" transform="rotate(-15 20 33)"/>
+    <rect x="8" y="35" width="25" height="6" fill="#FFB74D" rx="3" transform="rotate(10 20 38)"/>
+    
+    <!-- Head -->
+    <circle cx="22" cy="15" r="12" fill="#FFB74D"/>
+    <rect x="18" y="8" width="8" height="6" fill="#3E2723" rx="3"/>
+    
+    <!-- Envelope in hand -->
+    <g transform="translate(35, 25) rotate(10)">
+      <rect x="0" y="0" width="25" height="18" rx="1" fill="url(#envelope1)"/>
+      <path d="M0 0 L12.5 10 L25 0" fill="#FF8F00"/>
+      <rect x="0" y="0" width="25" height="1" fill="#FF8F00"/>
+    </g>
+    
+    <!-- Sparkles around person -->
+    <g fill="#FF4081">
+      <polygon points="45,20 47,24 51,24 48,27 49,31 45,29 41,31 42,27 39,24 43,24" transform="scale(0.6)"/>
+      <polygon points="5,45 7,49 11,49 8,52 9,56 5,54 1,56 2,52 -1,49 3,49" transform="scale(0.4)"/>
+      <polygon points="50,50 52,54 56,54 53,57 54,61 50,59 46,61 47,57 44,54 48,54" transform="scale(0.3)"/>
+    </g>
+  </g>
+</svg>
