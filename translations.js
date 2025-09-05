@@ -249,10 +249,10 @@ const translations = {
         "about.story.highlight": "« Plutôt que de subir les évolutions, pourquoi ne pas créer un outil qui permettrait aux métiers eux-mêmes de construire et faire évoluer leurs reportings ? »",
         "about.story.text3": "Cette idée révolutionnaire de mettre en place une solution agile, minimisant les développements et très évolutive, a donné naissance à Metrane. Une approche bottom-up unique qui redonne le pouvoir aux utilisateurs métier.",
         
-        "about.founder1.role": "Co-fondateur & CEO",
+        "about.founder1.role": "Co-fondateur",
         "about.founder1.bio": "Diplômé d'école d'ingénieur avec plus de 20 ans d'expérience dans le secteur informatique et financier. Vincent apporte sa vision stratégique et son expertise technique pour développer des solutions innovantes adaptées aux besoins des métiers financiers.",
         
-        "about.founder2.role": "Co-fondateur & CTO",
+        "about.founder2.role": "Co-fondateur",
         "about.founder2.bio": "Diplômé d'École de Commerce en 1991, Christian cumule plus de 30 ans d'expérience dans le commercial et le marketing. Spécialisé dans les métiers financiers et les solutions de reporting, il apporte son expertise métier et sa connaissance approfondie des besoins clients.",
         
         "about.values.tag": "NOS VALEURS",
@@ -567,10 +567,10 @@ const translations = {
         "about.story.highlight": "'Rather than suffering through changes, why not create a tool that would allow business users themselves to build and evolve their reports?'",
         "about.story.text3": "This revolutionary idea of implementing an agile solution, minimizing development and highly scalable, gave birth to Metrane. A unique bottom-up approach that gives power back to business users.",
         
-        "about.founder1.role": "Co-founder & CEO",
+        "about.founder1.role": "Co-founder",
         "about.founder1.bio": "Engineering school graduate with over 20 years of experience in the IT and financial sector. Vincent brings his strategic vision and technical expertise to develop innovative solutions tailored to the needs of financial businesses.",
         
-        "about.founder2.role": "Co-founder & CTO",
+        "about.founder2.role": "Co-founder",
         "about.founder2.bio": "Business School graduate in 1991, Christian has over 30 years of experience in sales and marketing. Specialized in financial businesses and reporting solutions, he brings his business expertise and deep knowledge of customer needs.",
         
         "about.values.tag": "OUR VALUES",
