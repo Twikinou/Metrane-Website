@@ -151,7 +151,7 @@ const translations = {
         "africa.coconstruction.card3.text": "Pilotage en temps réel",
         
         // Solutions Page
-        "solutions.hero.title": "Devenez l'architecte de vos solutions",
+        "solutions.hero.title": "Devenez l'architecte de <span class=\"text-primary\">vos solutions</span>",
         "solutions.hero.subtitle": "Metrane Tools, une solution simple, économique et évolutive pour tous vos besoins de reporting",
         "solutions.hero.feature1": "Sans code",
         "solutions.hero.feature2": "Autonomie totale",
@@ -315,7 +315,223 @@ const translations = {
         "contact.stat3.label": "Sur mesure",
         "contact.cta.title": "Besoin d'un renseignement ?",
         "contact.cta.subtitle": "Notre équipe est à votre écoute pour répondre à toutes vos questions.",
-        "contact.cta.button": "Contactez-nous"
+        "contact.cta.button": "Contactez-nous",
+        
+        // Products Page
+        "products.hero.title": "Nos <span class=\"text-primary\">produits</span><br>pour votre réussite",
+        "products.hero.subtitle": "4 solutions spécialisées pour répondre à tous vos besoins de reporting, gestion documentaire et surveillance des risques.",
+        "products.hero.btn.discover": "Comparer nos produits",
+        
+        // Comparison Section
+        "products.comparison.title": "Comparatif de nos 4 solutions",
+        "products.comparison.subtitle": "Chaque solution répond à des besoins métiers spécifiques avec des modèles économiques adaptés.",
+        
+        // Comparison Table
+        "products.table.criteria": "Critères",
+        "products.table.use_case": "Cas d'usage principal",
+        "products.table.target": "Cible privilégiée", 
+        "products.table.frequency": "Fréquence d'usage",
+        "products.table.pricing_model": "Modèle commercial",
+        "products.table.deployment": "Déploiement",
+        
+        // Table content - REG
+        "products.table.reg.use_case": "Reportings ACPR, BCE<br>Dashboards métiers",
+        "products.table.reg.target": "Banques<br>Assurances",
+        "products.table.reg.frequency": "Mensuel/Trimestriel",
+        "products.table.reg.pricing": "Licence + 15% maintenance",
+        "products.table.reg.deployment": "On-Premise / SaaS",
+        
+        // Table content - EDITIQUE
+        "products.table.editique.use_case": "Relevés bancaires<br>Documents clients",
+        "products.table.editique.target": "Établissements financiers<br>FinTech",
+        "products.table.editique.frequency": "Quotidien",
+        "products.table.editique.pricing": "Licence + 15% maintenance",
+        "products.table.editique.deployment": "On-Premise / SaaS",
+        
+        // Table content - INSIGHT
+        "products.table.insight.use_case": "Surveillance fraudes<br>Détection anomalies",
+        "products.table.insight.target": "États<br>Organismes de contrôle",
+        "products.table.insight.frequency": "Temps réel",
+        "products.table.insight.pricing": "Partage des gains<br><strong>ROI immédiat</strong>",
+        "products.table.insight.deployment": "SaaS privilégié",
+        
+        // Table content - ANOS
+        "products.table.anos.use_case": "Incidents cartes<br>Réclamations",
+        "products.table.anos.target": "Banques<br>Néobanques",
+        "products.table.anos.frequency": "Quotidien",
+        "products.table.anos.pricing": "Licence + 15% maintenance",
+        "products.table.anos.deployment": "On-Premise / SaaS",
+        
+        // Details Section
+        "products.details.title": "Fonctionnalités détaillées",
+        "products.details.subtitle": "Découvrez les capacités spécifiques de chaque solution.",
+        "products.details.regulatory": "Réglementaire",
+        "products.details.business": "Business",
+        "products.details.automation": "Automatisation",
+        "products.details.export": "Export",
+        "products.details.documents": "Documents",
+        "products.details.personalization": "Personnalisation",
+        "products.details.distribution": "Distribution",
+        "products.details.archiving": "Archivage",
+        "products.details.detection": "Détection",
+        "products.details.monitoring": "Surveillance",
+        "products.details.workflow": "Workflow",
+        "products.details.roi": "ROI",
+        "products.details.incidents": "Incidents",
+        "products.details.claims": "Réclamations",
+        "products.details.traceability": "Traçabilité",
+        "products.details.reporting": "Reporting",
+        
+        // Detailed features - REG
+        "products.reg.regulatory": "Bâle III, FODEP, COCOTIER, Solvabilité II",
+        "products.reg.business": "Dashboards personnalisés, KPIs métiers",
+        "products.reg.automation": "Collecte, validation, génération automatique",
+        "products.reg.export": "Excel, PDF, XML, formats autorités",
+        
+        // Detailed features - EDITIQUE
+        "products.editique.documents": "Relevés, avis d'opérations, courriers",
+        "products.editique.personalization": "Templates par client, branding",
+        "products.editique.distribution": "Print, email, portail client, mobile",
+        "products.editique.archiving": "Légal, recherche, traçabilité",
+        
+        // Detailed features - INSIGHT
+        "products.insight.detection": "IA, Machine Learning, règles métiers",
+        "products.insight.monitoring": "Temps réel, multi-critères, scoring",
+        "products.insight.workflow": "Alertes, ticketing, suivi des actions",
+        "products.insight.roi": "Partage des gains détectés",
+        
+        // Detailed features - ANOS
+        "products.anos.incidents": "Cartes, chèques, virements, prélèvements",
+        "products.anos.claims": "Workflow client, SLA, escalade",
+        "products.anos.traceability": "Audit trail, historique complet",
+        "products.anos.reporting": "Dashboards quotidiens, indicateurs",
+        
+        // Pricing Table
+        "products.pricing.table.model": "Modèle",
+        "products.pricing.table.products": "Produits concernés",
+        "products.pricing.table.structure": "Structure tarifaire",
+        "products.pricing.table.advantages": "Avantages",
+        "products.pricing.standard.license": "Licence initiale",
+        "products.pricing.standard.maintenance": "+ 15% maintenance/an",
+        "products.pricing.standard.adv1": "Coût prévisible",
+        "products.pricing.standard.adv2": "Support inclus",
+        "products.pricing.standard.adv3": "Évolutions comprises",
+        "products.pricing.insight.no_cost": "Aucun coût initial",
+        "products.pricing.insight.revenue_share": "Partage des gains détectés",
+        "products.pricing.insight.adv1": "Zéro investissement",
+        "products.pricing.insight.adv2": "ROI immédiat",
+        "products.pricing.insight.adv3": "Risque partagé",
+        "products.section.title": "4 solutions complètes<br>pour votre transformation digitale",
+        "products.section.subtitle": "Chaque produit Metrane est conçu pour répondre à des besoins métiers spécifiques avec une expertise sectorielle reconnue.",
+        
+        // REG & BUSINESS Product
+        "products.reg.title": "METRANE REG & BUSINESS",
+        "products.reg.tagline": "Solution de Reporting Réglementaire et Business",
+        "products.reg.description": "Centralisez tous vos reportings réglementaires et dashboards métiers dans une solution unique. Compatible avec les normes bancaires internationales.",
+        "products.reg.feature1": "Génération automatique de rapports réglementaires",
+        "products.reg.feature2": "Dashboards personnalisables pour le pilotage",
+        "products.reg.feature3": "Conformité aux normes bancaires internationales",
+        "products.reg.feature4": "Compatible Banques, Assurances, Mobile Money et FinTech",
+        
+        // EDITIQUE Product
+        "products.editique.title": "METRANE EDITIQUE",
+        "products.editique.tagline": "Gestion Documentaire Client",
+        "products.editique.description": "Automatisez la production et distribution de tous vos documents clients avec une personnalisation avancée et un archivage légal intégré.",
+        "products.editique.feature1": "Édition automatique de relevés et avis d'opérations",
+        "products.editique.feature2": "Personnalisation avancée par client",
+        "products.editique.feature3": "Multi-canal (print, email, mobile)",
+        "products.editique.feature4": "Archivage légal intégré",
+        
+        // INSIGHT Product
+        "products.insight.title": "METRANE INSIGHT (DIVE IN)",
+        "products.insight.tagline": "Monitoring et Détection de Fraudes",
+        "products.insight.description": "Solution intelligente de surveillance continue avec détection d'anomalies en temps réel. Modèle spécial avec partage des gains sur les fraudes détectées.",
+        "products.insight.feature1": "Détection de fraudes en temps réel",
+        "products.insight.feature2": "Analyse comportementale multicritères",
+        "products.insight.feature3": "Workflow de gestion des alertes",
+        "products.insight.feature4": "Ticketing intégré pour le suivi des anomalies",
+        "products.insight.badge": "BOT Disponible",
+        "products.insight.highlight": "ROI immédiat - Partage des gains détectés",
+        
+        // GESTION ANOS Product
+        "products.anos.title": "METRANE GESTION ANOS",
+        "products.anos.tagline": "Gestion des Anomalies Bancaires",
+        "products.anos.description": "Centralisez et optimisez le traitement des anomalies cartes et chèques avec une traçabilité complète et des workflows automatisés.",
+        "products.anos.feature1": "Gestion unifiée des incidents cartes bancaires et chèques",
+        "products.anos.feature2": "Workflow de réclamations clients",
+        "products.anos.feature3": "Traçabilité complète des actions",
+        "products.anos.feature4": "Tableaux de bord de suivi quotidien",
+        
+        // CTAs
+        "products.cta.demo": "Demander une démo",
+        "products.cta.discover": "Découvrir le BOT",
+        
+        // Services Section
+        "products.services.title": "Services d'accompagnement inclus",
+        "products.services.subtitle": "Chaque solution Metrane inclut un accompagnement complet pour garantir votre succès.",
+        "products.services.business.title": "Conseil Métier",
+        "products.services.business.item1": "Analyse et optimisation des processus bancaires",
+        "products.services.business.item2": "Mise en conformité réglementaire",
+        "products.services.business.item3": "Stratégie de lutte contre la fraude",
+        "products.services.business.item4": "Accompagnement à la transformation digitale",
+        "products.services.business.item5": "Formation des équipes métiers",
+        "products.services.technical.title": "Ingénierie Technique",
+        "products.services.technical.item1": "Architecture et design de la solution",
+        "products.services.technical.item2": "Intégration avec systèmes existants",
+        "products.services.technical.item3": "Migration et reprise de données",
+        "products.services.technical.item4": "Personnalisation spécifique",
+        "products.services.technical.item5": "Support technique expert",
+        
+        // Deployment Section
+        "products.deployment.title": "Options de déploiement flexibles",
+        "products.deployment.subtitle": "Choisissez le mode de déploiement qui correspond le mieux à vos contraintes et besoins.",
+        "products.deployment.onpremise.title": "On-Premise",
+        "products.deployment.onpremise.item1": "Installation dans vos datacenters",
+        "products.deployment.onpremise.item2": "Contrôle total des données",
+        "products.deployment.onpremise.item3": "Sécurité maximale",
+        "products.deployment.onpremise.item4": "Personnalisation illimitée",
+        "products.deployment.saas.title": "SaaS sur mesure",
+        "products.deployment.saas.item1": "Hébergement cloud sécurisé",
+        "products.deployment.saas.item2": "Paiement à l'usage",
+        "products.deployment.saas.item3": "Mise à jour automatique",
+        "products.deployment.saas.item4": "Scalabilité garantie",
+        
+        // Pricing Section
+        "products.pricing.title": "Modèles commerciaux adaptés",
+        "products.pricing.subtitle": "Des formules flexibles pour s'adapter à votre budget et vos objectifs.",
+        "products.pricing.standard.title": "Modèle Standard",
+        "products.pricing.standard.subtitle": "Pour REG & BUSINESS, EDITIQUE et GESTION ANOS",
+        "products.pricing.standard.license": "Licence",
+        "products.pricing.standard.maintenance": "15% maintenance annuelle",
+        "products.pricing.standard.consulting": "Consulting d'accompagnement",
+        "products.pricing.insight.title": "Modèle INSIGHT",
+        "products.pricing.insight.subtitle": "Partage des gains sur les fraudes détectées",
+        "products.pricing.insight.badge": "ROI Immédiat",
+        "products.pricing.insight.benefit": "Aucun investissement initial • Revenus partagés • ROI garanti",
+        "products.pricing.insight.description": "Modèle spécial avec partage des gains réalisés grâce aux fraudes détectées. Idéal pour les États et organismes de contrôle.",
+        
+        // Final CTA
+        "products.cta.title": "Prêt à transformer votre reporting ?",
+        "products.cta.subtitle": "Découvrez comment nos solutions peuvent s'adapter à vos besoins spécifiques.",
+        "products.cta.solutions": "Voir nos solutions",
+        
+        // Footer
+        "footer.description": "Prenez le contrôle de vos reportings avec des solutions sur mesure pour les institutions financières.",
+        "footer.solutions.title": "Solutions",
+        "footer.solutions.reporting": "Reporting Réglementaire",
+        "footer.solutions.business": "Business Intelligence",
+        "footer.solutions.editique": "Éditique Bancaire",
+        "footer.company.title": "Entreprise",
+        "footer.company.about": "À propos",
+        "footer.company.team": "Équipe",
+        "footer.company.careers": "Carrières",
+        "footer.support.title": "Support",
+        "footer.support.contact": "Contact",
+        "footer.support.demo": "Demander une démo",
+        "footer.support.documentation": "Documentation",
+        "footer.contact.phone": "Téléphone:",
+        "footer.contact.address": "Adresse:",
+        "footer.rights": "Tous droits réservés."
     },
     en: {
         // Navigation
@@ -469,7 +685,7 @@ const translations = {
         "africa.coconstruction.card3.text": "Real-time management",
         
         // Solutions Page
-        "solutions.hero.title": "Become the architect of your solutions",
+        "solutions.hero.title": "Become the architect of <span class=\"text-primary\">your solutions</span>",
         "solutions.hero.subtitle": "Metrane Tools, a simple, economical and scalable solution for all your reporting needs",
         "solutions.hero.feature1": "No code",
         "solutions.hero.feature2": "Total autonomy",
@@ -633,7 +849,223 @@ const translations = {
         "contact.stat3.label": "Custom-made",
         "contact.cta.title": "Need information?",
         "contact.cta.subtitle": "Our team is ready to answer all your questions.",
-        "contact.cta.button": "Contact us"
+        "contact.cta.button": "Contact us",
+        
+        // Products Page
+        "products.hero.title": "Our <span class=\"text-primary\">products</span><br>for your success",
+        "products.hero.subtitle": "4 specialized solutions to meet all your reporting, document management and risk monitoring needs.",
+        "products.hero.btn.discover": "Compare our products",
+        
+        // Comparison Section
+        "products.comparison.title": "Comparison of our 4 solutions",
+        "products.comparison.subtitle": "Each solution addresses specific business needs with adapted economic models.",
+        
+        // Comparison Table
+        "products.table.criteria": "Criteria",
+        "products.table.use_case": "Main use case",
+        "products.table.target": "Target audience", 
+        "products.table.frequency": "Usage frequency",
+        "products.table.pricing_model": "Business model",
+        "products.table.deployment": "Deployment",
+        
+        // Table content - REG
+        "products.table.reg.use_case": "ACPR, ECB reports<br>Business dashboards",
+        "products.table.reg.target": "Banks<br>Insurance companies",
+        "products.table.reg.frequency": "Monthly/Quarterly",
+        "products.table.reg.pricing": "License + 15% maintenance",
+        "products.table.reg.deployment": "On-Premise / SaaS",
+        
+        // Table content - EDITIQUE
+        "products.table.editique.use_case": "Bank statements<br>Client documents",
+        "products.table.editique.target": "Financial institutions<br>FinTech",
+        "products.table.editique.frequency": "Daily",
+        "products.table.editique.pricing": "License + 15% maintenance",
+        "products.table.editique.deployment": "On-Premise / SaaS",
+        
+        // Table content - INSIGHT
+        "products.table.insight.use_case": "Fraud monitoring<br>Anomaly detection",
+        "products.table.insight.target": "States<br>Control organizations",
+        "products.table.insight.frequency": "Real-time",
+        "products.table.insight.pricing": "Gain sharing<br><strong>Immediate ROI</strong>",
+        "products.table.insight.deployment": "SaaS preferred",
+        
+        // Table content - ANOS
+        "products.table.anos.use_case": "Card incidents<br>Claims",
+        "products.table.anos.target": "Banks<br>Neobanks",
+        "products.table.anos.frequency": "Daily",
+        "products.table.anos.pricing": "License + 15% maintenance",
+        "products.table.anos.deployment": "On-Premise / SaaS",
+        
+        // Details Section
+        "products.details.title": "Detailed features",
+        "products.details.subtitle": "Discover the specific capabilities of each solution.",
+        "products.details.regulatory": "Regulatory",
+        "products.details.business": "Business",
+        "products.details.automation": "Automation",
+        "products.details.export": "Export",
+        "products.details.documents": "Documents",
+        "products.details.personalization": "Personalization",
+        "products.details.distribution": "Distribution",
+        "products.details.archiving": "Archiving",
+        "products.details.detection": "Detection",
+        "products.details.monitoring": "Monitoring",
+        "products.details.workflow": "Workflow",
+        "products.details.roi": "ROI",
+        "products.details.incidents": "Incidents",
+        "products.details.claims": "Claims",
+        "products.details.traceability": "Traceability",
+        "products.details.reporting": "Reporting",
+        
+        // Detailed features - REG
+        "products.reg.regulatory": "Basel III, FODEP, COCOTIER, Solvency II",
+        "products.reg.business": "Custom dashboards, business KPIs",
+        "products.reg.automation": "Collection, validation, automatic generation",
+        "products.reg.export": "Excel, PDF, XML, authority formats",
+        
+        // Detailed features - EDITIQUE
+        "products.editique.documents": "Statements, transaction notices, letters",
+        "products.editique.personalization": "Client templates, branding",
+        "products.editique.distribution": "Print, email, client portal, mobile",
+        "products.editique.archiving": "Legal, search, traceability",
+        
+        // Detailed features - INSIGHT
+        "products.insight.detection": "AI, Machine Learning, business rules",
+        "products.insight.monitoring": "Real-time, multi-criteria, scoring",
+        "products.insight.workflow": "Alerts, ticketing, action tracking",
+        "products.insight.roi": "Detected gain sharing",
+        
+        // Detailed features - ANOS
+        "products.anos.incidents": "Cards, checks, transfers, debits",
+        "products.anos.claims": "Client workflow, SLA, escalation",
+        "products.anos.traceability": "Audit trail, complete history",
+        "products.anos.reporting": "Daily dashboards, indicators",
+        
+        // Pricing Table
+        "products.pricing.table.model": "Model",
+        "products.pricing.table.products": "Concerned products",
+        "products.pricing.table.structure": "Pricing structure",
+        "products.pricing.table.advantages": "Advantages",
+        "products.pricing.standard.license": "Initial license",
+        "products.pricing.standard.maintenance": "+ 15% annual maintenance",
+        "products.pricing.standard.adv1": "Predictable cost",
+        "products.pricing.standard.adv2": "Support included",
+        "products.pricing.standard.adv3": "Evolution included",
+        "products.pricing.insight.no_cost": "No initial cost",
+        "products.pricing.insight.revenue_share": "Detected gain sharing",
+        "products.pricing.insight.adv1": "Zero investment",
+        "products.pricing.insight.adv2": "Immediate ROI",
+        "products.pricing.insight.adv3": "Shared risk",
+        "products.section.title": "4 complete solutions<br>for your digital transformation",
+        "products.section.subtitle": "Each Metrane product is designed to meet specific business needs with recognized sector expertise.",
+        
+        // REG & BUSINESS Product
+        "products.reg.title": "METRANE REG & BUSINESS",
+        "products.reg.tagline": "Regulatory and Business Reporting Solution",
+        "products.reg.description": "Centralize all your regulatory reports and business dashboards in a single solution. Compatible with international banking standards.",
+        "products.reg.feature1": "Automatic generation of regulatory reports",
+        "products.reg.feature2": "Customizable dashboards for management",
+        "products.reg.feature3": "Compliance with international banking standards",
+        "products.reg.feature4": "Compatible with Banks, Insurance, Mobile Money and FinTech",
+        
+        // EDITIQUE Product
+        "products.editique.title": "METRANE EDITIQUE",
+        "products.editique.tagline": "Client Document Management",
+        "products.editique.description": "Automate the production and distribution of all your client documents with advanced personalization and integrated legal archiving.",
+        "products.editique.feature1": "Automatic editing of statements and transaction notices",
+        "products.editique.feature2": "Advanced personalization per client",
+        "products.editique.feature3": "Multi-channel (print, email, mobile)",
+        "products.editique.feature4": "Integrated legal archiving",
+        
+        // INSIGHT Product
+        "products.insight.title": "METRANE INSIGHT (DIVE IN)",
+        "products.insight.tagline": "Monitoring and Fraud Detection",
+        "products.insight.description": "Intelligent continuous monitoring solution with real-time anomaly detection. Special model with sharing of gains on detected fraud.",
+        "products.insight.feature1": "Real-time fraud detection",
+        "products.insight.feature2": "Multi-criteria behavioral analysis",
+        "products.insight.feature3": "Alert management workflow",
+        "products.insight.feature4": "Integrated ticketing for anomaly tracking",
+        "products.insight.badge": "BOT Available",
+        "products.insight.highlight": "Immediate ROI - Detected gains sharing",
+        
+        // GESTION ANOS Product
+        "products.anos.title": "METRANE GESTION ANOS",
+        "products.anos.tagline": "Banking Anomaly Management",
+        "products.anos.description": "Centralize and optimize the processing of card and check anomalies with complete traceability and automated workflows.",
+        "products.anos.feature1": "Unified management of bank card and check incidents",
+        "products.anos.feature2": "Customer complaint workflow",
+        "products.anos.feature3": "Complete action traceability",
+        "products.anos.feature4": "Daily monitoring dashboards",
+        
+        // CTAs
+        "products.cta.demo": "Request a demo",
+        "products.cta.discover": "Discover the BOT",
+        
+        // Services Section
+        "products.services.title": "Included support services",
+        "products.services.subtitle": "Each Metrane solution includes comprehensive support to guarantee your success.",
+        "products.services.business.title": "Business Consulting",
+        "products.services.business.item1": "Analysis and optimization of banking processes",
+        "products.services.business.item2": "Regulatory compliance implementation",
+        "products.services.business.item3": "Fraud prevention strategy",
+        "products.services.business.item4": "Digital transformation support",
+        "products.services.business.item5": "Business team training",
+        "products.services.technical.title": "Technical Engineering",
+        "products.services.technical.item1": "Solution architecture and design",
+        "products.services.technical.item2": "Integration with existing systems",
+        "products.services.technical.item3": "Data migration and recovery",
+        "products.services.technical.item4": "Specific customization",
+        "products.services.technical.item5": "Expert technical support",
+        
+        // Deployment Section
+        "products.deployment.title": "Flexible deployment options",
+        "products.deployment.subtitle": "Choose the deployment mode that best fits your constraints and needs.",
+        "products.deployment.onpremise.title": "On-Premise",
+        "products.deployment.onpremise.item1": "Installation in your data centers",
+        "products.deployment.onpremise.item2": "Total data control",
+        "products.deployment.onpremise.item3": "Maximum security",
+        "products.deployment.onpremise.item4": "Unlimited customization",
+        "products.deployment.saas.title": "Custom SaaS",
+        "products.deployment.saas.item1": "Secure cloud hosting",
+        "products.deployment.saas.item2": "Pay-per-use",
+        "products.deployment.saas.item3": "Automatic updates",
+        "products.deployment.saas.item4": "Guaranteed scalability",
+        
+        // Pricing Section
+        "products.pricing.title": "Adapted commercial models",
+        "products.pricing.subtitle": "Flexible formulas to adapt to your budget and objectives.",
+        "products.pricing.standard.title": "Standard Model",
+        "products.pricing.standard.subtitle": "For REG & BUSINESS, EDITIQUE and GESTION ANOS",
+        "products.pricing.standard.license": "License",
+        "products.pricing.standard.maintenance": "15% annual maintenance",
+        "products.pricing.standard.consulting": "Support consulting",
+        "products.pricing.insight.title": "INSIGHT Model",
+        "products.pricing.insight.subtitle": "Sharing of gains on detected fraud",
+        "products.pricing.insight.badge": "Immediate ROI",
+        "products.pricing.insight.benefit": "No initial investment • Shared revenue • Guaranteed ROI",
+        "products.pricing.insight.description": "Special model with sharing of gains achieved through detected fraud. Ideal for States and control organizations.",
+        
+        // Final CTA
+        "products.cta.title": "Ready to transform your reporting?",
+        "products.cta.subtitle": "Discover how our solutions can adapt to your specific needs.",
+        "products.cta.solutions": "View our solutions",
+        
+        // Footer
+        "footer.description": "Take control of your reporting with custom solutions for financial institutions.",
+        "footer.solutions.title": "Solutions",
+        "footer.solutions.reporting": "Regulatory Reporting",
+        "footer.solutions.business": "Business Intelligence",
+        "footer.solutions.editique": "Banking Document Management",
+        "footer.company.title": "Company",
+        "footer.company.about": "About",
+        "footer.company.team": "Team",
+        "footer.company.careers": "Careers",
+        "footer.support.title": "Support",
+        "footer.support.contact": "Contact",
+        "footer.support.demo": "Request a demo",
+        "footer.support.documentation": "Documentation",
+        "footer.contact.phone": "Phone:",
+        "footer.contact.address": "Address:",
+        "footer.rights": "All rights reserved."
     }
 };
 
