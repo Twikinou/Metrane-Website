@@ -155,6 +155,30 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
+.custom-solution-cta {
+    background: linear-gradient(135deg, var(--light-gray), rgba(0, 175, 239, 0.02));
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid rgba(0, 175, 239, 0.1);
+}
+
+.custom-solution-content p {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 24px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-solution-content .btn {
+    font-size: 16px;
+    padding: 12px 32px;
+}
+
 .products-details-section {
     padding: 80px 0;
     background: var(--white);
@@ -2271,6 +2295,165 @@ p {
     transition: opacity 0.6s ease;
     padding: 20px;
     max-width: 500px;
+}
+
+/* Contact Process Section - Scroll Offset */
+.contact-process {
+    scroll-margin-top: 120px;
+}
+
+/* =====================
+   CONTACT FORM STYLES
+   ===================== */
+
+/* Form Labels - Bold styling for specific labels to match contact info section */
+.form-group label[data-translate="contact.form.products"],
+.form-group label[data-translate="contact.form.attachment"],
+.form-group label[data-translate="contact.form.message"] {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    margin-top: 8px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    margin: 0;
+    font-weight: 400;
+    color: var(--text-dark);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Select Dropdown Styling */
+select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: var(--font-inter);
+    color: var(--text-dark);
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    appearance: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+}
+
+select option {
+    padding: 8px;
+}
+
+/* File Upload Styling */
+.file-upload-wrapper {
+    position: relative;
+    margin-top: 8px;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.file-upload-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 2px dashed var(--border-gray);
+    border-radius: 12px;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.file-upload-display:hover {
+    border-color: var(--primary-blue);
+    background-color: #f0f7ff;
+}
+
+.file-upload-text {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.file-upload-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.file-upload-btn:hover {
+    background: #0052cc;
+}
+
+.file-upload-wrapper.has-file .file-upload-display {
+    border-color: var(--primary-blue);
+    background-color: #f0f7ff;
+}
+
+.file-upload-wrapper.has-file .file-upload-text {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Mobile responsiveness for form elements */
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .checkbox-item {
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        margin-top: 2px;
+    }
+    
+    .file-upload-display {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
 }
 
 .mobile-benefit-item.visible {

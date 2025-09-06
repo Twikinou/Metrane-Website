@@ -85,7 +85,7 @@
                         <p data-translate="contact.hero.subtitle">Découvrez comment Metrane peut transformer votre approche du reporting et vous faire gagner du temps sur vos processus métier.</p>
                         <div class="hero-buttons">
                             <button class="btn btn-primary" onclick="scrollToForm()" data-translate="contact.cta.button">Contactez-nous</button>
-                            <a href="solutions.html" class="btn btn-secondary" data-translate="hero.btn.more">En savoir plus</a>
+                            <a href="#contact-process" class="btn btn-secondary" data-translate="hero.btn.more">En savoir plus</a>
                         </div>
                         <div class="stats">
                             <div class="stat">
@@ -137,8 +137,8 @@
                                     <input type="email" id="email" name="email" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone" data-translate="contact.form.phone">Téléphone</label>
-                                    <input type="tel" id="phone" name="phone">
+                                    <label for="phone" data-translate="contact.form.phone">Téléphone *</label>
+                                    <input type="tel" id="phone" name="phone" required>
                                 </div>
                             </div>
                             
@@ -147,9 +147,59 @@
                                     <label for="company" data-translate="contact.form.company">Entreprise</label>
                                     <input type="text" id="company" name="company">
                                 </div>
+                                <div class="form-group">
+                                    <label for="role" data-translate="contact.form.role">Fonction</label>
+                                    <select id="role" name="role">
+                                        <option value="" data-translate="contact.form.role.placeholder">Sélectionner votre fonction</option>
+                                        <option value="risk" data-translate="contact.form.role.risk">Responsable des Risques</option>
+                                        <option value="finance" data-translate="contact.form.role.finance">Responsable Financier</option>
+                                        <option value="it" data-translate="contact.form.role.it">Directeur des Systèmes d'Information</option>
+                                        <option value="compliance" data-translate="contact.form.role.compliance">Responsable Conformité</option>
+                                        <option value="other" data-translate="contact.form.role.other">Autre</option>
+                                    </select>
+                                </div>
                             </div>
                             
-                            <div class="form-group">
+                            <!-- Products Interest -->
+                            <div class="form-group" style="margin-top: 32px;">
+                                <label data-translate="contact.form.products">Produits qui vous intéressent</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="product-reg" name="products[]" value="reg-business">
+                                        <label for="product-reg" data-translate="contact.form.products.reg">REG & BUSINESS</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="product-editique" name="products[]" value="editique">
+                                        <label for="product-editique" data-translate="contact.form.products.editique">EDITIQUE</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="product-insight" name="products[]" value="insight">
+                                        <label for="product-insight" data-translate="contact.form.products.insight">INSIGHT (DIVE IN)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="product-anos" name="products[]" value="anos">
+                                        <label for="product-anos" data-translate="contact.form.products.anos">GESTION ANOS</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="product-other" name="products[]" value="other">
+                                        <label for="product-other" data-translate="contact.form.products.other">Autre</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- File Upload -->
+                            <div class="form-group" style="margin-top: 32px;">
+                                <label for="attachment" data-translate="contact.form.attachment">Pièce jointe (optionnelle)</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
+                                    <div class="file-upload-display">
+                                        <span class="file-upload-text" data-translate="contact.form.attachment.placeholder">Cliquez pour sélectionner un fichier</span>
+                                        <button type="button" class="file-upload-btn" data-translate="contact.form.attachment.browse">Parcourir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-top: 32px;">
                                 <label for="message" data-translate="contact.form.message">Message *</label>
                                 <textarea id="message" name="message" rows="4" placeholder="" data-translate-placeholder="contact.form.messagePlaceholder" required></textarea>
                             </div>
@@ -195,7 +245,7 @@
         </section>
 
         <!-- What to Expect Section -->
-        <section class="contact-process">
+        <section class="contact-process" id="contact-process">
             <div class="container">
                 <h2 class="section-title" data-translate="contact.process.title">À quoi s'attendre après votre demande ?</h2>
                 <p class="section-subtitle" data-translate="contact.process.subtitle">Notre équipe s'engage à vous accompagner de manière personnalisée pour comprendre vos besoins et vous présenter la solution adaptée.</p>
@@ -367,8 +417,47 @@
 
         // Scroll to form function
         function scrollToForm() {
-            document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' });
+            const formSection = document.querySelector('.contact-form-section');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
+
+        // File upload functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('attachment');
+            const fileDisplay = document.querySelector('.file-upload-display');
+            const fileText = document.querySelector('.file-upload-text');
+            const fileBtn = document.querySelector('.file-upload-btn');
+            const fileWrapper = document.querySelector('.file-upload-wrapper');
+
+            // Handle file upload button click
+            fileBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+
+            // Handle file display click
+            fileDisplay.addEventListener('click', function() {
+                fileInput.click();
+            });
+
+            // Handle file selection
+            fileInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const file = this.files[0];
+                    const fileName = file.name;
+                    const fileSize = (file.size / 1024 / 1024).toFixed(2); // Size in MB
+                    
+                    fileText.textContent = `${fileName} (${fileSize} MB)`;
+                    fileWrapper.classList.add('has-file');
+                } else {
+                    fileText.textContent = fileText.getAttribute('data-translate') === 'contact.form.attachment.placeholder' 
+                        ? 'Cliquez pour sélectionner un fichier' 
+                        : 'Click to select a file';
+                    fileWrapper.classList.remove('has-file');
+                }
+            });
+        });
     </script>
 </body>
 </html>
