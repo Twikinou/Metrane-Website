@@ -1109,19 +1109,83 @@ const translations = {
     }
 };
 
+// Country to language mapping configuration
+const countryToLanguageMapping = {
+    'FRA': 'fr', // France
+    'SEN': 'fr', // Senegal
+    'USA': 'en', // United States
+    'GBR': 'en', // United Kingdom
+    'CAN': 'en', // Canada (defaulting to English)
+    'AUS': 'en', // Australia
+    'NZL': 'en', // New Zealand
+    'IRL': 'en', // Ireland
+    'ZAF': 'en', // South Africa
+    // Add more country mappings as needed
+    // Default: if country not found or invalid, use 'en'
+};
+
 // Language switching functionality
 class LanguageManager {
     constructor() {
-        this.currentLang = localStorage.getItem('selectedLanguage') || 'fr';
+        this.currentCountry = null; // Store current country code
+        this.currentLang = null;    // Store current language
         this.init();
     }
 
     init() {
-        // Apply saved language on page load
-        this.switchLanguage(this.currentLang);
+        // Parse URL parameters to get country code
+        const urlParams = new URLSearchParams(window.location.search);
+        const countryParam = urlParams.get('ctry');
+        
+        // Determine language based on URL parameter and country mapping
+        this.determineLanguageFromCountry(countryParam);
         
         // Setup language selector events
         this.setupLanguageSelector();
+    }
+    
+    determineLanguageFromCountry(countryCode) {
+        let detectedLanguage = 'en'; // Default to English
+        let countryToUse = null;
+        
+        // Priority 1: URL parameter (new visit with ctry parameter)
+        if (countryCode) {
+            const normalizedCountry = countryCode.toUpperCase().trim();
+            
+            if (this.isValidCountryCode(normalizedCountry)) {
+                countryToUse = normalizedCountry;
+                // Store the country parameter for future page navigation
+                localStorage.setItem('selectedCountry', normalizedCountry);
+                detectedLanguage = countryToLanguageMapping[normalizedCountry] || 'en';
+            }
+        }
+        
+        // Priority 2: Previously stored country (from localStorage)
+        if (!countryToUse) {
+            const storedCountry = localStorage.getItem('selectedCountry');
+            if (storedCountry && this.isValidCountryCode(storedCountry)) {
+                countryToUse = storedCountry;
+                detectedLanguage = countryToLanguageMapping[storedCountry] || 'en';
+            }
+        }
+        
+        // Priority 3: User manually selected language (stored in localStorage)
+        if (!countryToUse) {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
+                detectedLanguage = savedLang;
+            }
+        }
+        
+        // Set current state
+        this.currentCountry = countryToUse;
+        this.currentLang = detectedLanguage;
+        this.switchLanguage(this.currentLang);
+    }
+    
+    isValidCountryCode(code) {
+        // Validate that it's a 3-character uppercase code
+        return /^[A-Z]{3}$/.test(code);
     }
 
     setupLanguageSelector() {
@@ -1143,7 +1207,7 @@ class LanguageManager {
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const lang = option.dataset.lang;
-                this.switchLanguage(lang);
+                this.manualLanguageSwitch(lang);
                 languageDropdown.classList.remove('active');
             });
         });
@@ -1153,7 +1217,7 @@ class LanguageManager {
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const lang = option.dataset.lang;
-                this.switchLanguage(lang);
+                this.manualLanguageSwitch(lang);
                 
                 // Update active state for mobile buttons
                 mobileLanguageOptions.forEach(opt => opt.classList.remove('active'));
@@ -1197,6 +1261,40 @@ class LanguageManager {
 
     switchLanguage(lang) {
         this.currentLang = lang;
+        
+        // Only save to localStorage if user manually switches language
+        // (not when auto-detecting from country)
+        if (!this.currentCountry) {
+            localStorage.setItem('selectedLanguage', lang);
+        }
+        
+        // Update current language display
+        const currentLangDisplay = document.querySelector('.current-lang');
+        if (currentLangDisplay) {
+            currentLangDisplay.textContent = lang.toUpperCase();
+        }
+
+        // Update page language attribute
+        document.documentElement.lang = lang;
+
+        // Translate all elements with data-translate attribute
+        this.translatePage();
+        
+        // Update mobile buttons state
+        this.updateMobileLanguageButtons();
+        
+        // Update internal links with country parameter if country is set
+        this.updateInternalLinks();
+    }
+    
+    // Method to manually switch language (called by user interaction)
+    manualLanguageSwitch(lang) {
+        // Reset country-based detection when user manually changes language
+        this.currentCountry = null;
+        this.currentLang = lang;
+        
+        // Remove stored country and set manual language preference
+        localStorage.removeItem('selectedCountry');
         localStorage.setItem('selectedLanguage', lang);
         
         // Update current language display
@@ -1213,6 +1311,9 @@ class LanguageManager {
         
         // Update mobile buttons state
         this.updateMobileLanguageButtons();
+        
+        // Update all internal links to not include ctry parameter
+        this.updateInternalLinks();
     }
 
     translatePage() {
@@ -1242,9 +1343,71 @@ class LanguageManager {
             }
         });
     }
+    
+    updateInternalLinks() {
+        // Get all internal links (excluding external links and anchors)
+        const internalLinks = document.querySelectorAll('a[href]:not([href^="http"]):not([href^="mailto"]):not([href^="tel"]):not([href^="#"])');
+        
+        internalLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+            
+            // Skip if it's already an anchor link or external
+            if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) {
+                return;
+            }
+            
+            // Create URL object to handle parameters
+            let url;
+            try {
+                // Handle relative URLs
+                url = new URL(href, window.location.origin);
+            } catch (e) {
+                // If URL creation fails, skip this link
+                return;
+            }
+            
+            // Remove existing ctry parameter
+            url.searchParams.delete('ctry');
+            
+            // Add ctry parameter if we have a stored country
+            if (this.currentCountry) {
+                url.searchParams.set('ctry', this.currentCountry);
+            }
+            
+            // Update the href
+            link.setAttribute('href', url.pathname + (url.search || ''));
+        });
+    }
+    
+    // Utility methods to access current state
+    getCurrentCountry() {
+        return this.currentCountry;
+    }
+    
+    getCurrentLanguage() {
+        return this.currentLang;
+    }
+    
+    // Method to get country name from code (for debugging)
+    getCountryName(countryCode) {
+        const countryNames = {
+            'FRA': 'France',
+            'SEN': 'Senegal', 
+            'USA': 'United States',
+            'GBR': 'United Kingdom',
+            'CAN': 'Canada',
+            'AUS': 'Australia',
+            'NZL': 'New Zealand',
+            'IRL': 'Ireland',
+            'ZAF': 'South Africa'
+        };
+        return countryNames[countryCode] || countryCode;
+    }
 }
 
 // Initialize language manager when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    new LanguageManager();
+    // Make languageManager globally accessible for debugging
+    window.languageManager = new LanguageManager();
 });

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Système pays/langue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .test-links a {
+            display: block;
+            padding: 10px 15px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .test-links a:hover {
+            background: #0052a3;
+        }
+        .current-state {
+            background: #f0f8f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+        .language-selector {
+            margin: 20px 0;
+        }
+        .language-selector button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .language-selector button:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 data-translate="test.title">Test du système pays/langue</h1>
+        
+        <div class="test-info">
+            <h3 data-translate="test.info.title">Informations sur le test</h3>
+            <p data-translate="test.info.description">Cette page permet de tester le système de détection automatique de langue basé sur le paramètre URL "ctry".</p>
+        </div>
+
+        <div class="current-state">
+            <h3 data-translate="test.current.title">État actuel</h3>
+            <div id="current-info">
+                <p><strong data-translate="test.current.country">Pays détecté :</strong> <span id="current-country">-</span></p>
+                <p><strong data-translate="test.current.language">Langue active :</strong> <span id="current-language">-</span></p>
+                <p><strong data-translate="test.current.url">URL actuelle :</strong> <span id="current-url">-</span></p>
+                <p><strong data-translate="test.current.stored">Pays stocké :</strong> <span id="stored-country">-</span></p>
+                <p><strong data-translate="test.current.stored-lang">Langue stockée :</strong> <span id="stored-language">-</span></p>
+            </div>
+        </div>
+
+        <div class="language-selector">
+            <h3 data-translate="test.manual.title">Changer de langue manuellement</h3>
+            <button onclick="window.languageManager.manualLanguageSwitch('fr')" data-translate="test.manual.french">Français</button>
+            <button onclick="window.languageManager.manualLanguageSwitch('en')" data-translate="test.manual.english">English</button>
+        </div>
+
+        <h3 data-translate="test.links.title">Liens de test avec différents pays</h3>
+        <div class="test-links">
+            <a href="?ctry=FRA" data-translate="test.links.fra">France (FRA) → FR</a>
+            <a href="?ctry=SEN" data-translate="test.links.sen">Sénégal (SEN) → FR</a>
+            <a href="?ctry=USA" data-translate="test.links.usa">USA (USA) → EN</a>
+            <a href="?ctry=GBR" data-translate="test.links.gbr">UK (GBR) → EN</a>
+            <a href="?ctry=CAN" data-translate="test.links.can">Canada (CAN) → EN</a>
+            <a href="?ctry=INVALID" data-translate="test.links.invalid">Code invalide → EN</a>
+            <a href="?" data-translate="test.links.none">Aucun paramètre → Défaut</a>
+        </div>
+        
+        <h3 data-translate="test.persistence.title">Test de persistance</h3>
+        <div class="test-links">
+            <a href="index.html" data-translate="test.persistence.home">Page d'accueil</a>
+            <a href="about.html" data-translate="test.persistence.about">À propos</a>
+            <a href="contact.html" data-translate="test.persistence.contact">Contact</a>
+            <a href="solutions.html" data-translate="test.persistence.solutions">Solutions</a>
+            <a href="products.html" data-translate="test.persistence.products">Produits</a>
+        </div>
+        
+        <div class="test-info">
+            <h4 data-translate="test.reset.title">Réinitialiser</h4>
+            <button onclick="localStorage.clear(); location.reload();" data-translate="test.reset.button">Supprimer toutes les données stockées</button>
+        </div>
+
+        <div class="test-info">
+            <h4 data-translate="test.console.title">Console JavaScript</h4>
+            <p data-translate="test.console.description">Tapez dans la console :</p>
+            <code>
+                window.languageManager.getCurrentCountry()<br>
+                window.languageManager.getCurrentLanguage()
+            </code>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script>
+        // Add test translations
+        if (typeof translations !== 'undefined') {
+            // French test translations
+            Object.assign(translations.fr, {
+                "test.title": "Test du système pays/langue",
+                "test.info.title": "Informations sur le test",
+                "test.info.description": "Cette page permet de tester le système de détection automatique de langue basé sur le paramètre URL \"ctry\".",
+                "test.current.title": "État actuel",
+                "test.current.country": "Pays détecté :",
+                "test.current.language": "Langue active :",
+                "test.current.url": "URL actuelle :",
+                "test.current.stored": "Pays stocké :",
+                "test.current.stored-lang": "Langue stockée :",
+                "test.manual.title": "Changer de langue manuellement",
+                "test.manual.french": "Français",
+                "test.manual.english": "English",
+                "test.links.title": "Liens de test avec différents pays",
+                "test.links.fra": "France (FRA) → FR",
+                "test.links.sen": "Sénégal (SEN) → FR", 
+                "test.links.usa": "USA (USA) → EN",
+                "test.links.gbr": "UK (GBR) → EN",
+                "test.links.can": "Canada (CAN) → EN",
+                "test.links.invalid": "Code invalide → EN",
+                "test.links.none": "Aucun paramètre → Défaut",
+                "test.persistence.title": "Test de persistance",
+                "test.persistence.home": "Page d'accueil",
+                "test.persistence.about": "À propos",
+                "test.persistence.contact": "Contact",
+                "test.persistence.solutions": "Solutions",
+                "test.persistence.products": "Produits",
+                "test.reset.title": "Réinitialiser",
+                "test.reset.button": "Supprimer toutes les données stockées",
+                "test.console.title": "Console JavaScript",
+                "test.console.description": "Tapez dans la console :"
+            });
+            
+            // English test translations
+            Object.assign(translations.en, {
+                "test.title": "Country/Language System Test",
+                "test.info.title": "Test Information",
+                "test.info.description": "This page allows testing the automatic language detection system based on the \"ctry\" URL parameter.",
+                "test.current.title": "Current State",
+                "test.current.country": "Detected Country:",
+                "test.current.language": "Active Language:",
+                "test.current.url": "Current URL:",
+                "test.current.stored": "Stored Country:",
+                "test.current.stored-lang": "Stored Language:",
+                "test.manual.title": "Change Language Manually",
+                "test.manual.french": "French",
+                "test.manual.english": "English",
+                "test.links.title": "Test Links with Different Countries",
+                "test.links.fra": "France (FRA) → FR",
+                "test.links.sen": "Senegal (SEN) → FR",
+                "test.links.usa": "USA (USA) → EN", 
+                "test.links.gbr": "UK (GBR) → EN",
+                "test.links.can": "Canada (CAN) → EN",
+                "test.links.invalid": "Invalid Code → EN",
+                "test.links.none": "No Parameter → Default",
+                "test.persistence.title": "Persistence Test",
+                "test.persistence.home": "Home Page",
+                "test.persistence.about": "About",
+                "test.persistence.contact": "Contact",
+                "test.persistence.solutions": "Solutions",
+                "test.persistence.products": "Products",
+                "test.reset.title": "Reset",
+                "test.reset.button": "Clear all stored data",
+                "test.console.title": "JavaScript Console",
+                "test.console.description": "Type in console:"
+            });
+        }
+
+        // Update current state display
+        function updateCurrentState() {
+            const countryElement = document.getElementById('current-country');
+            const languageElement = document.getElementById('current-language');
+            const urlElement = document.getElementById('current-url');
+            const storedCountryElement = document.getElementById('stored-country');
+            const storedLanguageElement = document.getElementById('stored-language');
+            
+            if (window.languageManager) {
+                const country = window.languageManager.getCurrentCountry();
+                const language = window.languageManager.getCurrentLanguage();
+                
+                countryElement.textContent = country ? `${country} (${window.languageManager.getCountryName(country)})` : 'None';
+                languageElement.textContent = language ? language.toUpperCase() : 'None';
+                urlElement.textContent = window.location.href;
+                
+                // Show stored values
+                const storedCountry = localStorage.getItem('selectedCountry');
+                const storedLang = localStorage.getItem('selectedLanguage');
+                
+                storedCountryElement.textContent = storedCountry || 'None';
+                storedLanguageElement.textContent = storedLang || 'None';
+            }
+        }
+
+        // Update state when language manager is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(updateCurrentState, 100);
+        });
+    </script>
+</body>
+</html>
