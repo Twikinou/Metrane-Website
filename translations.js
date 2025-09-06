@@ -1109,17 +1109,152 @@ const translations = {
     }
 };
 
+// African countries configuration (easily modifiable)
+const africanCountries = [
+    'SEN', // Senegal
+    'MAR', // Morocco
+    'TUN', // Tunisia
+    'DZA', // Algeria
+    'LBY', // Libya
+    'EGY', // Egypt
+    'SDN', // Sudan
+    'ETH', // Ethiopia
+    'KEN', // Kenya
+    'UGA', // Uganda
+    'TZA', // Tanzania
+    'RWA', // Rwanda
+    'BDI', // Burundi
+    'COD', // Democratic Republic of Congo
+    'COG', // Republic of Congo
+    'CAR', // Central African Republic
+    'CMR', // Cameroon
+    'TCD', // Chad
+    'NER', // Niger
+    'NGA', // Nigeria
+    'BEN', // Benin
+    'TGO', // Togo
+    'GHA', // Ghana
+    'CIV', // Ivory Coast
+    'LBR', // Liberia
+    'SLE', // Sierra Leone
+    'GIN', // Guinea
+    'GNB', // Guinea-Bissau
+    'MLI', // Mali
+    'BFA', // Burkina Faso
+    'MRT', // Mauritania
+    'GMB', // Gambia
+    'CPV', // Cape Verde
+    'AGO', // Angola
+    'ZMB', // Zambia
+    'ZWE', // Zimbabwe
+    'BWA', // Botswana
+    'NAM', // Namibia
+    'ZAF', // South Africa
+    'LSO', // Lesotho
+    'SWZ', // Eswatini (Swaziland)
+    'MDG', // Madagascar
+    'MUS', // Mauritius
+    'COM', // Comoros
+    'SYC', // Seychelles
+    'DJI', // Djibouti
+    'SOM', // Somalia
+    'ERI', // Eritrea
+    'MOZ', // Mozambique
+    'MWI', // Malawi
+    'GNQ', // Equatorial Guinea
+    'GAB', // Gabon
+    'STP'  // São Tomé and Príncipe
+];
+
+// Contact information configuration
+const contactInfo = {
+    france: {
+        address: "10 rue de Penthièvre<br>75008 Paris",
+        phone: "01 86 95 04 08",
+        email: "contact@metrane.fr",
+        website: "www.metrane.fr"
+    },
+    africa: {
+        address: "MERMOZ COMICO, RÉSIDENCE HUJURAT<br>DAKAR",
+        phone: "+30 78 388 78 78", 
+        email: "contact@metrane.sn",
+        website: "www.metrane.sn"
+    }
+};
+
 // Country to language mapping configuration
 const countryToLanguageMapping = {
+    // European countries
     'FRA': 'fr', // France
+    
+    // African countries (French speaking)
     'SEN': 'fr', // Senegal
+    'MAR': 'fr', // Morocco
+    'TUN': 'fr', // Tunisia
+    'DZA': 'fr', // Algeria
+    'CIV': 'fr', // Ivory Coast
+    'MLI': 'fr', // Mali
+    'BFA': 'fr', // Burkina Faso
+    'NER': 'fr', // Niger
+    'TCD': 'fr', // Chad
+    'CAR': 'fr', // Central African Republic
+    'CMR': 'fr', // Cameroon
+    'COG': 'fr', // Republic of Congo
+    'COD': 'fr', // Democratic Republic of Congo
+    'GAB': 'fr', // Gabon
+    'GNQ': 'fr', // Equatorial Guinea
+    'BEN': 'fr', // Benin
+    'TGO': 'fr', // Togo
+    'GIN': 'fr', // Guinea
+    'MRT': 'fr', // Mauritania
+    'COM': 'fr', // Comoros
+    'MDG': 'fr', // Madagascar
+    
+    // African countries (English speaking)
+    'ZAF': 'en', // South Africa
+    'KEN': 'en', // Kenya
+    'UGA': 'en', // Uganda
+    'TZA': 'en', // Tanzania
+    'RWA': 'en', // Rwanda
+    'ETH': 'en', // Ethiopia
+    'GHA': 'en', // Ghana
+    'NGA': 'en', // Nigeria
+    'SLE': 'en', // Sierra Leone
+    'LBR': 'en', // Liberia
+    'GMB': 'en', // Gambia
+    'BWA': 'en', // Botswana
+    'NAM': 'en', // Namibia
+    'ZMB': 'en', // Zambia
+    'ZWE': 'en', // Zimbabwe
+    'MWI': 'en', // Malawi
+    'LSO': 'en', // Lesotho
+    'SWZ': 'en', // Eswatini
+    'MUS': 'en', // Mauritius
+    'SYC': 'en', // Seychelles
+    
+    // Other African countries (Arabic speaking - defaulting to English)
+    'EGY': 'en', // Egypt
+    'LBY': 'en', // Libya
+    'SDN': 'en', // Sudan
+    'SOM': 'en', // Somalia
+    'DJI': 'en', // Djibouti
+    'ERI': 'en', // Eritrea
+    
+    // Other African countries
+    'AGO': 'en', // Angola (Portuguese - defaulting to English)
+    'MOZ': 'en', // Mozambique (Portuguese - defaulting to English)
+    'CPV': 'en', // Cape Verde (Portuguese - defaulting to English)
+    'GNB': 'en', // Guinea-Bissau (Portuguese - defaulting to English)
+    'STP': 'en', // São Tomé and Príncipe (Portuguese - defaulting to English)
+    
+    // Non-African countries
     'USA': 'en', // United States
     'GBR': 'en', // United Kingdom
     'CAN': 'en', // Canada (defaulting to English)
     'AUS': 'en', // Australia
     'NZL': 'en', // New Zealand
     'IRL': 'en', // Ireland
-    'ZAF': 'en', // South Africa
+    
     // Add more country mappings as needed
     // Default: if country not found or invalid, use 'en'
 };
@@ -1285,6 +1420,9 @@ class LanguageManager {
         
         // Update internal links with country parameter if country is set
         this.updateInternalLinks();
+        
+        // Update contact information based on country
+        this.updateContactInfo();
     }
     
     // Method to manually switch language (called by user interaction)
@@ -1314,6 +1452,9 @@ class LanguageManager {
         
         // Update all internal links to not include ctry parameter
         this.updateInternalLinks();
+        
+        // Update contact information
+        this.updateContactInfo();
     }
 
     translatePage() {
@@ -1380,6 +1521,53 @@ class LanguageManager {
         });
     }
     
+    updateContactInfo() {
+        const contact = this.getContactInfo();
+        
+        // Update address information
+        const addressElements = document.querySelectorAll('[data-contact="address"]');
+        addressElements.forEach(element => {
+            element.innerHTML = contact.address;
+        });
+        
+        // Update phone information  
+        const phoneElements = document.querySelectorAll('[data-contact="phone"]');
+        phoneElements.forEach(element => {
+            element.textContent = contact.phone;
+            if (element.tagName === 'A') {
+                element.href = `tel:${contact.phone.replace(/\s/g, '')}`;
+            }
+        });
+        
+        // Update email information
+        const emailElements = document.querySelectorAll('[data-contact="email"]');
+        emailElements.forEach(element => {
+            element.textContent = contact.email;
+            if (element.tagName === 'A') {
+                element.href = `mailto:${contact.email}`;
+            }
+        });
+        
+        // Update website information
+        const websiteElements = document.querySelectorAll('[data-contact="website"]');
+        websiteElements.forEach(element => {
+            element.textContent = contact.website;
+            if (element.tagName === 'A') {
+                element.href = `https://${contact.website}`;
+            }
+        });
+        
+        // Update phone numbers in translated text
+        const phoneTextElements = document.querySelectorAll('[data-contact="phone-text"]');
+        phoneTextElements.forEach(element => {
+            const currentText = element.innerHTML;
+            // Replace phone number in text while preserving HTML structure
+            const phonePattern = /(\+?[\d\s\-\(\)]{10,})/g;
+            const updatedText = currentText.replace(phonePattern, `<strong>${contact.phone}</strong>`);
+            element.innerHTML = updatedText;
+        });
+    }
+    
     // Utility methods to access current state
     getCurrentCountry() {
         return this.currentCountry;
@@ -1387,6 +1575,17 @@ class LanguageManager {
     
     getCurrentLanguage() {
         return this.currentLang;
+    }
+    
+    // Check if current country is African
+    isAfricanCountry(countryCode = null) {
+        const country = countryCode || this.currentCountry;
+        return country && africanCountries.includes(country);
+    }
+    
+    // Get appropriate contact information based on country
+    getContactInfo() {
+        return this.isAfricanCountry() ? contactInfo.africa : contactInfo.france;
     }
     
     // Method to get country name from code (for debugging)

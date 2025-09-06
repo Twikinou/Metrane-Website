@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Système pays/adresses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .test-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .contact-display {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .contact-display h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .test-links a, .test-links button {
+            display: block;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .test-links a:hover, .test-links button:hover {
+            background: #218838;
+        }
+        .africa-links a, .africa-links button {
+            background: #fd7e14;
+        }
+        .africa-links a:hover, .africa-links button:hover {
+            background: #e8660e;
+        }
+        .current-state {
+            background: #f0f8f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Test du système pays/adresses</h1>
+        
+        <div class="test-info">
+            <h3>Informations sur le test</h3>
+            <p>Cette page permet de tester le changement automatique d'adresse selon le pays détecté (France vs Afrique).</p>
+        </div>
+
+        <div class="current-state">
+            <h3>État actuel</h3>
+            <div id="current-info">
+                <p><strong>Pays détecté :</strong> <span id="current-country">-</span></p>
+                <p><strong>Langue active :</strong> <span id="current-language">-</span></p>
+                <p><strong>Région :</strong> <span id="current-region">-</span></p>
+            </div>
+        </div>
+
+        <div class="contact-display">
+            <h4>Informations de contact actuelles :</h4>
+            <p><strong>Adresse :</strong><br><span data-contact="address">10 rue de Penthièvre<br>75008 Paris</span></p>
+            <p><strong>Téléphone :</strong> <span data-contact="phone">01 86 95 04 08</span></p>
+            <p><strong>Email :</strong> <span data-contact="email">contact@metrane.fr</span></p>
+            <p><strong>Site web :</strong> <span data-contact="website">www.metrane.fr</span></p>
+            <p data-contact="phone-text">Besoin d'aide ? Appelez-nous au <strong>01 86 95 04 08</strong></p>
+        </div>
+
+        <h3>Test avec pays européens (France)</h3>
+        <div class="test-links">
+            <a href="?ctry=FRA">France (FRA)</a>
+            <a href="?ctry=DEU">Allemagne (DEU)</a>
+            <a href="?ctry=ESP">Espagne (ESP)</a>
+            <a href="?ctry=ITA">Italie (ITA)</a>
+            <a href="?ctry=USA">USA (USA)</a>
+        </div>
+
+        <h3>Test avec pays africains (Sénégal)</h3>
+        <div class="test-links africa-links">
+            <a href="?ctry=SEN">Sénégal (SEN)</a>
+            <a href="?ctry=MAR">Maroc (MAR)</a>
+            <a href="?ctry=TUN">Tunisie (TUN)</a>
+            <a href="?ctry=DZA">Algérie (DZA)</a>
+            <a href="?ctry=EGY">Égypte (EGY)</a>
+            <a href="?ctry=KEN">Kenya (KEN)</a>
+            <a href="?ctry=ZAF">Afrique du Sud (ZAF)</a>
+            <a href="?ctry=NGA">Nigeria (NGA)</a>
+            <a href="?ctry=GHA">Ghana (GHA)</a>
+            <a href="?ctry=CIV">Côte d'Ivoire (CIV)</a>
+        </div>
+
+        <h3>Actions de test</h3>
+        <div class="test-links">
+            <button onclick="testContactUpdate()">Forcer la mise à jour des contacts</button>
+            <button onclick="showContactInfo()">Afficher les infos de contact actuelles</button>
+            <button onclick="clearStorage()">Effacer le stockage local</button>
+            <a href="index.html">Retour à l'accueil</a>
+        </div>
+
+        <div class="test-info">
+            <h4>Console JavaScript</h4>
+            <p>Commandes utiles :</p>
+            <code>
+                window.languageManager.getCurrentCountry()<br>
+                window.languageManager.isAfricanCountry()<br>
+                window.languageManager.getContactInfo()<br>
+            </code>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script>
+        function updateCurrentState() {
+            const countryElement = document.getElementById('current-country');
+            const languageElement = document.getElementById('current-language');
+            const regionElement = document.getElementById('current-region');
+            
+            if (window.languageManager) {
+                const country = window.languageManager.getCurrentCountry();
+                const language = window.languageManager.getCurrentLanguage();
+                const isAfrican = window.languageManager.isAfricanCountry();
+                
+                countryElement.textContent = country || 'Aucun';
+                languageElement.textContent = language ? language.toUpperCase() : 'Aucune';
+                regionElement.textContent = country ? (isAfrican ? 'Afrique' : 'Autre') : 'Non définie';
+            }
+        }
+
+        function testContactUpdate() {
+            if (window.languageManager) {
+                window.languageManager.updateContactInfo();
+                updateCurrentState();
+                alert('Contacts mis à jour !');
+            }
+        }
+
+        function showContactInfo() {
+            if (window.languageManager) {
+                const contact = window.languageManager.getContactInfo();
+                const info = `Adresse: ${contact.address.replace(/<br>/g, ', ')}\nTéléphone: ${contact.phone}\nEmail: ${contact.email}\nSite web: ${contact.website}`;
+                alert(info);
+            }
+        }
+
+        function clearStorage() {
+            localStorage.clear();
+            location.reload();
+        }
+
+        // Update state when language manager is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateCurrentState();
+                console.log('Contact system ready for testing!');
+                if (window.languageManager) {
+                    console.log('Current contact info:', window.languageManager.getContactInfo());
+                }
+            }, 100);
+        });
+
+        // Update state every second for live monitoring
+        setInterval(updateCurrentState, 1000);
+    </script>
+</body>
+</html>
