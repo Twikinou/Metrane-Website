@@ -2,6 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Gestion des cartes flottantes pour qu'elles restent au premier plan
+    const floatingCards = document.querySelectorAll('.floating-card');
+    
+    floatingCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            // Retirer la classe hovered de toutes les cartes
+            floatingCards.forEach(c => c.classList.remove('hovered'));
+            // Ajouter la classe hovered à la carte survolée
+            this.classList.add('hovered');
+        });
+    });
+    
     // Mobile menu toggle (using same system as main page)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
