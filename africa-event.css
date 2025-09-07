@@ -10,6 +10,21 @@
     color: #FFB74D;
 }
 
+/* CTA Button in navbar with white background */
+.navbar .btn-primary {
+    background: white !important;
+    color: black !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.navbar .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: black !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
 /* When scrolled, return to normal colors */
 .navbar.scrolled .nav-link {
     color: var(--secondary-color);
@@ -17,6 +32,12 @@
 
 .navbar.scrolled .nav-link:hover {
     color: var(--primary-color);
+}
+
+/* Keep button white even when scrolled */
+.navbar.scrolled .btn-primary {
+    background: white !important;
+    color: black !important;
 }
 
 /* Language selector text in white initially */
@@ -41,7 +62,7 @@
 /* Hero Section with Advanced Animations */
 .hero-africa {
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh; /* Réduit de 100vh à 60vh */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -62,9 +83,10 @@
         radial-gradient(circle at 20% 80%, rgba(0, 153, 255, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
+    /* animation: float 20s ease-in-out infinite; */ /* Animation désactivée pour fond fixe */
 }
 
+/* Effet de vague supprimé
 .animated-waves {
     position: absolute;
     bottom: 0;
@@ -75,25 +97,30 @@
     background-size: cover;
     animation: wave 10s linear infinite;
 }
+*/
 
+/* Animation float désactivée pour fond fixe
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(5deg); }
 }
+*/
 
+/* Animation wave supprimée car l'effet de vague est désactivé
 @keyframes wave {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+*/
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem; /* Réduit de 4rem à 3rem */
     align-items: center;
     position: relative;
     z-index: 2;
-    padding: 2rem 0;
+    padding: 1rem 0; /* Réduit de 2rem à 1rem */
 }
 
 .hero-text {
@@ -123,6 +150,7 @@
     backdrop-filter: blur(10px);
 }
 
+/* Animation floating désactivée pour badge fixe
 .floating {
     animation: floating 3s ease-in-out infinite;
 }
@@ -131,17 +159,20 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
+*/
 
 .badge-icon {
     font-size: 1.2rem;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */ /* Animation désactivée pour icône fixe */
 }
 
+/* Animation pulse désactivée
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+*/
 
 .event-badge span:last-child {
     color: white;
@@ -189,9 +220,9 @@
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: white;
+    color: white !important;
     margin-bottom: 2rem;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .hero-description {
@@ -302,6 +333,7 @@
     animation: rotate 20s linear infinite reverse;
 }
 
+/* Point orange supprimé
 .orbit-dot {
     position: absolute;
     width: 10px;
@@ -314,11 +346,14 @@
     box-shadow: 0 0 20px rgba(255, 183, 77, 0.8);
     animation: orbit 20s linear infinite;
 }
+*/
 
+/* Animation orbit supprimée car le point orange est désactivé
 @keyframes orbit {
     from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
     to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
 }
+*/
 
 .logo-africa {
     position: absolute;
@@ -329,13 +364,15 @@
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
 }
 
+/* Animation floating-slow désactivée pour logo fixe
 .floating-slow {
     animation: floating 4s ease-in-out infinite;
 }
+*/
 
 /* Event Program Section */
 .event-program {
-    padding: 6rem 0;
+    padding: 3rem 0; /* Réduit de 6rem à 3rem pour remonter la section */
     background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 }
 

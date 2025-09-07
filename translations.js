@@ -97,7 +97,7 @@ const translations = {
         // Africa Event Page
         "africa.hero.date": "Jeudi 3 juillet 2025 - Noom Hotel Dakar",
         "africa.hero.title": "AFRIQUE",
-        "africa.hero.subtitle": "L'innovation au service du reporting financier africain",
+        "africa.hero.subtitle": "Révolutionner le reporting financier en Afrique",
         "africa.hero.description": "Metrane s'installe au Sénégal pour accompagner la transformation digitale des institutions financières africaines avec des solutions adaptées aux besoins locaux.",
         "africa.hero.cta": "Découvrir l'événement",
         "africa.program.title": "Moments forts de l'événement",
@@ -651,7 +651,7 @@ const translations = {
         // Africa Event Page
         "africa.hero.date": "Thursday July 3, 2025 - Noom Hotel Dakar",
         "africa.hero.title": "AFRICA",
-        "africa.hero.subtitle": "Innovation at the service of African financial reporting",
+        "africa.hero.subtitle": "Revolutionizing financial reporting in Africa",
         "africa.hero.description": "Metrane is setting up in Senegal to support the digital transformation of African financial institutions with solutions adapted to local needs.",
         "africa.hero.cta": "Discover the event",
         "africa.program.title": "Event highlights",
