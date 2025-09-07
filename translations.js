@@ -1531,8 +1531,8 @@ class LanguageManager {
             // Create URL object to handle parameters
             let url;
             try {
-                // Handle relative URLs
-                url = new URL(href, window.location.origin);
+                // Handle relative URLs - use current page URL as base to preserve path
+                url = new URL(href, window.location.href);
             } catch (e) {
                 // If URL creation fails, skip this link
                 return;
@@ -1546,8 +1546,9 @@ class LanguageManager {
                 url.searchParams.set('ctry', this.currentCountry);
             }
             
-            // Update the href
-            link.setAttribute('href', url.pathname + (url.search || ''));
+            // Update the href - keep it relative by extracting just the filename and search params
+            const filename = url.pathname.split('/').pop() || href.split('/').pop();
+            link.setAttribute('href', filename + (url.search || ''));
         });
     }
     
