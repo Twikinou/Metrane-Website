@@ -429,6 +429,91 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Gestion de la fenêtre flottante Sénégal
+    setTimeout(() => {
+        const senegalBanner = document.getElementById('senegalBanner');
+        const closeBanner = document.getElementById('closeBanner');
+        
+        if (senegalBanner && closeBanner) {
+            // Vérifier si l'utilisateur est déjà sur le site Sénégal
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentCountry = urlParams.get('ctry');
+            
+            console.log('Current URL:', window.location.href);
+            console.log('Country parameter:', currentCountry);
+            
+            // Conditions pour masquer le banner
+            let shouldHideBanner = false;
+            
+            // 1. Si l'utilisateur est déjà sur la version Sénégal
+            if (currentCountry === 'SEN') {
+                shouldHideBanner = true;
+                console.log('Banner masqué : déjà sur version Sénégal');
+            }
+            
+            // 2. Si l'utilisateur a fermé le banner dans cette session
+            if (sessionStorage.getItem('senegalBannerClosedThisSession') === 'true') {
+                shouldHideBanner = true;
+                console.log('Banner masqué : fermé dans cette session');
+            }
+            
+            // Masquer le banner si nécessaire
+            if (shouldHideBanner) {
+                senegalBanner.style.display = 'none';
+            } else {
+                console.log('Banner affiché');
+            }
+            
+            // Fermer la bannière quand on clique sur le X
+            closeBanner.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Clic sur fermer détecté');
+                
+                senegalBanner.classList.add('hidden');
+                sessionStorage.setItem('senegalBannerClosedThisSession', 'true');
+                
+                // Alternative : masquer immédiatement si l'animation ne fonctionne pas
+                setTimeout(() => {
+                    senegalBanner.style.display = 'none';
+                }, 500);
+            });
+            
+            // Gérer le clic sur le bouton "Version Sénégal"
+            const senegalVersionBtn = document.getElementById('senegalVersionBtn');
+            if (senegalVersionBtn) {
+                senegalVersionBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Redirection vers version Sénégal');
+                    
+                    // Marquer que l'utilisateur a choisi la version Sénégal
+                    sessionStorage.setItem('senegalBannerClosedThisSession', 'true');
+                    
+                    // Construire la nouvelle URL avec le paramètre ctry=SEN
+                    const currentUrl = new URL(window.location.href);
+                    currentUrl.searchParams.set('ctry', 'SEN');
+                    
+                    console.log('Nouvelle URL:', currentUrl.toString());
+                    
+                    // Masquer le banner avant la redirection
+                    senegalBanner.style.display = 'none';
+                    
+                    // Rediriger vers la nouvelle URL avec un petit délai pour s'assurer que le banner est masqué
+                    setTimeout(() => {
+                        window.location.href = currentUrl.toString();
+                    }, 100);
+                });
+            }
+            
+            // Aussi ajouter un listener au banner pour éviter la fermeture accidentelle
+            senegalBanner.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+    }, 500);
+    
+
     // Load all images for gallery
     const allPhotos = [
         'DSC01155.jpg', 'DSC01157.jpg', 'DSC01162.jpg', 'DSC01164.jpg', 'DSC01168.jpg',

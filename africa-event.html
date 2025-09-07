@@ -85,10 +85,6 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="event-badge floating">
-                        <span class="badge-icon">📍</span>
-                        <span data-translate="africa.hero.date">Jeudi 3 juillet 2025 - Noom Hotel Dakar</span>
-                    </div>
                     <h1 class="hero-title">
                         <span class="title-line-1">METRANE</span>
                         <span class="title-line-2 gradient-text" data-translate="africa.hero.title">AFRIQUE</span>
@@ -133,6 +129,10 @@
             <div class="section-header">
                 <h2 class="section-title" data-translate="africa.program.title">Moments forts de l'événement</h2>
                 <p class="section-subtitle" data-translate="africa.program.subtitle">Une soirée mémorable dédiée à l'innovation financière en Afrique</p>
+                <div class="event-badge floating">
+                    <span class="badge-icon">📍</span>
+                    <span data-translate="africa.hero.date">Jeudi 3 juillet 2025 - Noom Hotel Dakar</span>
+                </div>
             </div>
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-up">
@@ -229,19 +229,25 @@
                 <div class="gallery-container">
                     <div class="gallery-track">
                         <div class="gallery-item active">
-                            <img src="assets/africa-event/photos/DSC01155.jpg" alt="Photo événement 1" loading="lazy">
+                            <img src="assets/africa-event/photos/DSC01172.jpg" alt="Photo événement 1" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/africa-event/photos/DSC01157.jpg" alt="Photo événement 2" loading="lazy">
+                            <img src="assets/africa-event/photos/DSC01282.jpg" alt="Photo événement 2" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/africa-event/photos/DSC01162.jpg" alt="Photo événement 3" loading="lazy">
+                            <img src="assets/africa-event/photos/DSC01267.jpg" alt="Photo événement 3" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/africa-event/photos/DSC01164.jpg" alt="Photo événement 4" loading="lazy">
+                            <img src="assets/africa-event/photos/DSC01162.jpg" alt="Photo événement 4" loading="lazy">
                         </div>
                         <div class="gallery-item">
                             <img src="assets/africa-event/photos/DSC01168.jpg" alt="Photo événement 5" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/africa-event/photos/DSC01188.jpg" alt="Photo événement 6" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/africa-event/photos/DSC01192.jpg" alt="Photo événement 7" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -487,5 +493,29 @@
     <script src="script.js"></script>
     <script src="translations.js"></script>
     <script src="africa-event.js"></script>
+    
+    <!-- Fenêtre flottante CTA Sénégal -->
+    <div class="floating-senegal-banner" id="senegalBanner">
+        <button class="banner-close" id="closeBanner" aria-label="Fermer">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="banner-content">
+            <div class="banner-header">
+                <span class="banner-flag">🇸🇳</span>
+                <div class="banner-text">
+                    <strong data-translate="africa.banner.title">Metrane Sénégal est en ligne !</strong>
+                    <span data-translate="africa.banner.subtitle">Suivez toute l'actualité sur notre site dédié</span>
+                </div>
+            </div>
+            <button class="banner-btn" id="senegalVersionBtn">
+                <span data-translate="africa.banner.cta">Version Sénégal</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 </html>

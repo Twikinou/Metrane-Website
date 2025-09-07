@@ -161,6 +161,9 @@ const translations = {
         "africa.coconstruction.card7.text": "Génération automatisée de documents",
         "africa.coconstruction.card8.title": "Bâle II & III",
         "africa.coconstruction.card8.text": "Reporting prudentiel complet",
+        "africa.banner.title": "Vous êtes au Sénégal ?",
+        "africa.banner.subtitle": "Accédez à la version adaptée à votre région",
+        "africa.banner.cta": "Version Sénégal",
         
         // Solutions Page
         "solutions.hero.title": "Devenez l'architecte de <span class=\"text-primary\">vos solutions</span>",
@@ -727,6 +730,9 @@ const translations = {
         "africa.coconstruction.card7.text": "Automated document generation",
         "africa.coconstruction.card8.title": "Basel II & III",
         "africa.coconstruction.card8.text": "Complete prudential reporting",
+        "africa.banner.title": "Are you in Senegal?",
+        "africa.banner.subtitle": "Access the version adapted to your region",
+        "africa.banner.cta": "Senegal Version",
         
         // Solutions Page
         "solutions.hero.title": "Become the architect of <span class=\"text-primary\">your solutions</span>",
