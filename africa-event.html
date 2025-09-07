@@ -106,6 +106,12 @@
                                 <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
+                        <a href="#vision-africa" class="btn-secondary">
+                            <span data-translate="africa.hero.cta2">Notre vision</span>
+                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -167,8 +173,8 @@
     <section class="video-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-translate="africa.video.title">Découvrez Metrane en action</h2>
-                <p class="section-subtitle" data-translate="africa.video.subtitle">Survolez pour prévisualiser, cliquez pour voir en grand</p>
+                <h2 class="section-title" data-translate="africa.video.title">Revivez notre événement à Dakar</h2>
+                <p class="section-subtitle" data-translate="africa.video.subtitle">Découvrez les moments forts de notre lancement au Sénégal</p>
             </div>
             <div class="video-container">
                 <video 
@@ -258,7 +264,7 @@
     </section>
 
     <!-- Section Notre Vision pour l'Afrique -->
-    <section class="vision-africa">
+    <section class="vision-africa" id="vision-africa">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-translate="africa.vision.title">Notre vision pour l'Afrique</h2>
@@ -267,10 +273,7 @@
             <div class="vision-grid">
                 <div class="vision-card" data-aos="zoom-in">
                     <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <circle cx="24" cy="24" r="20" stroke="#0099FF" stroke-width="2"/>
-                            <path d="M16 24L22 30L32 18" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <img src="assets/africa-event/icon-senegal.svg" alt="Icône Sénégal" width="48" height="48">
                     </div>
                     <h3 data-translate="africa.vision.card1.title">Pourquoi le Sénégal?</h3>
                     <ul>
@@ -284,10 +287,7 @@
                 </div>
                 <div class="vision-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="8" y="12" width="32" height="24" rx="4" stroke="#0099FF" stroke-width="2"/>
-                            <path d="M20 24H28M24 20V28" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="assets/africa-event/icon-locaux.svg" alt="Icône Locaux" width="48" height="48">
                     </div>
                     <h3 data-translate="africa.vision.card2.title">Nouveaux locaux de standing</h3>
                     <p data-translate="africa.vision.card2.text">Installation de bureaux modernes de 60m² à Dakar, dans un beau quartier. Bureaux privatifs individualisés avec équipements complets et internet haut débit pour accueillir nos équipes dans un environnement d'exception.</p>
@@ -298,10 +298,7 @@
                 </div>
                 <div class="vision-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <circle cx="24" cy="16" r="6" stroke="#0099FF" stroke-width="2"/>
-                            <path d="M12 34C12 28 17 24 24 24C31 24 36 28 36 34" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="assets/africa-event/icon-recrutement.svg" alt="Icône Recrutement" width="48" height="48">
                     </div>
                     <h3 data-translate="africa.vision.card3.title">Recrutement ambitieux</h3>
                     <p data-translate="africa.vision.card3.text">Objectifs ambitieux : 4-5 personnes d'ici la rentrée, une dizaine d'ici la fin de l'année, avec formation en France sur nos outils avant retour au Sénégal.</p>
@@ -312,16 +309,17 @@
                 </div>
                 <div class="vision-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 8L30 14L36 8M24 40L30 34L36 40" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 24H36" stroke="#0099FF" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="assets/africa-event/icon-partenariats.svg" alt="Icône Partenariats" width="48" height="48">
                     </div>
                     <h3 data-translate="africa.vision.card4.title">Partenariats stratégiques</h3>
                     <p data-translate="africa.vision.card4.text">Collaboration avec Business France, les institutions financières locales et les régulateurs pour développer des solutions adaptées.</p>
                     <div class="partners-logos">
-                        <img src="assets/partner-1.png" alt="Business France" loading="lazy">
-                        <img src="assets/partner-2.png" alt="Finance Innovation" loading="lazy">
+                        <a href="https://world.businessfrance.fr/sub-saharan-africa/fr/business-france-senegal/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/africa-event/partner-1.png" alt="Business France" loading="lazy" style="background: white; padding: 10px; border-radius: 8px;">
+                        </a>
+                        <a href="https://www.bceao.int" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/africa-event/partner-2.png" alt="Finance Innovation" loading="lazy" style="background: white; padding: 10px; border-radius: 8px;">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -341,6 +339,13 @@
                                 <path d="M9 12L11 14L15 10" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <circle cx="12" cy="12" r="10" stroke="#0099FF" stroke-width="2"/>
                             </svg>
+                            <span data-translate="africa.coconstruction.feature0">Création d'une filiale locale avec une structure propre à l'activité Metrane en Afrique</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="10" stroke="#0099FF" stroke-width="2"/>
+                            </svg>
                             <span data-translate="africa.coconstruction.feature1">Adaptation aux réglementations BCEAO et locales</span>
                         </div>
                         <div class="feature-item">
@@ -348,14 +353,14 @@
                                 <path d="M9 12L11 14L15 10" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <circle cx="12" cy="12" r="10" stroke="#0099FF" stroke-width="2"/>
                             </svg>
-                            <span data-translate="africa.coconstruction.feature2">Reporting COCOTIER</span>
+                            <span data-translate="africa.coconstruction.feature2">Développement d'un reporting COCOTIER exigence propre à la BCEAO (tout en proposant nos solutions existantes pour couvrir tous les besoins de reporting exemple FODEP, Bâle III etc..)</span>
                         </div>
                         <div class="feature-item">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M9 12L11 14L15 10" stroke="#0099FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <circle cx="12" cy="12" r="10" stroke="#0099FF" stroke-width="2"/>
                             </svg>
-                            <span data-translate="africa.coconstruction.feature3">Gestion des anomalies (incidents, fraudes, réclamations)</span>
+                            <span data-translate="africa.coconstruction.feature3">Création d'un module innovant de gestion des anomalies (incidents, fraudes, réclamations) intégrant un workflow intelligent, directement connecté au reporting COCOTIER et offrant des analyses avancées pour optimiser votre gestion des risques opérationnels</span>
                         </div>
                     </div>
                     <div class="cta-group">
