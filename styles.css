@@ -885,7 +885,6 @@ p {
 .announcement-card {
     padding: 32px 64px;
     position: relative;
-    overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -897,41 +896,35 @@ p {
     border: 0.833px solid #D5D5D5;
     background: #FFF;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
-}
-
-.earth-bg-container {
-    width: 40%;
-    height: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.earth-bg {
-    position: absolute;
-    bottom: -55%;
-    width: 35%;
-    height: auto;
-    opacity: 1;
-    z-index: 1;
-    flex-shrink: 0;
     overflow: hidden;
 }
 
-.earth-bg img {
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
-    object-position: center top;
+.earth-bg-container {
+    position: absolute;
+    left: 50px;
+    bottom: -150px;
+    width: 350px;
+    height: 350px;
 }
+
+.earth-bg {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center center;
+}
+
 
 .announcement-content {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
-    width: 50%;    
-
+    width: 50%;
+    margin-left: auto;
+    text-align: left;
 }
 
 .flag {
