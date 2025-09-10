@@ -902,9 +902,9 @@ p {
 .earth-bg-container {
     position: absolute;
     left: 50px;
-    bottom: -150px;
-    width: 350px;
-    height: 350px;
+    bottom: -180px;
+    width: 400px;
+    height: 400px;
 }
 
 .earth-bg {
