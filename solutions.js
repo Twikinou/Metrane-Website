@@ -244,12 +244,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
         
-        // Hide/show navbar on scroll
-        if (currentScroll > lastScroll && currentScroll > 300) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
         
         lastScroll = currentScroll;
     });
