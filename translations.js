@@ -164,6 +164,11 @@ const translations = {
         "africa.banner.title": "Vous êtes au Sénégal ?",
         "africa.banner.subtitle": "Accédez à la version adaptée à votre région",
         "africa.banner.cta": "Version Sénégal",
+        "africa.banner.hide": "Ne plus afficher",
+        "africa.banner.confirm.title": "Êtes-vous sûr ?",
+        "africa.banner.confirm.message": "Si vous choisissez cela, le message n'apparaîtra plus. Pour vous connecter sur la version sénégalaise, allez à l'adresse www.metrane.sn",
+        "africa.banner.confirm.understand": "J'ai compris",
+        "africa.banner.confirm.cancel": "Annuler",
         
         // Solutions Page
         "solutions.hero.title": "Devenez l'architecte de <span class=\"text-primary\">vos solutions</span>",
@@ -733,6 +738,11 @@ const translations = {
         "africa.banner.title": "Are you in Senegal?",
         "africa.banner.subtitle": "Access the version adapted to your region",
         "africa.banner.cta": "Senegal Version",
+        "africa.banner.hide": "Don't show again",
+        "africa.banner.confirm.title": "Are you sure?",
+        "africa.banner.confirm.message": "If you choose this, the message will no longer appear. To connect to the Senegalese version, go to www.metrane.sn",
+        "africa.banner.confirm.understand": "I understand",
+        "africa.banner.confirm.cancel": "Cancel",
         
         // Solutions Page
         "solutions.hero.title": "Become the architect of <span class=\"text-primary\">your solutions</span>",

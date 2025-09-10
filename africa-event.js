@@ -451,10 +451,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Banner masqué : déjà sur version Sénégal');
             }
             
-            // 2. Si l'utilisateur a fermé le banner dans cette session
-            if (sessionStorage.getItem('senegalBannerClosedThisSession') === 'true') {
+            // 2. Si l'utilisateur a définitivement masqué le banner
+            if (localStorage.getItem('senegalBannerPermanentlyHidden') === 'true') {
                 shouldHideBanner = true;
-                console.log('Banner masqué : fermé dans cette session');
+                console.log('Banner masqué : masquage définitif par l\'utilisateur');
             }
             
             // Masquer le banner si nécessaire
@@ -471,7 +471,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Clic sur fermer détecté');
                 
                 senegalBanner.classList.add('hidden');
-                sessionStorage.setItem('senegalBannerClosedThisSession', 'true');
                 
                 // Alternative : masquer immédiatement si l'animation ne fonctionne pas
                 setTimeout(() => {
@@ -506,12 +505,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             
+            // Gérer le clic sur "Ne plus afficher"
+            const hideBannerBtn = document.getElementById('hideBannerBtn');
+            if (hideBannerBtn) {
+                hideBannerBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Clic sur "Ne plus afficher"');
+                    
+                    // Afficher la modal de confirmation
+                    const confirmationModal = document.getElementById('confirmationModal');
+                    if (confirmationModal) {
+                        confirmationModal.classList.add('active');
+                    }
+                });
+            }
+            
             // Aussi ajouter un listener au banner pour éviter la fermeture accidentelle
             senegalBanner.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
         }
     }, 500);
+    
+    // Gestion de la modal de confirmation
+    const confirmationModal = document.getElementById('confirmationModal');
+    const confirmHideBtn = document.getElementById('confirmHideBtn');
+    const cancelHideBtn = document.getElementById('cancelHideBtn');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    
+    if (confirmationModal && confirmHideBtn && cancelHideBtn) {
+        // Clic sur "J'ai compris" - masquer définitivement
+        confirmHideBtn.addEventListener('click', function() {
+            console.log('Masquage définitif du banner');
+            
+            // Stocker la préférence dans localStorage
+            localStorage.setItem('senegalBannerPermanentlyHidden', 'true');
+            
+            // Masquer la modal
+            confirmationModal.classList.remove('active');
+            
+            // Masquer le banner
+            const senegalBanner = document.getElementById('senegalBanner');
+            if (senegalBanner) {
+                senegalBanner.style.display = 'none';
+            }
+        });
+        
+        // Clic sur "Annuler" - fermer la modal sans rien faire
+        cancelHideBtn.addEventListener('click', function() {
+            console.log('Annulation du masquage');
+            confirmationModal.classList.remove('active');
+        });
+        
+        // Clic sur l'overlay - fermer la modal
+        modalOverlay.addEventListener('click', function() {
+            console.log('Fermeture modal via overlay');
+            confirmationModal.classList.remove('active');
+        });
+    }
     
 
     // Load all images for gallery

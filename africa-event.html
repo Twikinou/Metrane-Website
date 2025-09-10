@@ -509,12 +509,34 @@
                     <span data-translate="africa.banner.subtitle">Suivez toute l'actualité sur notre site dédié</span>
                 </div>
             </div>
-            <button class="banner-btn" id="senegalVersionBtn">
-                <span data-translate="africa.banner.cta">Version Sénégal</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+            <div class="banner-buttons">
+                <button class="banner-btn banner-btn-primary" id="senegalVersionBtn">
+                    <span data-translate="africa.banner.cta">Version Sénégal</span>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="banner-btn banner-btn-secondary" id="hideBannerBtn">
+                    <span data-translate="africa.banner.hide">Ne plus afficher</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation pour masquer définitivement -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h3 data-translate="africa.banner.confirm.title">Êtes-vous sûr ?</h3>
+            <p data-translate="africa.banner.confirm.message">Si vous choisissez cela, le message n'apparaîtra plus. Pour vous connecter sur la version sénégalaise, allez à l'adresse www.metrane.sn</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-primary" id="confirmHideBtn">
+                    <span data-translate="africa.banner.confirm.understand">J'ai compris</span>
+                </button>
+                <button class="modal-btn modal-btn-secondary" id="cancelHideBtn">
+                    <span data-translate="africa.banner.confirm.cancel">Annuler</span>
+                </button>
+            </div>
         </div>
     </div>
 </body>
