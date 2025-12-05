@@ -9,7 +9,7 @@ const translations = {
         
         // Hero Section
         "hero.title": "Prenez le contrôle<br>de vos <span class=\"text-primary\">reportings</span>",
-        "hero.subtitle": "Vos métiers savent ce qu'ils veulent. Offrez-leur les moyens de le faire. Metrane vous aide à créer le reporting dont votre entreprise a besoin.",
+        "hero.subtitle": "Vos métiers connaissent leurs besoins. Offrez-leur les moyens de les réaliser. Metrane facilite la création de vos reportings.",
         "hero.btn.demo": "Demander une démo",
         "hero.btn.more": "En savoir plus",
         "hero.stat1.value": "10+",
@@ -21,12 +21,13 @@ const translations = {
         
         // Announcement Section
         "announcement.title": "Metrane Arrive au Sénégal !",
-        "announcement.text": "Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions locales, adaptées et réactives.",
+        "announcement.text": "Nos nouveaux bureaux à Dakar marquent une étape clé dans notre engagement à accompagner les acteurs financiers africains avec des solutions réactives et adaptées aux exigences locales.",
         "announcement.btn": "On vous montre ?",
         
         // Features Section
         "features.tag": "Qu'est-ce que Metrane ?",
-        "features.title": "Tout ce dont vous avez<br>besoin dans un seul outil",
+        "features.slogan": "Une Plateforme Unique Tout en un",
+        "features.title": "Tout ce dont vous avez besoin dans un seul outil",
         "features.subtitle": "Réalisez vos reportings réglementaires, opérationnels et documentaires dans une seule plateforme automatisée et sans une seule ligne de code.",
         "features.regulatory.title": "Reporting Réglementaire",
         "features.regulatory.text": "Simplifiez la production de vos reportings destinés à l'ACPR, la BCE ou toute autre autorité. Générez, validez et exportez vos états réglementaires en quelques clics, en assurant la transparence et la fiabilité de vos données.",
@@ -583,7 +584,7 @@ const translations = {
         
         // Hero Section
         "hero.title": "Take control<br>of your <span class=\"text-primary\">reporting</span>",
-        "hero.subtitle": "Your teams know what they want. Give them the means to do it. Metrane helps you create the reporting your business needs.",
+        "hero.subtitle": "Your teams know their needs. Give them the means to achieve them. Metrane makes it easy to create your reports.",
         "hero.btn.demo": "Request a demo",
         "hero.btn.more": "Learn more",
         "hero.stat1.value": "10+",
@@ -595,12 +596,13 @@ const translations = {
         
         // Announcement Section
         "announcement.title": "Metrane Arrives in Senegal!",
-        "announcement.text": "Our new offices in Dakar mark a key step in our commitment to supporting African financial players with local, adapted and responsive solutions.",
+        "announcement.text": "Our new offices in Dakar mark a key step in our commitment to supporting African financial players with responsive solutions adapted to local requirements.",
         "announcement.btn": "Want to see?",
         
         // Features Section
         "features.tag": "What is Metrane?",
-        "features.title": "Everything you need<br>in a single tool",
+        "features.slogan": "A Unique All-in-One Platform",
+        "features.title": "Everything you need in a single tool",
         "features.subtitle": "Create your regulatory, operational and documentary reports in a single automated platform without a single line of code.",
         "features.regulatory.title": "Regulatory Reporting",
         "features.regulatory.text": "Simplify the production of your reports for ACPR, ECB or any other authority. Generate, validate and export your regulatory statements in just a few clicks, ensuring transparency and reliability of your data.",
