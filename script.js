@@ -411,3 +411,36 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+
+// Vision 360° diagram - highlight domains on quadrant hover
+document.addEventListener('DOMContentLoaded', () => {
+    const quadrants = document.querySelectorAll('.circle-quadrant');
+    const axisLabels = {
+        metiers: document.querySelector('.axis-top'),
+        si: document.querySelector('.axis-bottom'),
+        gestion: document.querySelector('.axis-left'),
+        production: document.querySelector('.axis-right')
+    };
+
+    quadrants.forEach(quadrant => {
+        const domains = quadrant.dataset.domains?.split(',') || [];
+
+        quadrant.addEventListener('mouseenter', () => {
+            // Highlight related domain labels
+            domains.forEach(domain => {
+                if (axisLabels[domain]) {
+                    axisLabels[domain].classList.add('highlighted');
+                }
+            });
+        });
+
+        quadrant.addEventListener('mouseleave', () => {
+            // Remove highlight from all domain labels
+            Object.values(axisLabels).forEach(label => {
+                if (label) {
+                    label.classList.remove('highlighted');
+                }
+            });
+        });
+    });
+});
