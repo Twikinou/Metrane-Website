@@ -389,13 +389,197 @@ style.textContent = `
         transform: translateY(30px);
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    
+
     .animate-in {
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* Onboarding arrow pointing to switch */
+    .onboarding-arrow {
+        position: fixed;
+        z-index: 10001;
+        pointer-events: none;
+        animation: arrowBounce 0.6s ease-in-out infinite;
+    }
+
+    .onboarding-arrow svg {
+        width: 50px;
+        height: 50px;
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    @keyframes arrowBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    /* Pulse effect on switch during onboarding */
+    .product-switch-floating.onboarding-pulse {
+        animation: switchPulse 0.8s ease-in-out infinite;
+    }
+
+    @keyframes switchPulse {
+        0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
+        50% { box-shadow: 0 4px 30px rgba(201, 169, 98, 0.6); }
+    }
+
+    /* Simulated click effect */
+    .product-switch-floating.onboarding-click {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
 `;
 document.head.appendChild(style);
+
+// Onboarding animation for product switch
+function initSwitchOnboarding() {
+    const floatingSwitch = document.getElementById('productSwitchFloating');
+    const switchConseil = document.querySelector('.switch-conseil');
+    const switchTools = document.querySelector('.switch-tools');
+
+    if (!floatingSwitch || !switchConseil || !switchTools) return;
+
+    // Don't show onboarding if user already clicked on switch (stored in localStorage)
+    if (localStorage.getItem('switchOnboardingClicked')) return;
+
+    // Don't show if coming from hash (user already knows about switch)
+    if (window.location.hash === '#conseil') {
+        localStorage.setItem('switchOnboardingClicked', 'true');
+        return;
+    }
+
+    let onboardingActive = true;
+    let isAnimationClick = false; // Flag to ignore animation-triggered clicks
+    let timeoutIds = [];
+
+    // Function to stop onboarding and mark as clicked (only for real user clicks)
+    function stopOnboarding() {
+        if (isAnimationClick) return; // Ignore animation clicks
+        if (!onboardingActive) return;
+        onboardingActive = false;
+
+        // Clear all pending timeouts
+        timeoutIds.forEach(id => clearTimeout(id));
+        timeoutIds = [];
+
+        // Remove visual effects
+        floatingSwitch.classList.remove('onboarding-pulse');
+        floatingSwitch.classList.remove('onboarding-click');
+
+        // Remove arrow
+        const arrow = document.querySelector('.onboarding-arrow');
+        if (arrow) {
+            arrow.style.transition = 'opacity 0.3s ease';
+            arrow.style.opacity = '0';
+            setTimeout(() => arrow.remove(), 300);
+        }
+
+        // Mark as clicked permanently - won't show again
+        localStorage.setItem('switchOnboardingClicked', 'true');
+
+        // Remove listener
+        floatingSwitch.removeEventListener('click', stopOnboarding);
+    }
+
+    // Stop onboarding if user clicks on switch
+    floatingSwitch.addEventListener('click', stopOnboarding);
+
+    // Create arrow element
+    const arrow = document.createElement('div');
+    arrow.className = 'onboarding-arrow';
+    arrow.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="#c9a962" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    `;
+    document.body.appendChild(arrow);
+
+    // Position arrow above the switch
+    function positionArrow() {
+        const rect = floatingSwitch.getBoundingClientRect();
+        arrow.style.left = (rect.left + rect.width / 2 - 25) + 'px';
+        arrow.style.top = (rect.top - 60) + 'px';
+    }
+
+    positionArrow();
+
+    // Start onboarding sequence after 1.5 seconds
+    const startTimeout = setTimeout(() => {
+        if (!onboardingActive) return;
+
+        floatingSwitch.classList.add('onboarding-pulse');
+
+        // Sequence: click Conseil, click Tools, click Conseil, click Tools (2 times back and forth)
+        const sequence = [
+            { target: 'conseil', delay: 1000 },
+            { target: 'tools', delay: 1800 },
+            { target: 'conseil', delay: 2600 },
+            { target: 'tools', delay: 3400 }
+        ];
+
+        sequence.forEach(({ target, delay }) => {
+            const id = setTimeout(() => {
+                if (!onboardingActive) return;
+
+                // Simulate click effect (button press)
+                floatingSwitch.classList.add('onboarding-click');
+
+                const clickId = setTimeout(() => {
+                    if (!onboardingActive) return;
+                    floatingSwitch.classList.remove('onboarding-click');
+
+                    // Mark as animation click to prevent stopOnboarding from triggering
+                    isAnimationClick = true;
+
+                    // Trigger the real click to change page content
+                    if (target === 'conseil') {
+                        switchConseil.click();
+                    } else {
+                        switchTools.click();
+                    }
+
+                    // Reset flag after click event is processed
+                    setTimeout(() => {
+                        isAnimationClick = false;
+                    }, 50);
+                }, 100);
+                timeoutIds.push(clickId);
+            }, delay);
+            timeoutIds.push(id);
+        });
+
+        // End onboarding after sequence
+        const endId = setTimeout(() => {
+            if (!onboardingActive) return;
+
+            floatingSwitch.classList.remove('onboarding-pulse');
+            arrow.style.transition = 'opacity 0.5s ease';
+            arrow.style.opacity = '0';
+
+            const removeId = setTimeout(() => {
+                arrow.remove();
+                // Remove listener after animation ends
+                floatingSwitch.removeEventListener('click', stopOnboarding);
+            }, 500);
+            timeoutIds.push(removeId);
+
+            onboardingActive = false;
+        }, 4500);
+        timeoutIds.push(endId);
+
+    }, 1500);
+    timeoutIds.push(startTimeout);
+
+    // Update arrow position on resize
+    window.addEventListener('resize', positionArrow);
+}
+
+// Initialize onboarding when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait a bit for the page to fully render
+    setTimeout(initSwitchOnboarding, 500);
+});
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
@@ -422,6 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
         production: document.querySelector('.axis-right')
     };
 
+    // Highlight domains on quadrant hover
     quadrants.forEach(quadrant => {
         const domains = quadrant.dataset.domains?.split(',') || [];
 
