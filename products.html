@@ -75,6 +75,20 @@
     </div>
 
     <main>
+        <!-- Floating Product Switch Toggle -->
+        <div class="product-switch-floating" id="productSwitchFloating">
+            <div class="switch-half switch-tools active" data-product="tools">
+                <span class="switch-label" data-translate="products.switch.tools">Tools</span>
+            </div>
+            <div class="switch-half switch-conseil" data-product="conseil">
+                <span class="switch-label" data-translate="products.switch.conseil">Conseil</span>
+            </div>
+            <div class="switch-indicator"></div>
+        </div>
+
+        <!-- ========== METRANE TOOLS SECTION ========== -->
+        <div id="tools-content" class="product-content active">
+
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -447,6 +461,586 @@
                 </div>
             </div>
         </section>
+
+        </div><!-- End tools-content -->
+
+        <!-- ========== METRANE CONSEIL SECTION ========== -->
+        <div id="conseil-content" class="product-content conseil-theme">
+
+        <!-- Conseil Hero Section -->
+        <section class="conseil-hero">
+            <div class="container">
+                <div class="conseil-hero-content">
+                    <div class="conseil-hero-text">
+                        <h1 data-translate="conseil.hero.title">METRANE <span class="text-gold">Conseil</span></h1>
+                        <p class="conseil-hero-subtitle" data-translate="conseil.hero.subtitle">Conseil et développement sur mesure pour vos projets Finance & Risk</p>
+                        <p class="conseil-hero-description" data-translate="conseil.hero.description">Fort de notre double expertise conseil et éditeur logiciel avec METRANE Tools, nous vous accompagnons de bout en bout : de la maîtrise d'ouvrage jusqu'au développement de solutions sur mesure.</p>
+                        <div class="conseil-hero-buttons">
+                            <a href="./contact.html" class="btn btn-gold" data-translate="conseil.hero.btn.contact">Parlons de votre projet</a>
+                            <a href="#conseil-expertise" class="btn btn-outline-light" data-translate="conseil.hero.btn.approach">Découvrir notre approche</a>
+                        </div>
+                    </div>
+                    <div class="conseil-hero-visual">
+                        <div class="conseil-visual-element">
+                            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="150" cy="150" r="120" stroke="#c9a962" stroke-width="2" opacity="0.3"/>
+                                <circle cx="150" cy="150" r="80" stroke="#c9a962" stroke-width="2" opacity="0.5"/>
+                                <circle cx="150" cy="150" r="40" fill="#c9a962" opacity="0.2"/>
+                                <path d="M150 70 L150 230 M70 150 L230 150" stroke="#c9a962" stroke-width="1" opacity="0.4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Double Expertise Section -->
+        <section id="conseil-expertise" class="conseil-expertise">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.expertise.tag">Notre double expertise</span>
+                    <h2 data-translate="conseil.expertise.title">Conseil & Développement</h2>
+                    <p class="conseil-lead" data-translate="conseil.expertise.lead">METRANE combine une expertise conseil de haut niveau avec une capacité de développement éprouvée. Notre expérience d'éditeur logiciel nous confère une sensibilité technique rare chez les cabinets de conseil.</p>
+                </div>
+
+                <div class="expertise-pillars">
+                    <div class="expertise-pillar">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="conseil.expertise.pillar1.title">Conseil & Maîtrise d'ouvrage</h3>
+                        <ul class="pillar-list">
+                            <li data-translate="conseil.expertise.pillar1.item1">Pilotage et coordination de projets</li>
+                            <li data-translate="conseil.expertise.pillar1.item2">Expertise réglementaire (CRR/CRD, FINREP, COREP, LCR, NSFR...)</li>
+                            <li data-translate="conseil.expertise.pillar1.item3">Accompagnement des métiers et conduite du changement</li>
+                            <li data-translate="conseil.expertise.pillar1.item4">Animation de comités de pilotage</li>
+                        </ul>
+                    </div>
+                    <div class="expertise-pillar">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="16,18 22,12 16,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="8,6 2,12 8,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-translate="conseil.expertise.pillar2.title">Développement sur mesure</h3>
+                        <ul class="pillar-list">
+                            <li data-translate="conseil.expertise.pillar2.item1">Création d'outils de reporting from scratch</li>
+                            <li data-translate="conseil.expertise.pillar2.item2">Dashboards et portails métiers</li>
+                            <li data-translate="conseil.expertise.pillar2.item3">Automatisation des processus</li>
+                            <li data-translate="conseil.expertise.pillar2.item4">Expertise technique issue de METRANE Tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section - 4 Quadrants -->
+        <section class="conseil-vision">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.vision.tag">Notre vision</span>
+                    <h2 data-translate="conseil.vision.title">Une expertise à 360°</h2>
+                    <p class="conseil-lead" data-translate="conseil.vision.lead">Une véritable connaissance des enjeux métiers et des problématiques IT pour une vision globale de vos projets.</p>
+                </div>
+
+                <div class="vision-quadrants">
+                    <div class="quadrant-labels">
+                        <span class="label-top" data-translate="conseil.vision.label.metiers">Métiers</span>
+                        <span class="label-bottom" data-translate="conseil.vision.label.si">Système d'information</span>
+                        <span class="label-left" data-translate="conseil.vision.label.gestion">Gestion</span>
+                        <span class="label-right" data-translate="conseil.vision.label.production">Production</span>
+                    </div>
+                    <div class="quadrants-grid">
+                        <div class="quadrant">
+                            <div class="quadrant-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4 data-translate="conseil.vision.q1.title">Management de projet</h4>
+                        </div>
+                        <div class="quadrant">
+                            <div class="quadrant-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h4 data-translate="conseil.vision.q2.title">Expertise opérationnelle</h4>
+                        </div>
+                        <div class="quadrant">
+                            <div class="quadrant-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4 data-translate="conseil.vision.q3.title">Solutions réglementaires</h4>
+                        </div>
+                        <div class="quadrant">
+                            <div class="quadrant-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4 data-translate="conseil.vision.q4.title">Traitement des données</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposition Section - 5 Steps -->
+        <section class="conseil-proposition">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.proposition.tag">Notre proposition</span>
+                    <h2 data-translate="conseil.proposition.title">Un accompagnement de bout en bout</h2>
+                    <p class="conseil-lead" data-translate="conseil.proposition.lead">Du sourcing des données à la production des reportings.</p>
+                </div>
+
+                <div class="proposition-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.proposition.step1.title">Recueil des besoins</h4>
+                        <p data-translate="conseil.proposition.step1.text">Comprendre vos enjeux métiers et réglementaires</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.proposition.step2.title">Sourcing des données</h4>
+                        <p data-translate="conseil.proposition.step2.text">Identifier et cartographier les sources</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 20V10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M18 20V4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 20v-4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.proposition.step3.title">Définition des règles</h4>
+                        <p data-translate="conseil.proposition.step3.text">Formaliser la logique métier</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.proposition.step4.title">Construction</h4>
+                        <p data-translate="conseil.proposition.step4.text">Développer, automatiser, intégrer</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.proposition.step5.title">Conduite du changement</h4>
+                        <p data-translate="conseil.proposition.step5.text">Former et accompagner vos équipes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modes d'intervention Section -->
+        <section class="conseil-modes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.modes.tag">Nos modes d'intervention</span>
+                    <h2 data-translate="conseil.modes.title">Une offre adaptée à vos besoins</h2>
+                    <p class="conseil-lead" data-translate="conseil.modes.lead">Conseil ou développement, en régie ou au forfait — nous construisons avec vous la collaboration qui vous convient.</p>
+                </div>
+
+                <div class="modes-grid">
+                    <!-- METRANE Embedded -->
+                    <div class="mode-card">
+                        <div class="mode-header">
+                            <div class="mode-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-translate="conseil.modes.embedded.title">METRANE Embedded</h3>
+                            <p class="mode-tagline" data-translate="conseil.modes.embedded.tagline">Nos experts intégrés à vos équipes</p>
+                        </div>
+                        <p class="mode-description" data-translate="conseil.modes.embedded.description">Vos projets nécessitent un renfort durable ? Nos consultants s'intègrent à vos équipes pour vous accompagner au quotidien, en maîtrise d'ouvrage comme en développement.</p>
+                        <ul class="mode-features">
+                            <li data-translate="conseil.modes.embedded.feature1">Intégration complète dans vos locaux et processus</li>
+                            <li data-translate="conseil.modes.embedded.feature2">Flexibilité et montée en charge rapide</li>
+                            <li data-translate="conseil.modes.embedded.feature3">Transfert de compétences continu</li>
+                            <li data-translate="conseil.modes.embedded.feature4">Facturation au temps passé</li>
+                        </ul>
+                        <div class="mode-ideal">
+                            <strong data-translate="conseil.modes.ideal">Idéal pour :</strong>
+                            <span data-translate="conseil.modes.embedded.ideal">Projets de transformation, renfort d'équipe, accompagnement long terme</span>
+                        </div>
+                        <a href="./contact.html" class="btn btn-outline-gold" data-translate="conseil.modes.cta">Nous contacter</a>
+                    </div>
+
+                    <!-- METRANE Commit -->
+                    <div class="mode-card featured">
+                        <div class="mode-header">
+                            <div class="mode-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="22,4 12,14.01 9,11.01" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-translate="conseil.modes.commit.title">METRANE Commit</h3>
+                            <p class="mode-tagline" data-translate="conseil.modes.commit.tagline">Engagement de résultat, budget maîtrisé</p>
+                        </div>
+                        <p class="mode-description" data-translate="conseil.modes.commit.description">Vous avez un périmètre défini et un budget à respecter ? Nous nous engageons sur les livrables avec une enveloppe fixe, que ce soit pour une mission de conseil ou un développement complet.</p>
+                        <ul class="mode-features">
+                            <li data-translate="conseil.modes.commit.feature1">Périmètre et livrables définis ensemble</li>
+                            <li data-translate="conseil.modes.commit.feature2">Prix fixe, pas de surprise</li>
+                            <li data-translate="conseil.modes.commit.feature3">Engagement de résultat</li>
+                            <li data-translate="conseil.modes.commit.feature4">Planning garanti</li>
+                        </ul>
+                        <div class="mode-ideal">
+                            <strong data-translate="conseil.modes.ideal">Idéal pour :</strong>
+                            <span data-translate="conseil.modes.commit.ideal">Projets cadrés, développements spécifiques, missions ponctuelles</span>
+                        </div>
+                        <a href="./contact.html" class="btn btn-gold" data-translate="conseil.modes.cta">Nous contacter</a>
+                    </div>
+
+                    <!-- METRANE Extended -->
+                    <div class="mode-card">
+                        <div class="mode-header">
+                            <div class="mode-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-translate="conseil.modes.extended.title">METRANE Extended</h3>
+                            <p class="mode-tagline" data-translate="conseil.modes.extended.tagline">Capacité de développement augmentée</p>
+                        </div>
+                        <p class="mode-description" data-translate="conseil.modes.extended.description">Besoin de renforcer significativement votre capacité de développement ? Notre centre offshore vous donne accès à des ressources qualifiées à coût optimisé, en parfaite coordination avec vos équipes.</p>
+                        <ul class="mode-features">
+                            <li data-translate="conseil.modes.extended.feature1">Équipes de développement dédiées</li>
+                            <li data-translate="conseil.modes.extended.feature2">Coûts optimisés sans compromis sur la qualité</li>
+                            <li data-translate="conseil.modes.extended.feature3">Coordination fluide avec vos équipes locales</li>
+                            <li data-translate="conseil.modes.extended.feature4">Scalabilité rapide selon vos besoins</li>
+                            <li data-translate="conseil.modes.extended.feature5">Expertise technique METRANE</li>
+                        </ul>
+                        <div class="mode-ideal">
+                            <strong data-translate="conseil.modes.ideal">Idéal pour :</strong>
+                            <span data-translate="conseil.modes.extended.ideal">Développements importants, maintenance applicative, projets à forte volumétrie</span>
+                        </div>
+                        <a href="./contact.html" class="btn btn-outline-gold" data-translate="conseil.modes.cta">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domaines d'intervention Section -->
+        <section class="conseil-domaines">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.domaines.tag">Domaines d'intervention</span>
+                    <h2 data-translate="conseil.domaines.title">Nos domaines d'expertise</h2>
+                </div>
+
+                <div class="domaines-grid">
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.credit.title">Risque de crédit</h4>
+                        <p data-translate="conseil.domaines.credit.text">CRR/CRD, NDDOD, Bâle II/III, gestion des défauts, portails de surveillance</p>
+                    </div>
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.liquidity.title">Liquidité</h4>
+                        <p data-translate="conseil.domaines.liquidity.text">LCR, NSFR, ALMM, taxonomies EBA, acte délégué</p>
+                    </div>
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,4 12,14.01 9,11.01" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.quality.title">Qualité des données</h4>
+                        <p data-translate="conseil.domaines.quality.text">Contrôles automatisés, supervision volumétrie, détection anomalies</p>
+                    </div>
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"/>
+                                <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.reporting.title">Reporting réglementaire</h4>
+                        <p data-translate="conseil.domaines.reporting.text">FINREP, COREP, RUBA, reportings ad hoc, arrêtés mensuels</p>
+                    </div>
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.custom.title">Outils sur mesure</h4>
+                        <p data-translate="conseil.domaines.custom.text">Création from scratch, dashboards, automatisation, portails métiers</p>
+                    </div>
+                    <div class="domaine-card">
+                        <div class="domaine-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.domaines.change.title">Conduite du changement</h4>
+                        <p data-translate="conseil.domaines.change.text">Formation, montée en compétences, accompagnement production</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pourquoi METRANE Section -->
+        <section class="conseil-why">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="conseil.why.title">Pourquoi choisir METRANE ?</h2>
+                </div>
+
+                <div class="why-list">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="why-content">
+                            <h4 data-translate="conseil.why.item1.title">Conformité réglementaire</h4>
+                            <p data-translate="conseil.why.item1.text">RUBA, FINREP, COREP, LCR, NSFR et toutes les évolutions</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="why-content">
+                            <h4 data-translate="conseil.why.item2.title">Solutions sur mesure</h4>
+                            <p data-translate="conseil.why.item2.text">Du "from scratch" à l'implémentation de progiciels (Moody's, Temenos...)</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="why-content">
+                            <h4 data-translate="conseil.why.item3.title">Accompagnement opérationnel</h4>
+                            <p data-translate="conseil.why.item3.text">Support lors des arrêtés, conduite du changement</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="why-content">
+                            <h4 data-translate="conseil.why.item4.title">Acculturation IT/Métier</h4>
+                            <p data-translate="conseil.why.item4.text">Rapprocher vos équipes techniques des enjeux réglementaires</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="why-content">
+                            <h4 data-translate="conseil.why.item5.title">Méthodologies agiles</h4>
+                            <p data-translate="conseil.why.item5.text">Montée en compétence de vos équipes aux approches modernes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Références Section -->
+        <section class="conseil-references">
+            <div class="container">
+                <div class="section-header">
+                    <span class="conseil-tag" data-translate="conseil.references.tag">Références</span>
+                    <h2 data-translate="conseil.references.title">Nos consultants en action</h2>
+                    <p class="conseil-lead" data-translate="conseil.references.lead">Des missions structurantes au sein d'établissements bancaires de premier plan.</p>
+                </div>
+
+                <div class="references-grid">
+                    <div class="reference-card">
+                        <div class="reference-category" data-translate="conseil.references.mission1.category">Risque de crédit</div>
+                        <h4 data-translate="conseil.references.mission1.title">Stratégie de recette RWA Groupe</h4>
+                        <p data-translate="conseil.references.mission1.description">Animation des Comités de Pilotage Groupe, homologation interne, point de contact audits BCE</p>
+                        <div class="reference-tags">
+                            <span data-translate="conseil.references.mission1.tag1">Pilotage multi-entités</span>
+                            <span data-translate="conseil.references.mission1.tag2">Homologation</span>
+                            <span data-translate="conseil.references.mission1.tag3">Audit BCE</span>
+                        </div>
+                    </div>
+                    <div class="reference-card">
+                        <div class="reference-category" data-translate="conseil.references.mission2.category">Conformité</div>
+                        <h4 data-translate="conseil.references.mission2.title">Migration & Conformité IFRS 9</h4>
+                        <p data-translate="conseil.references.mission2.description">Migration RiskConfidence, paramétrage fonctionnel IFRS 9, calcul Probabilité de Défaut</p>
+                        <div class="reference-tags">
+                            <span data-translate="conseil.references.mission2.tag1">IFRS 9</span>
+                            <span data-translate="conseil.references.mission2.tag2">Tests bout en bout</span>
+                            <span data-translate="conseil.references.mission2.tag3">PDLIFETIME</span>
+                        </div>
+                    </div>
+                    <div class="reference-card">
+                        <div class="reference-category" data-translate="conseil.references.mission3.category">Liquidité</div>
+                        <h4 data-translate="conseil.references.mission3.title">Acte délégué & Taxonomies EBA</h4>
+                        <p data-translate="conseil.references.mission3.description">Mise en place acte délégué liquidité, support arrêtés mensuels Crédit et Liquidité</p>
+                        <div class="reference-tags">
+                            <span data-translate="conseil.references.mission3.tag1">Automatisation</span>
+                            <span data-translate="conseil.references.mission3.tag2">Contrôles qualité</span>
+                            <span data-translate="conseil.references.mission3.tag3">Support production</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="references-banner">
+                    <p data-translate="conseil.references.banner">Nos consultants ont évolué au sein de grandes banques européennes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valeurs Section -->
+        <section class="conseil-valeurs">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="conseil.valeurs.title">Nos valeurs</h2>
+                    <p class="conseil-lead" data-translate="conseil.valeurs.lead">Une relation de confiance pour le succès de vos projets. Vos objectifs sont les nôtres.</p>
+                </div>
+
+                <div class="valeurs-grid">
+                    <div class="valeur-item">
+                        <div class="valeur-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="6" y1="1" x2="6" y2="4" stroke="currentColor" stroke-width="2"/>
+                                <line x1="10" y1="1" x2="10" y2="4" stroke="currentColor" stroke-width="2"/>
+                                <line x1="14" y1="1" x2="14" y2="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.valeurs.v1.title">Ouverture</h4>
+                        <p data-translate="conseil.valeurs.v1.text">Écoute et collaboration</p>
+                    </div>
+                    <div class="valeur-item">
+                        <div class="valeur-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.valeurs.v2.title">Intégrité</h4>
+                        <p data-translate="conseil.valeurs.v2.text">Transparence et honnêteté</p>
+                    </div>
+                    <div class="valeur-item">
+                        <div class="valeur-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4 data-translate="conseil.valeurs.v3.title">Courage</h4>
+                        <p data-translate="conseil.valeurs.v3.text">Oser dire et challenger</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiffres METRANE Section -->
+        <section class="conseil-chiffres">
+            <div class="container">
+                <div class="chiffres-grid">
+                    <div class="chiffre-item">
+                        <div class="chiffre-value" data-translate="conseil.chiffres.c1.value">+11 ans</div>
+                        <div class="chiffre-label" data-translate="conseil.chiffres.c1.label">d'expertise conseil</div>
+                    </div>
+                    <div class="chiffre-item">
+                        <div class="chiffre-value" data-translate="conseil.chiffres.c2.value">+15 ans</div>
+                        <div class="chiffre-label" data-translate="conseil.chiffres.c2.label">d'expérience moyenne consultants seniors</div>
+                    </div>
+                    <div class="chiffre-item">
+                        <div class="chiffre-value" data-translate="conseil.chiffres.c3.value">Tier 1</div>
+                        <div class="chiffre-label" data-translate="conseil.chiffres.c3.label">Banques européennes accompagnées</div>
+                    </div>
+                    <div class="chiffre-item">
+                        <div class="chiffre-value" data-translate="conseil.chiffres.c4.value">2017</div>
+                        <div class="chiffre-label" data-translate="conseil.chiffres.c4.label">Label Finance Innovation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final Section -->
+        <section class="conseil-cta">
+            <div class="container">
+                <div class="conseil-cta-content">
+                    <h2 data-translate="conseil.cta.title">Un projet en risque de crédit, liquidité ou qualité de données ?</h2>
+                    <p data-translate="conseil.cta.text">Nos consultants seniors vous accompagnent avec une vision 360° de vos enjeux, des contraintes opérationnelles aux exigences réglementaires.</p>
+                    <a href="./contact.html" class="btn btn-gold" data-translate="conseil.cta.btn">Contactez-nous</a>
+                    <p class="conseil-cta-phone">
+                        <span data-translate="conseil.cta.phone">Appelez-nous au</span>
+                        <strong>01 86 95 04 08</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        </div><!-- End conseil-content -->
+
     </main>
 
     <!-- Footer -->

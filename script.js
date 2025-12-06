@@ -214,7 +214,170 @@ function initBenefitsMobile() {
 document.addEventListener('DOMContentLoaded', () => {
     initBenefitsScroll(); // Desktop
     initBenefitsMobile(); // Mobile
+    initProductSwitch(); // Product page switch
 });
+
+// Product Switch (Tools / Conseil) - Floating Draggable
+function initProductSwitch() {
+    const floatingSwitch = document.getElementById('productSwitchFloating');
+    const switchHalves = document.querySelectorAll('.switch-half');
+    const toolsContent = document.getElementById('tools-content');
+    const conseilContent = document.getElementById('conseil-content');
+
+    if (!floatingSwitch || !toolsContent || !conseilContent) return;
+
+    let isDragging = false;
+    let dragStarted = false;
+    let startX, startY, initialX, initialY;
+
+    // Check URL hash on load and set initial glow state
+    const hash = window.location.hash;
+    if (hash === '#conseil') {
+        switchToConseil();
+    } else {
+        // Default to tools-active glow
+        floatingSwitch.classList.add('tools-active');
+    }
+
+    // Handle switch half clicks
+    switchHalves.forEach(half => {
+        half.addEventListener('click', (e) => {
+            // Don't switch if we just finished dragging
+            if (dragStarted) {
+                dragStarted = false;
+                return;
+            }
+
+            const product = half.dataset.product;
+            if (product === 'conseil') {
+                switchToConseil();
+            } else {
+                switchToTools();
+            }
+        });
+    });
+
+    // Drag functionality
+    floatingSwitch.addEventListener('mousedown', startDrag);
+    floatingSwitch.addEventListener('touchstart', startDrag, { passive: false });
+
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('touchmove', drag, { passive: false });
+
+    document.addEventListener('mouseup', endDrag);
+    document.addEventListener('touchend', endDrag);
+
+    function startDrag(e) {
+        isDragging = true;
+        dragStarted = false;
+        floatingSwitch.classList.add('dragging');
+
+        if (e.type === 'touchstart') {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        } else {
+            startX = e.clientX;
+            startY = e.clientY;
+        }
+
+        const rect = floatingSwitch.getBoundingClientRect();
+        initialX = rect.left;
+        initialY = rect.top;
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+
+        let currentX, currentY;
+        if (e.type === 'touchmove') {
+            currentX = e.touches[0].clientX;
+            currentY = e.touches[0].clientY;
+            e.preventDefault();
+        } else {
+            currentX = e.clientX;
+            currentY = e.clientY;
+        }
+
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
+
+        // Only consider it a drag if moved more than 5px
+        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+            dragStarted = true;
+        }
+
+        let newX = initialX + deltaX;
+        let newY = initialY + deltaY;
+
+        // Keep within viewport bounds
+        const switchWidth = floatingSwitch.offsetWidth;
+        const switchHeight = floatingSwitch.offsetHeight;
+        const maxX = window.innerWidth - switchWidth;
+        const maxY = window.innerHeight - switchHeight;
+
+        newX = Math.max(0, Math.min(newX, maxX));
+        newY = Math.max(0, Math.min(newY, maxY));
+
+        floatingSwitch.style.left = newX + 'px';
+        floatingSwitch.style.top = newY + 'px';
+        floatingSwitch.style.right = 'auto';
+        floatingSwitch.style.bottom = 'auto';
+    }
+
+    function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        floatingSwitch.classList.remove('dragging');
+
+        // Reset dragStarted after a small delay to allow click to be ignored
+        if (dragStarted) {
+            setTimeout(() => {
+                dragStarted = false;
+            }, 100);
+        }
+    }
+
+    // Handle hash change
+    window.addEventListener('hashchange', () => {
+        if (window.location.hash === '#conseil') {
+            switchToConseil();
+        } else if (window.location.hash === '#tools' || window.location.hash === '') {
+            switchToTools();
+        }
+    });
+
+    function switchToTools() {
+        switchHalves.forEach(h => h.classList.remove('active'));
+        document.querySelector('.switch-tools').classList.add('active');
+        toolsContent.classList.add('active');
+        conseilContent.classList.remove('active');
+        // Update glow effect
+        floatingSwitch.classList.remove('conseil-active');
+        floatingSwitch.classList.add('tools-active');
+        // Update navbar mode
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            navbar.classList.remove('conseil-mode');
+        }
+        history.replaceState(null, null, window.location.pathname);
+    }
+
+    function switchToConseil() {
+        switchHalves.forEach(h => h.classList.remove('active'));
+        document.querySelector('.switch-conseil').classList.add('active');
+        conseilContent.classList.add('active');
+        toolsContent.classList.remove('active');
+        // Update glow effect
+        floatingSwitch.classList.remove('tools-active');
+        floatingSwitch.classList.add('conseil-active');
+        // Update navbar mode
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            navbar.classList.add('conseil-mode');
+        }
+        history.replaceState(null, null, '#conseil');
+    }
+}
 
 // Add animation styles
 const style = document.createElement('style');
