@@ -230,10 +230,19 @@ function initProductSwitch() {
     let dragStarted = false;
     let startX, startY, initialX, initialY;
 
-    // Check URL hash on load and set initial glow state
+    // Check URL hash on load and set initial state
     const hash = window.location.hash;
     if (hash === '#conseil') {
-        switchToConseil();
+        // Small delay to ensure DOM is fully rendered
+        setTimeout(() => {
+            switchToConseil();
+            window.scrollTo(0, 0);
+        }, 50);
+    } else if (hash === '#tools') {
+        setTimeout(() => {
+            switchToTools();
+            window.scrollTo(0, 0);
+        }, 50);
     } else {
         // Default to tools-active glow
         floatingSwitch.classList.add('tools-active');

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique des Cookies - Metrane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Radio+Canada+Big:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page { min-height: 100vh; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); padding: 40px 20px; }
+        .legal-wrapper { max-width: 800px; margin: 0 auto; }
+        .legal-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-gray); text-decoration: none; font-size: 14px; transition: var(--transition); }
+        .back-link:hover { color: var(--primary-color); }
+        .back-link svg { width: 16px; height: 16px; }
+        .legal-language-selector { position: relative; }
+        .legal-language-selector .language-toggle { display: flex; align-items: center; gap: 6px; background: var(--white); border: 1px solid var(--border-gray); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 14px; color: var(--secondary-color); transition: var(--transition); }
+        .legal-language-selector .language-toggle:hover { border-color: var(--primary-color); }
+        .legal-language-selector .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 4px; background: var(--white); border: 1px solid var(--border-gray); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transition: var(--transition); z-index: 100; }
+        .legal-language-selector:hover .language-dropdown, .legal-language-selector .language-dropdown.active { opacity: 1; visibility: visible; }
+        .legal-language-selector .language-option { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border: none; background: none; width: 100%; cursor: pointer; font-size: 14px; color: var(--text-gray); transition: var(--transition); }
+        .legal-language-selector .language-option:hover { background: var(--light-gray); color: var(--primary-color); }
+        .legal-header { text-align: center; margin-bottom: 32px; }
+        .legal-header img { height: 40px; margin-bottom: 24px; }
+        .legal-header h1 { font-size: 32px; color: var(--secondary-color); margin-bottom: 8px; }
+        .legal-update { color: var(--text-gray); font-size: 14px; }
+        .legal-card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(0, 23, 60, 0.1); }
+        .legal-card h2 { font-size: 20px; color: var(--secondary-color); margin-top: 32px; margin-bottom: 12px; padding-top: 20px; border-top: 1px solid var(--border-gray); }
+        .legal-card h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+        .legal-card h3 { font-size: 16px; color: var(--secondary-color); margin-top: 20px; margin-bottom: 8px; }
+        .legal-card p { color: var(--text-gray); line-height: 1.8; margin-bottom: 12px; }
+        .legal-card ul { margin: 12px 0; padding-left: 20px; }
+        .legal-card li { color: var(--text-gray); line-height: 1.8; margin-bottom: 6px; }
+        .legal-card li strong { color: var(--secondary-color); }
+        .legal-card address { font-style: normal; color: var(--text-gray); line-height: 1.8; margin-top: 12px; padding: 16px; background: var(--light-gray); border-radius: 12px; }
+        .legal-card address strong { color: var(--secondary-color); display: block; margin-bottom: 8px; }
+        @media (max-width: 768px) { .legal-page { padding: 24px 16px; } .legal-header h1 { font-size: 24px; } .legal-card { padding: 24px; border-radius: 16px; } .legal-card h2 { font-size: 18px; } .legal-card h3 { font-size: 15px; } }
+    </style>
+</head>
+<body>
+    <div class="legal-page">
+        <div class="legal-wrapper">
+            <div class="legal-top-bar">
+                <a href="./index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span data-translate="legal.back">Retour au site</span>
+                </a>
+                <div class="legal-language-selector">
+                    <button class="language-toggle">
+                        <span class="current-lang">FR</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="fr"><span>FR</span><span>Français</span></button>
+                        <button class="language-option" data-lang="en"><span>EN</span><span>English</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-header">
+                <a href="./index.html"><img src="assets/metrane-logo.svg" alt="Metrane"></a>
+                <h1 data-translate="cookies.title">Politique des Cookies</h1>
+                <p class="legal-update" data-translate="legal.lastUpdate">Dernière mise à jour : Janvier 2025</p>
+            </div>
+
+            <div class="legal-card">
+                <h2 data-translate="cookies.1.title">1. Qu'est-ce qu'un cookie ?</h2>
+                <p data-translate="cookies.1.text">Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette, smartphone) lors de votre visite sur notre site. Il permet de stocker des informations relatives à votre navigation et de vous reconnaître lors de vos visites ultérieures.</p>
+
+                <h2 data-translate="cookies.2.title">2. Types de cookies utilisés</h2>
+                <p data-translate="cookies.2.text">Notre site utilise différentes catégories de cookies :</p>
+
+                <h3 data-translate="cookies.2.necessary.title">Cookies strictement nécessaires</h3>
+                <p data-translate="cookies.2.necessary.text">Ces cookies sont indispensables au fonctionnement du site et ne peuvent pas être désactivés. Ils permettent notamment :</p>
+                <ul>
+                    <li data-translate="cookies.2.necessary.item1">La navigation entre les pages</li>
+                    <li data-translate="cookies.2.necessary.item2">L'accès aux zones sécurisées</li>
+                    <li data-translate="cookies.2.necessary.item3">La mémorisation de vos préférences de confidentialité</li>
+                </ul>
+
+                <h3 data-translate="cookies.2.performance.title">Cookies de performance</h3>
+                <p data-translate="cookies.2.performance.text">Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site en collectant des informations de manière anonyme :</p>
+                <ul>
+                    <li data-translate="cookies.2.performance.item1">Pages les plus visitées</li>
+                    <li data-translate="cookies.2.performance.item2">Temps passé sur le site</li>
+                    <li data-translate="cookies.2.performance.item3">Messages d'erreur rencontrés</li>
+                </ul>
+
+                <h3 data-translate="cookies.2.functionality.title">Cookies de fonctionnalité</h3>
+                <p data-translate="cookies.2.functionality.text">Ces cookies permettent d'améliorer votre expérience en mémorisant vos choix :</p>
+                <ul>
+                    <li data-translate="cookies.2.functionality.item1">Langue préférée</li>
+                    <li data-translate="cookies.2.functionality.item2">Région géographique</li>
+                    <li data-translate="cookies.2.functionality.item3">Préférences d'affichage</li>
+                </ul>
+
+                <h3 data-translate="cookies.2.targeting.title">Cookies de ciblage/publicité</h3>
+                <p data-translate="cookies.2.targeting.text">Ces cookies peuvent être placés par nos partenaires publicitaires pour :</p>
+                <ul>
+                    <li data-translate="cookies.2.targeting.item1">Mesurer l'efficacité des campagnes</li>
+                    <li data-translate="cookies.2.targeting.item2">Limiter le nombre de fois où vous voyez une publicité</li>
+                    <li data-translate="cookies.2.targeting.item3">Personnaliser les contenus publicitaires</li>
+                </ul>
+
+                <h2 data-translate="cookies.3.title">3. Durée de conservation</h2>
+                <p data-translate="cookies.3.text">Les cookies sont conservés pour une durée maximale de 13 mois à compter de leur dépôt sur votre terminal. À l'expiration de ce délai, votre consentement sera à nouveau requis.</p>
+
+                <h2 data-translate="cookies.4.title">4. Gestion de vos préférences</h2>
+                <p data-translate="cookies.4.text">Vous pouvez à tout moment gérer vos préférences en matière de cookies :</p>
+
+                <h3 data-translate="cookies.4.browser.title">Via votre navigateur</h3>
+                <p data-translate="cookies.4.browser.text">La plupart des navigateurs permettent de gérer les cookies. Voici comment procéder selon votre navigateur :</p>
+                <ul>
+                    <li data-translate="cookies.4.browser.item1"><strong>Chrome :</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
+                    <li data-translate="cookies.4.browser.item2"><strong>Firefox :</strong> Options > Vie privée et sécurité > Cookies</li>
+                    <li data-translate="cookies.4.browser.item3"><strong>Safari :</strong> Préférences > Confidentialité > Cookies</li>
+                    <li data-translate="cookies.4.browser.item4"><strong>Edge :</strong> Paramètres > Cookies et autorisations du site</li>
+                </ul>
+
+                <h3 data-translate="cookies.4.consequences.title">Conséquences du refus des cookies</h3>
+                <p data-translate="cookies.4.consequences.text">Si vous choisissez de refuser certains cookies, certaines fonctionnalités du site pourraient ne pas fonctionner de manière optimale. Les cookies strictement nécessaires ne peuvent pas être refusés.</p>
+
+                <h2 data-translate="cookies.5.title">5. Cookies tiers</h2>
+                <p data-translate="cookies.5.text">Notre site peut contenir des cookies déposés par des tiers (partenaires, réseaux sociaux, services d'analyse). Ces cookies sont soumis aux politiques de confidentialité de ces tiers :</p>
+                <ul>
+                    <li data-translate="cookies.5.item1">Google Analytics - pour l'analyse de trafic</li>
+                    <li data-translate="cookies.5.item2">LinkedIn - pour le partage social</li>
+                    <li data-translate="cookies.5.item3">Twitter - pour le partage social</li>
+                </ul>
+
+                <h2 data-translate="cookies.6.title">6. Mise à jour de cette politique</h2>
+                <p data-translate="cookies.6.text">Nous pouvons mettre à jour cette politique des cookies à tout moment. Toute modification sera publiée sur cette page avec indication de la date de mise à jour.</p>
+
+                <h2 data-translate="cookies.7.title">7. Contact</h2>
+                <p data-translate="cookies.7.text">Pour toute question concernant notre utilisation des cookies :</p>
+                <address>
+                    <strong data-translate="legal.contact.company">Metrane SAS</strong>
+                    <span data-translate="legal.contact.address">10 rue de Penthièvre<br>75008 Paris, France</span><br>
+                    <span data-translate="legal.contact.email">Email : contact@metrane.com</span><br>
+                    <span data-translate="legal.contact.phone">Tél : 01 86 95 04 08</span>
+                </address>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>

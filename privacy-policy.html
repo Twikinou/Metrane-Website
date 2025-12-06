@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Metrane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Radio+Canada+Big:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 40px 20px;
+        }
+
+        .legal-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .legal-language-selector {
+            position: relative;
+        }
+
+        .legal-language-selector .language-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .legal-language-selector .language-toggle:hover {
+            border-color: var(--primary-color);
+        }
+
+        .legal-language-selector .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 4px;
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .legal-language-selector:hover .language-dropdown,
+        .legal-language-selector .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .legal-language-selector .language-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: none;
+            background: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-gray);
+            transition: var(--transition);
+        }
+
+        .legal-language-selector .language-option:hover {
+            background: var(--light-gray);
+            color: var(--primary-color);
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .legal-header img {
+            height: 40px;
+            margin-bottom: 24px;
+        }
+
+        .legal-header h1 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .legal-update {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .legal-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0, 23, 60, 0.1);
+        }
+
+        .legal-card h2 {
+            font-size: 20px;
+            color: var(--secondary-color);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-gray);
+        }
+
+        .legal-card h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .legal-card ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .legal-card li {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 6px;
+        }
+
+        .legal-card li strong {
+            color: var(--secondary-color);
+        }
+
+        .legal-card address {
+            font-style: normal;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-top: 12px;
+            padding: 16px;
+            background: var(--light-gray);
+            border-radius: 12px;
+        }
+
+        .legal-card address strong {
+            color: var(--secondary-color);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .legal-page {
+                padding: 24px 16px;
+            }
+
+            .legal-header h1 {
+                font-size: 24px;
+            }
+
+            .legal-card {
+                padding: 24px;
+                border-radius: 16px;
+            }
+
+            .legal-card h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="legal-page">
+        <div class="legal-wrapper">
+            <div class="legal-top-bar">
+                <a href="./index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span data-translate="legal.back">Retour au site</span>
+                </a>
+                <div class="legal-language-selector">
+                    <button class="language-toggle">
+                        <span class="current-lang">FR</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="fr">
+                            <span>FR</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <span>EN</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-header">
+                <a href="./index.html">
+                    <img src="assets/metrane-logo.svg" alt="Metrane">
+                </a>
+                <h1 data-translate="privacy.title">Politique de Confidentialité</h1>
+                <p class="legal-update" data-translate="legal.lastUpdate">Dernière mise à jour : Janvier 2025</p>
+            </div>
+
+            <div class="legal-card">
+                <h2 data-translate="privacy.1.title">1. Introduction</h2>
+                <p data-translate="privacy.1.text">Metrane SAS ("nous", "notre", "nos") s'engage à protéger la vie privée de ses utilisateurs. Cette politique de confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos informations personnelles lorsque vous utilisez nos services.</p>
+
+                <h2 data-translate="privacy.2.title">2. Données collectées</h2>
+                <p data-translate="privacy.2.text">Nous collectons les types de données suivants :</p>
+                <ul>
+                    <li data-translate="privacy.2.item1"><strong>Données d'identification :</strong> nom, prénom, adresse email, numéro de téléphone, fonction professionnelle</li>
+                    <li data-translate="privacy.2.item2"><strong>Données de connexion :</strong> adresse IP, type de navigateur, pages visitées, dates et heures de connexion</li>
+                    <li data-translate="privacy.2.item3"><strong>Données professionnelles :</strong> nom de l'entreprise, secteur d'activité, taille de l'entreprise</li>
+                    <li data-translate="privacy.2.item4"><strong>Données d'utilisation :</strong> interactions avec nos services, préférences, historique d'utilisation</li>
+                </ul>
+
+                <h2 data-translate="privacy.3.title">3. Utilisation des données</h2>
+                <p data-translate="privacy.3.text">Vos données sont utilisées pour :</p>
+                <ul>
+                    <li data-translate="privacy.3.item1">Fournir et améliorer nos services de reporting et de business intelligence</li>
+                    <li data-translate="privacy.3.item2">Personnaliser votre expérience utilisateur</li>
+                    <li data-translate="privacy.3.item3">Communiquer avec vous concernant nos services</li>
+                    <li data-translate="privacy.3.item4">Assurer la sécurité de nos systèmes</li>
+                    <li data-translate="privacy.3.item5">Respecter nos obligations légales et réglementaires</li>
+                </ul>
+
+                <h2 data-translate="privacy.4.title">4. Base légale du traitement</h2>
+                <p data-translate="privacy.4.text">Nous traitons vos données sur les bases légales suivantes :</p>
+                <ul>
+                    <li data-translate="privacy.4.item1">L'exécution d'un contrat auquel vous êtes partie</li>
+                    <li data-translate="privacy.4.item2">Votre consentement explicite</li>
+                    <li data-translate="privacy.4.item3">Nos intérêts légitimes (amélioration des services, sécurité)</li>
+                    <li data-translate="privacy.4.item4">Le respect de nos obligations légales</li>
+                </ul>
+
+                <h2 data-translate="privacy.5.title">5. Partage des données</h2>
+                <p data-translate="privacy.5.text">Nous ne vendons pas vos données personnelles. Nous pouvons les partager avec :</p>
+                <ul>
+                    <li data-translate="privacy.5.item1">Nos prestataires de services (hébergement, support technique)</li>
+                    <li data-translate="privacy.5.item2">Les autorités compétentes lorsque la loi l'exige</li>
+                    <li data-translate="privacy.5.item3">Nos partenaires commerciaux avec votre consentement</li>
+                </ul>
+
+                <h2 data-translate="privacy.6.title">6. Sécurité des données</h2>
+                <p data-translate="privacy.6.text">Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou altération.</p>
+
+                <h2 data-translate="privacy.7.title">7. Conservation des données</h2>
+                <p data-translate="privacy.7.text">Nous conservons vos données personnelles aussi longtemps que nécessaire pour les finalités pour lesquelles elles ont été collectées, et conformément aux obligations légales applicables.</p>
+
+                <h2 data-translate="privacy.8.title">8. Vos droits</h2>
+                <p data-translate="privacy.8.text">Conformément au RGPD, vous disposez des droits suivants :</p>
+                <ul>
+                    <li data-translate="privacy.8.item1"><strong>Droit d'accès :</strong> obtenir une copie de vos données personnelles</li>
+                    <li data-translate="privacy.8.item2"><strong>Droit de rectification :</strong> corriger des données inexactes</li>
+                    <li data-translate="privacy.8.item3"><strong>Droit à l'effacement :</strong> demander la suppression de vos données</li>
+                    <li data-translate="privacy.8.item4"><strong>Droit à la portabilité :</strong> recevoir vos données dans un format structuré</li>
+                    <li data-translate="privacy.8.item5"><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
+                    <li data-translate="privacy.8.item6"><strong>Droit à la limitation :</strong> limiter le traitement de vos données</li>
+                </ul>
+
+                <h2 data-translate="privacy.9.title">9. Contact</h2>
+                <p data-translate="privacy.9.text">Pour exercer vos droits ou pour toute question concernant cette politique, contactez-nous :</p>
+                <address>
+                    <strong data-translate="legal.contact.company">Metrane SAS</strong>
+                    <span data-translate="legal.contact.address">10 rue de Penthièvre<br>75008 Paris, France</span><br>
+                    <span data-translate="legal.contact.email">Email : contact@metrane.com</span><br>
+                    <span data-translate="legal.contact.phone">Tél : 01 86 95 04 08</span>
+                </address>
+
+                <h2 data-translate="privacy.10.title">10. Modifications</h2>
+                <p data-translate="privacy.10.text">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications prendront effet dès leur publication sur cette page.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>
